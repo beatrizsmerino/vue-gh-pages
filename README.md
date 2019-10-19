@@ -19,10 +19,10 @@ module.exports = {
 
 Donde `/name-repo/` hace referencia al repositorio donde desplegue la aplicación.
 
-2. En la raíz del proyecto crear el archivo deploy.sh  
+3. En la raíz del proyecto crear el archivo deploy.sh  
    `touch deploy.sh`
 
-Dentro de `deploy.sh` pegar el codigo:
+4. Dentro de `deploy.sh` pegar el codigo:
 
 ```
 #!/usr/bin/env sh
@@ -57,10 +57,10 @@ En caso de no tener configurado su cuenta de GitHub para conectarse via SSH debe
 Por:  
 `git push -f https://github.com/<USERNAME>/<REPO>.git master:gh-pages`
 
-3. Abrir la terminal y moverse a la raíz del proyecto. Luego asignar el permiso de ejecución con el comando:  
+5. Abrir la terminal y moverse a la raíz del proyecto. Luego asignar el permiso de ejecución con el comando:  
    `chmod +x deploy.sh`
 
-4. Finalmente ejecutar el comando deploy.sh con el comando:  
+6. Finalmente ejecutar el comando deploy.sh con el comando:  
    `./deploy.sh`
 
 Esperar que termine la ejecucion del script y abrir en el navegador nuestra aplicación
