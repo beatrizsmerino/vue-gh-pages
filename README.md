@@ -1,6 +1,6 @@
 # How to deploy a Vue.js application to GitHub Pages using Vue CLI 3
 
-![demo-vue-cli-gh-pages gh-pages](https://github.com/beatrizsmerino/demo-vue-cli-gh-pages/blob/master/documentation/images/demo-vue-cli-gh-pages.jpg)
+![demo-vue-cli-gh-pages gh-pages](https://github.com/beatrizsmerino/demo-vue-cli-gh-pages/blob/master/doc/images/demo-vue-cli-gh-pages.jpg)
 
 ## USE
 
