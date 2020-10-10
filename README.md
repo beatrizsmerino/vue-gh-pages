@@ -17,7 +17,7 @@ module.exports = {
 }
 ```
 
-Donde `/name-repo/` hace referencia al repositorio donde desplegue la aplicación.
+`/name-repo/` hace referencia al repositorio donde se despliega la aplicación.
 
 3. En la raíz del proyecto crear el archivo deploy.sh  
    `touch deploy.sh`
@@ -50,23 +50,23 @@ git push -f git@github.com:<USERNAME>/<REPO>.git master:gh-pages
 cd -
 ```
 
-Deben reemplazar la palabra `<USERNAME>` por su usuario de GitHub y `<REPO>` por el nombre de su repositorio.
+Hay que reemplazar la palabra `<USERNAME>` por tu usuario de GitHub y `<REPO>` por el nombre de tu repositorio.
 
-En caso de no tener configurado su cuenta de GitHub para conectarse via SSH debe reemplazar:  
+En caso de no tener configurado tu cuenta de GitHub para conectarse via SSH debe reemplazar:  
 `git push -f git@github.com:<USERNAME>/<REPO>.git master:gh-pages`  
 Por:  
 `git push -f https://github.com/<USERNAME>/<REPO>.git master:gh-pages`
 
-5. Abrir la terminal y moverse a la raíz del proyecto. Luego asignar el permiso de ejecución con el comando:  
+5. Abre la terminal y ve a la raíz del proyecto. Luego asigna el permiso de ejecución con el comando:  
    `chmod +x deploy.sh`
 
-6. Finalmente ejecutar el comando deploy.sh con el comando:  
+6. Finalmente ejecuta el comando deploy.sh:  
    `./deploy.sh`
 
-Esperar que termine la ejecucion del script y abrir en el navegador nuestra aplicación
+Espera a que termine la ejecución del script y abre en el navegador nuestra aplicación
 `https://<USERNAME>.github.io/<REPO>/`
 
-Aqui les dejo el ejemplo de la mia [https://beatrizsmerino.github.io/demo-vue-cli-gh-pages/](https://beatrizsmerino.github.io/demo-vue-cli-gh-pages/)
+Aqui os dejo el ejemplo de la mia [https://beatrizsmerino.github.io/demo-vue-cli-gh-pages/](https://beatrizsmerino.github.io/demo-vue-cli-gh-pages/)
 
 [Ver aqui la documentación sobre Deployment con Vue Cli 3.](https://cli.vuejs.org/guide/deployment.html#github-pages)
 
