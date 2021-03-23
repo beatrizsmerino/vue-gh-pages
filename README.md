@@ -1,6 +1,6 @@
 # How to deploy a Vue.js application to GitHub Pages using Vue CLI 3
 
-![demo-vue-cli-gh-pages gh-pages](https://github.com/beatrizsmerino/demo-vue-cli-gh-pages/blob/master/README/images/demo-vue-cli-gh-pages.jpg)
+![vue-gh-pages gh-pages](https://github.com/beatrizsmerino/vue-gh-pages/blob/master/README/images/vue-gh-pages.jpg)
 
 ## USE
 
@@ -77,7 +77,7 @@ chmod +x deploy.sh
 https://<USERNAME>.github.io/<REPO>/
 ```
 
-Here I leave you the example of mine [https://beatrizsmerino.github.io/demo-vue-cli-gh-pages/](https://beatrizsmerino.github.io/demo-vue-cli-gh-pages/)
+Here I leave you the example of mine [https://beatrizsmerino.github.io/vue-gh-pages/](https://beatrizsmerino.github.io/vue-gh-pages/)
 
 ## DOCUMENTATION
 [See here the documentation about Deployment with Vue Cli 3.](https://cli.vuejs.org/guide/deployment.html#github-pages)
