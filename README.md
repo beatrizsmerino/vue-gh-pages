@@ -1,3 +1,8 @@
+![GitHub issues](https://img.shields.io/github/issues/beatrizsmerino/vue-gh-pages)
+![GitHub forks](https://img.shields.io/github/forks/beatrizsmerino/vue-gh-pages)
+![GitHub stars](https://img.shields.io/github/stars/beatrizsmerino/vue-gh-pages)
+![GitHub watchers](https://img.shields.io/github/watchers/beatrizsmerino/vue-gh-pages)
+![GitHub last commit](https://img.shields.io/github/last-commit/beatrizsmerino/vue-gh-pages)
 # How to deploy a Vue.js application to GitHub Pages using Vue CLI 3
 
 ![vue-gh-pages gh-pages](https://github.com/beatrizsmerino/vue-gh-pages/blob/master/README/images/vue-gh-pages.jpg)
