@@ -9,7 +9,7 @@
 		"deploy": "chmod +x ./deploy.sh && ./deploy.sh"
 	},
 	"dependencies": {
-		"core-js": "^3.18.3",
+		"core-js": "^3.19.0",
 		"vue": "^2.6.14",
 		"vue-router": "^3.5.2"
 	},
