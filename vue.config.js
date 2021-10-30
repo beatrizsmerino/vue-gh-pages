@@ -1,5 +1,6 @@
 module.exports = {
-	publicPath: process.env.NODE_ENV === "production" ? "/vue-gh-pages/" : "/",
+	publicPath: process.env.NODE_ENV === 'production' ? '/vue-gh-pages/' : '/',
+	lintOnSave: false,
 	css: {
 		loaderOptions: {
 			sass: {
@@ -10,9 +11,7 @@ module.exports = {
 	pluginOptions: {
 		'style-resources-loader': {
 			preProcessor: 'scss',
-			patterns: [
-				'./src/assets/scss/styles.scss',
-			]
+			patterns: ['./src/assets/scss/styles.scss']
 		}
 	}
 };
