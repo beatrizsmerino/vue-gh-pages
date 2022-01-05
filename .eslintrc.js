@@ -143,8 +143,16 @@ module.exports = {
 		'max-nested-callbacks': 2,
 		'max-params': 2,
 		'max-statements': 0,
-		'max-statements-per-line': [2, { max: 1 }],
-		'multiline-comment-style': [2, 'separate-lines'],
+		'max-statements-per-line': [
+			2,
+			{
+				max: 1
+			}
+		],
+		'multiline-comment-style': [
+			2,
+			'separate-lines'
+		],
 		'multiline-ternary': 0,
 		'new-cap': [
 			2,
@@ -233,7 +241,14 @@ module.exports = {
 		'no-self-compare': 2,
 		'no-sequences': 2,
 		'no-setter-return': 2,
-		'no-shadow': [2, { allow: ['state'] }],
+		'no-shadow': [
+			2,
+			{
+				allow: [
+					'state'
+				]
+			}
+		],
 		'no-spaced-func': 2,
 		'no-sync': 0,
 		'no-tabs': 0,
@@ -431,7 +446,9 @@ module.exports = {
 			2,
 			{
 				ignoreWhenEmpty: true,
-				ignores: ['pre']
+				ignores: [
+					'pre'
+				]
 			}
 		],
 		'vue/no-side-effects-in-computed-properties': 0,
@@ -439,7 +456,9 @@ module.exports = {
 	},
 	overrides: [
 		{
-			files: ['*.vue'],
+			files: [
+				'*.vue'
+			],
 			rules: {
 				indent: 'off'
 			}
