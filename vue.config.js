@@ -1,3 +1,5 @@
+const StyleLintPlugin = require('stylelint-webpack-plugin');
+
 module.exports = {
 	publicPath: process.env.NODE_ENV === 'production' ? '/vue-gh-pages/' : '/',
 	lintOnSave: true,
@@ -15,6 +17,16 @@ module.exports = {
 				'./src/assets/scss/styles.scss'
 			]
 		}
+	},
+	configureWebpack: {
+		plugins: [
+			new StyleLintPlugin({
+				fix: true,
+				files: [
+					'src/**/*.{vue,scss}'
+				]
+			})
+		]
 	},
 	chainWebpack: config => {
 		config.module.rule('eslint').use('eslint-loader').
