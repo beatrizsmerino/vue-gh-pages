@@ -1,6 +1,6 @@
 module.exports = {
 	publicPath: process.env.NODE_ENV === 'production' ? '/vue-gh-pages/' : '/',
-	lintOnSave: false,
+	lintOnSave: true,
 	css: {
 		loaderOptions: {
 			sass: {
@@ -13,5 +13,11 @@ module.exports = {
 			preProcessor: 'scss',
 			patterns: ['./src/assets/scss/styles.scss']
 		}
+	},
+	chainWebpack: config => {
+		config.module.rule('eslint').use('eslint-loader').
+			options({
+				fix: true
+			});
 	}
 };
