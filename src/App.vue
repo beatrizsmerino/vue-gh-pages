@@ -34,5 +34,4 @@
 	//----------------------------------------------------------------------
 	@import '@/assets/scss/base/base-reset';
 	@import '@/assets/scss/base/base-global';
-
 </style>
