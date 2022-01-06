@@ -1,7 +1,12 @@
 <template>
-	<div id="app">
+	<div
+		id="app"
+		class="page__app"
+	>
 		<Nav />
-		<router-view />
+		<main class="page__main">
+			<router-view />
+		</main>
 	</div>
 </template>
 
@@ -11,6 +16,20 @@
 		name: 'App',
 		components: {
 			Nav
+		},
+		watch: {
+			$route: {
+				handler(to, from) {
+					const html = document.getElementsByTagName('html')[0];
+					const body = document.getElementsByTagName('body')[0];
+					if (typeof from !== 'undefined') {
+						html.classList.remove('page', `page-${from.name.toLowerCase()}`);
+					}
+					html.classList.add('page', `page-${to.name.toLowerCase()}`);
+					body.classList.add('page__body');
+				},
+				immediate: true
+			}
 		}
 	};
 </script>
@@ -37,5 +56,6 @@
 
 	// COMPONENTS
 	//----------------------------------------------------------------------
+	@import '@/assets/scss/components/components-page';
 	@import '@/assets/scss/components/components-link';
 </style>

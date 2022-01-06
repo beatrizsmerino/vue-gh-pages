@@ -1,10 +1,5 @@
 <template>
 	<div class="home">
-		<Icon
-			name="logoVue"
-			aria-label="Logo Vue"
-			title="Logo Vue"
-		/>
 		<HelloWorld msg="Welcome to Your Vue.js App" />
 	</div>
 </template>
