@@ -1,6 +1,6 @@
 <template>
 	<div id="app">
-		<div id="nav">
+		<div class="nav">
 			<router-link to="/">
 				Home
 			</router-link>
@@ -22,7 +22,7 @@
 		text-align: center;
 	}
 
-	#nav {
+	.nav {
 		padding: 30px;
 
 		a {
