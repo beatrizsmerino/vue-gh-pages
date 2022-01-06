@@ -146,27 +146,29 @@
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped lang="scss">
-	h1 {
-		font-family: $font-brand-1;
-	}
+<style lang="scss" scoped>
+	.hello {
+		h1 {
+			font-family: $font-brand-1;
+		}
 
-	h3 {
-		margin: 40px 0 0;
-		font-family: $font-brand-1;
-	}
+		h3 {
+			margin: 40px 0 0;
+			font-family: $font-brand-1;
+		}
 
-	ul {
-		padding: 0;
-		list-style-type: none;
-	}
+		ul {
+			padding: 0;
+			list-style-type: none;
+		}
 
-	li {
-		display: inline-block;
-		margin: 0 10px;
-	}
+		li {
+			display: inline-block;
+			margin: 0 10px;
+		}
 
-	a {
-		color: $color-brand-1;
+		a {
+			color: $color-brand-1;
+		}
 	}
 </style>
