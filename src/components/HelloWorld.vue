@@ -212,6 +212,7 @@
 
 		&__link {
 			color: $color-brand-1;
+			text-decoration: underline;
 		}
 	}
 </style>
