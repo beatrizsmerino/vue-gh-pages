@@ -162,6 +162,6 @@
 	}
 
 	a {
-		color: #42B983;
+		color: $color-brand-1;
 	}
 </style>
