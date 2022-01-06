@@ -148,6 +148,8 @@
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss" scoped>
 	.hello {
+		text-align: center;
+
 		h1 {
 			font-family: $font-brand-1;
 		}
