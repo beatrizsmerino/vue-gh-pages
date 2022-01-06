@@ -1,11 +1,17 @@
 <template>
 	<div id="app">
 		<div class="nav">
-			<router-link to="/">
+			<router-link
+				to="/"
+				class="nav__link"
+			>
 				Home
 			</router-link>
 			|
-			<router-link to="/about">
+			<router-link
+				to="/about"
+				class="nav__link"
+			>
 				About
 			</router-link>
 		</div>
@@ -25,7 +31,7 @@
 	.nav {
 		padding: 30px;
 
-		a {
+		&__link {
 			color: $color-brand-2;
 			font-weight: bold;
 
