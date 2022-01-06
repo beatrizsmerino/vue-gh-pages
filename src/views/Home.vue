@@ -1,10 +1,5 @@
 <template>
 	<div class="home">
-		<Icon
-			name="logoVue"
-			aria-label="Logo Vue"
-			title="Logo Vue"
-		/>
 		<HelloWorld msg="Welcome to Your Vue.js App" />
 	</div>
 </template>
@@ -22,9 +17,10 @@
 	};
 </script>
 
-
 <style lang="scss" scoped>
 	.home {
+		text-align: center;
+
 		::v-deep {
 			.icon-logo-vue {
 				width: 12rem;

@@ -1,0 +1,30 @@
+// COMPONENTS
+// LINK
+// =================================================
+
+.link {
+	position: relative;
+	padding: 0 0.2rem;
+	font-weight: 400;
+
+	&:before {
+		content: '';
+		display: inline-block;
+		position: absolute;
+		bottom: -0.1em;
+		left: 50%;
+		width: 100%;
+		height: 0.2rem;
+		transform: translate3d(-50%, 0, 0);
+		transition: all 0.3s ease-in-out 0s;
+		background-color: $color-brand-1;
+	}
+
+	&.is-selected,
+	&:hover {
+		&:before {
+			width: 0;
+			background-color: transparent;
+		}
+	}
+}
