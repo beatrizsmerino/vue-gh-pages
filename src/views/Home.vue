@@ -22,7 +22,6 @@
 	};
 </script>
 
-
 <style lang="scss" scoped>
 	.home {
 		::v-deep {
