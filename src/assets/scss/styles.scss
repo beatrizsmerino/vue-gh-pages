@@ -5,4 +5,12 @@
 // ABSTRACTS
 //----------------------------------------------------------------------
 // variables
+// -----------------
+@import 'abstracts/variables/abstracts-variables-breakpoints';
 @import 'abstracts/variables/abstracts-variables-colors';
+// functions
+// -----------------
+@import 'abstracts/functions/abstracts-functions-contains';
+// mixins
+// -----------------
+@import 'abstracts/mixins/abstracts-mixins-media-queries';
