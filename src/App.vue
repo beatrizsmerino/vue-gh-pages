@@ -20,7 +20,7 @@
 
 	#app {
 		color: $color-brand-2;
-		font-family: 'Avenir', Helvetica, Arial, sans-serif;
+		font-family: $font-brand-2;
 		-webkit-font-smoothing: antialiased;
 		-moz-osx-font-smoothing: grayscale;
 		text-align: center;
