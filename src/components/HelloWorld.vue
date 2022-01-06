@@ -181,11 +181,17 @@
 		text-align: center;
 
 		&__title {
+			margin-bottom: 2.5rem;
 			font-family: $font-brand-1;
+			font-size: 3.2rem;
+			font-weight: 900;
 		}
 
 		&__subtitle {
+			margin-bottom: 1rem;
 			font-family: $font-brand-1;
+			font-size: 2rem;
+			font-weight: 900;
 		}
 
 		&__info {
