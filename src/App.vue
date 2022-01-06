@@ -1,11 +1,17 @@
 <template>
 	<div id="app">
-		<div id="nav">
-			<router-link to="/">
+		<div class="nav">
+			<router-link
+				to="/"
+				class="nav__link"
+			>
 				Home
 			</router-link>
 			|
-			<router-link to="/about">
+			<router-link
+				to="/about"
+				class="nav__link"
+			>
 				About
 			</router-link>
 		</div>
@@ -15,22 +21,22 @@
 
 <style lang="scss">
 	#app {
+		color: $color-brand-2;
 		font-family: 'Avenir', Helvetica, Arial, sans-serif;
 		-webkit-font-smoothing: antialiased;
 		-moz-osx-font-smoothing: grayscale;
 		text-align: center;
-		color: #2c3e50;
 	}
 
-	#nav {
+	.nav {
 		padding: 30px;
 
-		a {
+		&__link {
+			color: $color-brand-2;
 			font-weight: bold;
-			color: #2c3e50;
 
 			&.router-link-exact-active {
-				color: #42b983;
+				color: $color-brand-1;
 			}
 		}
 	}

@@ -7,8 +7,9 @@
 		"serve": "vue-cli-service serve",
 		"build": "vue-cli-service build",
 		"prettier:fix": "prettier --write \"./**/*.{vue,js,json}\"",
+		"stylelint:fix": "stylelint \"**/*.{css,scss,sass,vue}\" --fix --ignore-path .stylelintignore",
 		"eslint:fix": "vue-cli-service lint \"**/*.{json,js,vue}\" --fix --ignore-path .eslintignore",
-		"lint": "npm run prettier:fix && npm run eslint:fix",
+		"lint": "npm run prettier:fix && npm run eslint:fix && npm run stylelint:fix",
 		"deploy": "chmod +x ./deploy.sh && ./deploy.sh"
 	},
 	"dependencies": {
@@ -33,6 +34,13 @@
 		"sass": "^1.45.2",
 		"sass-loader": "^10.1.1",
 		"style-resources-loader": "^1.5.0",
+		"stylelint": "^13.13.1",
+		"stylelint-config-prettier": "^8.0.2",
+		"stylelint-config-property-sort-order-smacss": "^7.1.0",
+		"stylelint-config-sass-guidelines": "^8.0.0",
+		"stylelint-config-standard": "^22.0.0",
+		"stylelint-scss": "^3.21.0",
+		"stylelint-webpack-plugin": "^3.1.0",
 		"vue-cli-plugin-style-resources-loader": "~0.1.5",
 		"vue-template-compiler": "^2.6.14"
 	},
