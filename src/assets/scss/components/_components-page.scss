@@ -1,0 +1,54 @@
+// COMPONENTS
+// PAGE
+// =================================================
+
+.page {
+	scroll-behavior: smooth;
+
+	&__container {
+		width: 100%;
+		max-width: 150rem;
+		margin: 0 auto;
+	}
+
+	&__inner {
+		padding-right: 3rem;
+		padding-left: 3rem;
+
+		@include media('sm') {
+			padding-right: 2rem;
+			padding-left: 2rem;
+		}
+	}
+
+	&__title {
+		margin-bottom: 2.5rem;
+		font-family: $font-brand-1;
+		font-size: 3.2rem;
+		font-weight: 900;
+	}
+
+	&__subtitle {
+		margin-bottom: 1rem;
+		font-family: $font-brand-1;
+		font-size: 2rem;
+		font-weight: 900;
+	}
+
+	&__main {
+		position: relative;
+		height: 100%;
+		min-height: 20rem;
+		overflow: hidden;
+	}
+
+	&__section {
+		padding-top: 6rem;
+		padding-bottom: 6rem;
+
+		@include media('sm') {
+			padding-top: 4rem;
+			padding-bottom: 4rem;
+		}
+	}
+}

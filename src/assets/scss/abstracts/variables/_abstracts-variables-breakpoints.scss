@@ -1,0 +1,25 @@
+// ABSTRACTS VARIABLES
+// BREAKPOINTS
+// =================================================
+
+// @map breakpoints
+// @description Breakpoint to define the media query size.
+// (xs|sm|md|lg|xl|xxl|xxxl)
+// xs - mobile
+// sm - mobile
+// md - iPad portrait
+// lg - iPad portrait
+// xl - iPad landscape
+// xxl - laptop
+// xxxl - big display
+
+$breakpoints: (
+	'xs': 380px,
+	'sm': 576px,
+	'md': 768px,
+	'lg': 1024px,
+	'xl': 1080px,
+	'xxl': 1280px,
+	'xxxl': 1500px,
+	'xxxxl': 1700px,
+) !default;

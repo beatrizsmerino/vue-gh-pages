@@ -1,0 +1,69 @@
+// ABSTRACTS MIXINS
+// MEDIA QUERIES
+// =================================================
+
+// @function media
+// @description This mixin 'media' generate the rule @media in a way more easy, passing only the parameters of size breakpoint, min/max and width/height.
+// @access public
+// @require {Variable} breakpoints
+// @require {Function} contains
+// @param {String|Number} $breakpoint - ($var|sizePX|size%|sizeEM|sizeREM) - Breakpoint to define the media query. It accepts 'numbers' with and without units (px will be asigned if unitless) or 'key' within a previous $breakpoints map defined (see @optional), or variables previously defined.
+// @param {String} $rule - Default: max (max|min) - Defines if it will be a max-width or min-width mediaquery.
+// @param {String} $dimension - Default: width (width|height) - Defines if it will be a width or height mediaquery.
+// @return {Boolean} True/false if the item is contained in the list.
+// @see Used in: {@link abstracts/mixins/mixins-media-queries.scss}
+// @see Used inside: {@link abstracts/variables/abstracts-variables-breakpoints.scss}, {@link abstracts/mixins/abstracts-mixins-contains.scss}
+
+@mixin media($breakpoint, $rule: 'max', $dimension: 'width', $unit: 'px') {
+	$rules: 'max', 'min';
+	$dimensions: 'width', 'height';
+	$units: 'px', 'em', 'rem', '%', 'vw', 'vh';
+
+	@if not contains($rules, $rule) {
+		$rule: 'max';
+	}
+
+	@if not contains($dimensions, $dimension) {
+		$rule: 'width';
+	}
+
+	@if type-of($breakpoint) == number {
+		@if unitless($breakpoint) {
+			@media (#{$rule}-#{$dimension}: #{$breakpoint} + $unit) {
+				@content;
+			}
+		}
+
+		@else if contains($units, unit($breakpoint)) {
+			@media (#{$rule}-#{$dimension}: #{$breakpoint}) {
+				@content;
+			}
+		}
+
+		@else {
+			@error 'Invalid units provided';
+		}
+	}
+
+	@else if variable_exists(breakpoints) {
+		@if map-has-key($breakpoints, $breakpoint) {
+			@media (#{$rule}-#{$dimension}: #{inspect(map-get($breakpoints, $breakpoint))}) {
+				@content;
+			}
+		}
+
+		@else {
+			@error 'Unfortunately, no value could be retrieved from `#{$breakpoint}`. ' + 'Available breakpoints are: #{map-keys($breakpoints)}.';
+		}
+	}
+
+	@else if variable_exists(breakpoint) {
+		@media (#{$rule}-#{$dimension}: #{$breakpoint}) {
+			@content;
+		}
+	}
+
+	@else {
+		@error 'Neither $breakpoints map nor variable provided are defined';
+	}
+}
