@@ -1,9 +1,5 @@
 <template>
 	<div class="home">
-		<img
-			alt="Vue logo"
-			src="../assets/logo.png"
-		>
 		<HelloWorld msg="Welcome to Your Vue.js App" />
 	</div>
 </template>
@@ -20,3 +16,17 @@
 		}
 	};
 </script>
+
+<style lang="scss" scoped>
+	.home {
+		text-align: center;
+
+		::v-deep {
+			.icon-logo-vue {
+				width: 12rem;
+				height: 12rem;
+				margin: 0 auto 2rem;
+			}
+		}
+	}
+</style>
