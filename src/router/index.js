@@ -7,12 +7,12 @@ Vue.use(VueRouter);
 const routes = [
 	{
 		path: '/',
-		name: 'home',
+		name: 'Home',
 		component: Home
 	},
 	{
 		path: '/about',
-		name: 'about',
+		name: 'About',
 
 		// route level code-splitting
 		// this generates a separate chunk (about.[hash].js) for this route
@@ -23,6 +23,8 @@ const routes = [
 ];
 
 const router = new VueRouter({
+	mode: 'history',
+	base: process.env.BASE_URL,
 	routes
 });
 
