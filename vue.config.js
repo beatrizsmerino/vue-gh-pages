@@ -1,5 +1,6 @@
 const path = require('path');
 const SVGSymbolSprite = require('svg-symbol-sprite-loader');
+const ESLintPlugin = require('eslint-webpack-plugin');
 const StyleLintPlugin = require('stylelint-webpack-plugin');
 
 // Define the resolve method to obtain the absolute path of the file
@@ -31,9 +32,18 @@ module.exports = {
 	// https://cli.vuejs.org/config/#lintonsave
 	lintOnSave: true,
 
-	// Add configuration for autofix stylelint errors
 	configureWebpack: {
 		plugins: [
+
+			// Add configuration for autofix eslint errors
+			new ESLintPlugin({
+				fix: true,
+				files: [
+					'src/**/*.{vue,js}'
+				]
+			}),
+
+			// Add configuration for autofix stylelint errors
 			new StyleLintPlugin({
 				fix: true,
 				files: [
@@ -46,12 +56,6 @@ module.exports = {
 	// A function that recives a ChainableConfig instance based on webpack chain
 	// Allows more fine-grained modifications to the internal webpack configuration
 	chainWebpack: config => {
-		// Add configuration for autofix eslint errors
-		config.module.rule('eslint').use('eslint-loader').
-			options({
-				fix: true
-			});
-
 		// Create and insert sprite before the html body
 		config.plugin('svg-symbol-sprite-loader').after('html').
 			use(SVGSymbolSprite.Plugin).
