@@ -1,21 +1,25 @@
 #!/usr/bin/env sh
 
-# abort on errors
+# Abort on errors
 set -e
 
-# build
+# Build the files for production
 npm run build
 
-# navigate into the build output directory
+# Navigate into the build output directory
 cd dist
 
+# Inizialize git repository
 git init
+
+# Add all files to the repository
 git add -A
+
+# Commit the changes
 git commit -m 'deploy'
 
-# if you are deploying to https://<USERNAME>.github.io/<REPO>
-# git push -f git@github.com:<USERNAME>/<REPO>.git master:gh-pagesgit push -f git@github.com:<USERNAME>/<REPO>.git master:gh-pages
-# git push -f https://github.com/<USERNAME>/<REPO>.git master:gh-pages
+# Push the new files to the remote repository if you are deploying to github.io
 git push -f https://github.com/beatrizsmerino/vue-gh-pages.git master:gh-pages
 
+# Return to the previous directory
 cd -
