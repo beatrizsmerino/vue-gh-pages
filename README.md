@@ -39,6 +39,21 @@ Version features:
 🔗 &nbsp; Demo: [Tag 1.0.0](https://github.com/beatrizsmerino/vue-gh-pages/tree/1.0.0)  
 🔗 &nbsp; Documentation: [README 1.0.0](./README-v1.md)
 
+## v2.0.0
+
+Version features:
+
+-   Runs a javascript file using a script npm.
+
+-   It does require the installation npm packages.
+
+-   In the terminal you can see few execution steps.
+
+-   To use it you need to customize few data.
+
+🔗 &nbsp; Demo: Current version  
+🔗 &nbsp; Documentation: [README 2.0.0](./README-v2.md)
+
 # 🚀 Project setup
 
 ## Install npm packages
