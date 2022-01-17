@@ -15,6 +15,7 @@
 	},
 	"dependencies": {
 		"core-js": "^3.20.3",
+		"execa": "^5.1.1",
 		"svg-symbol-sprite-loader": "^4.0.0",
 		"vue": "^2.6.14",
 		"vue-router": "^3.5.3"
