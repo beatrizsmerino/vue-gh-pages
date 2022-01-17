@@ -11,10 +11,11 @@
 		"stylelint:fix": "stylelint \"**/*.{css,scss,sass,vue}\" --fix --ignore-path .stylelintignore",
 		"eslint:fix": "vue-cli-service lint \"**/*.{json,js,vue}\" --fix --ignore-path .eslintignore",
 		"lint": "npm run prettier:fix && npm run eslint:fix && npm run stylelint:fix",
-		"deploy": "chmod +x ./deploy.sh && ./deploy.sh"
+		"deploy": "node deploy.js"
 	},
 	"dependencies": {
 		"core-js": "^3.20.3",
+		"execa": "^5.1.1",
 		"svg-symbol-sprite-loader": "^4.0.0",
 		"vue": "^2.6.14",
 		"vue-router": "^3.5.3"
