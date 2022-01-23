@@ -16,7 +16,6 @@ const fs = require('fs');
 			'build'
 		]);
 
-		// Understand if it's dist or build folder
 		const folderName = fs.existsSync('dist') ? 'dist' : 'build';
 		await execa('git', [
 			'--work-tree',
