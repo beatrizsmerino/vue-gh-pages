@@ -47,9 +47,6 @@
 		"stylelint-webpack-plugin": "^3.1.1",
 		"vue-template-compiler": "^2.6.14"
 	},
-	"peerDependencies": {
-		"postcss": "^8.4.6"
-	},
 	"resolutions": {
 		"ansi-html": "https://registry.npmjs.org/ansi-html-community/-/ansi-html-community-0.0.8.tgz",
 		"ansi-regex": "https://registry.npmjs.org/ansi-regex/-/ansi-regex-5.0.1.tgz",
