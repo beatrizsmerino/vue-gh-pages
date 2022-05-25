@@ -59,7 +59,6 @@ const fs = require('fs');
 		]);
 
 		console.log('Successfully deployed, check your settings');
-
 	} catch (e) {
 		console.log(e.message);
 		process.exit(1);
