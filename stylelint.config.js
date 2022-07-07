@@ -44,12 +44,21 @@ module.exports = {
 		'no-invalid-position-at-import-rule': true,
 		'no-irregular-whitespace': true,
 		'property-no-unknown': true,
-		'selector-pseudo-class-no-unknown': true,
+		'selector-pseudo-class-no-unknown': [
+			true,
+			{
+				ignorePseudoClasses: [
+					'v-deep',
+					'deep'
+				]
+			}
+		],
 		'selector-pseudo-element-no-unknown': [
 			true,
 			{
 				ignorePseudoElements: [
-					'v-deep'
+					'v-deep',
+					'deep'
 				]
 			}
 		],
