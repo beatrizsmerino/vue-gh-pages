@@ -38,7 +38,7 @@
 </script>
 
 <style lang="scss" scoped>
-	.nav {
+	.page-nav {
 		display: flex;
 		justify-content: center;
 		padding: 30px;
