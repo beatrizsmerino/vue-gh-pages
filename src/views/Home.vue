@@ -21,7 +21,7 @@
 	.home {
 		text-align: center;
 
-		::v-deep {
+		:deep() {
 			.icon-logo-vue {
 				width: 12rem;
 				height: 12rem;
