@@ -44,13 +44,34 @@
 		"**/.git": false
 	},
 	"incrementor.enums.values": [
-		["%", "em", "px", "rem"],
-		["block", "flex", "inline-block"],
-		["const", "let"],
-		["false", "true"],
-		["private", "protected", "public"]
+		[
+			"%",
+			"em",
+			"px",
+			"rem"
+		],
+		[
+			"block",
+			"flex",
+			"inline-block"
+		],
+		[
+			"const",
+			"let"
+		],
+		[
+			"false",
+			"true"
+		],
+		[
+			"private",
+			"protected",
+			"public"
+		]
 	],
-	"indentRainbow.excludedLanguages": ["plaintext"],
+	"indentRainbow.excludedLanguages": [
+		"plaintext"
+	],
 	"indentRainbow.updateDelay": 100,
 	"javascript.updateImportsOnFileMove.enabled": "always",
 	"prettier.enable": true,
