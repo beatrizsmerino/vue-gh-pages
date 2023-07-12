@@ -2,6 +2,7 @@ module.exports = {
 	customSyntax: 'postcss-html',
 	extends: [
 		'stylelint-config-standard',
+		'stylelint-config-recommended-vue',
 		'stylelint-config-sass-guidelines',
 		'stylelint-config-property-sort-order-smacss'
 	],
