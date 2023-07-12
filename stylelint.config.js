@@ -1,7 +1,6 @@
 module.exports = {
 	customSyntax: 'postcss-html',
 	extends: [
-		'stylelint-config-prettier',
 		'stylelint-config-standard',
 		'stylelint-config-sass-guidelines',
 		'stylelint-config-property-sort-order-smacss'
