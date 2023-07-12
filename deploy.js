@@ -2,6 +2,7 @@
 const execa = require("execa");
 const fs = require("fs");
 
+// eslint-disable-next-line max-statements
 (async () => {
 	try {
 		await execa("git", [
@@ -61,6 +62,7 @@ const fs = require("fs");
 		console.log("Successfully deployed, check your settings");
 	} catch (e) {
 		console.log(e.message);
+		// eslint-disable-next-line no-process-exit
 		process.exit(1);
 	}
 })();
