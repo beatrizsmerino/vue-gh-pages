@@ -20,7 +20,13 @@ module.exports = {
 		}
 	],
 	parserOptions: {
-		parser: '@babel/eslint-parser'
+		parser: '@babel/eslint-parser',
+		ecmaFeatures: {
+			'jsx': true,
+		},
+		ecmaVersion: 'latest',
+		sourceType: 'module',
+		requireConfigFile: false,
 	},
 	plugins: [
 		'vue',
@@ -37,13 +43,17 @@ module.exports = {
 				multiline: true
 			}
 		],
-		'array-bracket-spacing': 2,
+		'array-bracket-spacing': [
+			2,
+			'always',
+		],
 		'array-callback-return': 1,
 		'array-element-newline': [
 			2,
 			{
-				minItems: 1
-			}
+				'multiline': true,
+				'minItems': 1,
+			},
 		],
 		'arrow-body-style': [
 			1,
@@ -54,8 +64,9 @@ module.exports = {
 		'block-scoped-var': 2,
 		'block-spacing': 2,
 		'brace-style': 2,
+		'callback-return': 2,
 		'camelcase': [
-			1,
+			2,
 			{
 				ignoreDestructuring: true,
 				ignoreImports: false,
@@ -66,19 +77,18 @@ module.exports = {
 		'class-methods-use-this': 2,
 		'comma-dangle': [
 			2,
-			{
-				arrays: 'never',
-				exports: 'never',
-				functions: 'never',
-				imports: 'never',
-				objects: 'never'
-			}
+			'always-multiline',
 		],
 		'comma-spacing': 2,
 		'comma-style': 2,
-		'complexity': 0,
+		'complexity': [
+			2,
+			{
+				'max': 4,
+			},
+		],
 		'computed-property-spacing': 2,
-		'consistent-return': 1,
+		'consistent-return': 2,
 		'consistent-this': 1,
 		'curly': 2,
 		'default-case': 2,
@@ -99,7 +109,7 @@ module.exports = {
 		'generator-star-spacing': 0,
 		'global-require': 0,
 		'grouped-accessor-pairs': 2,
-		'guard-for-in': 1,
+		'guard-for-in': 2,
 		'handle-callback-err': 2,
 		'id-blacklist': 2,
 		'id-length': [
@@ -115,7 +125,7 @@ module.exports = {
 			2,
 			'tab'
 		],
-		'init-declarations': 1,
+		'init-declarations': 2,
 		'jsx-quotes': [
 			2,
 			'prefer-double'
@@ -136,7 +146,7 @@ module.exports = {
 		'lines-between-class-members': 2,
 		'max-classes-per-file': 1,
 		'max-depth': 1,
-		'max-length': 0,
+		'max-len': 0,
 		'max-lines': [
 			1,
 			{
@@ -153,7 +163,12 @@ module.exports = {
 		],
 		'max-nested-callbacks': 2,
 		'max-params': 2,
-		'max-statements': 0,
+		'max-statements': [
+			1,
+			{
+				'max': 10,
+			},
+		],
 		'max-statements-per-line': [
 			2,
 			{
@@ -184,10 +199,10 @@ module.exports = {
 		'no-caller': 2,
 		'no-catch-shadow': 2,
 		'no-confusing-arrow': 2,
-		'no-console': process.env.NODE_ENV === 'production' ? 1 : 'off',
+		'no-console': process.env.NODE_ENV === 'production' ? 2 : 'off',
 		'no-constructor-return': 2,
 		'no-continue': 2,
-		'no-debugger': process.env.NODE_ENV === 'production' ? 1 : 'off',
+		'no-debugger': process.env.NODE_ENV === 'production' ? 2 : 'off',
 		'no-div-regex': 2,
 		'no-dupe-else-if': 2,
 		'no-duplicate-imports': 2,
@@ -240,6 +255,7 @@ module.exports = {
 		'no-path-concat': 2,
 		'no-plusplus': 0,
 		'no-process-env': 0,
+		'no-process-exit': 2,
 		'no-proto': 2,
 		'no-prototype-builtins': 0,
 		'no-restricted-globals': 2,
@@ -303,16 +319,9 @@ module.exports = {
 		'object-curly-newline': [
 			2,
 			{
-				ExportDeclaration: {
-					minProperties: 3,
-					multiline: true
-				},
-				ImportDeclaration: 'never',
-				ObjectExpression: 'always',
-				ObjectPattern: {
-					multiline: true
-				}
-			}
+				'multiline': false,
+				'consistent': true,
+			},
 		],
 		'object-curly-spacing': [
 			2,
@@ -321,7 +330,7 @@ module.exports = {
 		'object-property-newline': [
 			2,
 			{
-				allowAllPropertiesOnSameLine: true
+				allowAllPropertiesOnSameLine: false
 			}
 		],
 		'object-shorthand': 2,
@@ -355,11 +364,11 @@ module.exports = {
 		'prefer-template': 2,
 		'quote-props': [
 			2,
-			'consistent'
+			'always'
 		],
 		'quotes': [
 			2,
-			'single',
+			'double',
 			{
 				allowTemplateLiterals: true,
 				avoidEscape: true
@@ -370,7 +379,7 @@ module.exports = {
 			'as-needed'
 		],
 		'require-atomic-updates': 2,
-		'require-await': 1,
+		'require-await': 2,
 		'require-unicode-regexp': 2,
 		'rest-spread-spacing': 2,
 		'semi': [
@@ -431,14 +440,29 @@ module.exports = {
 		'vue/max-attributes-per-line': [
 			2,
 			{
-				multiline: 1,
-				singleline: 1
-			}
+				'singleline': {
+					'max': 1,
+				},
+				'multiline': {
+					'max': 1,
+				},
+			},
 		],
 		'vue/multi-word-component-names': 0,
+		'vue/multiline-html-element-content-newline': [
+			2,
+			{
+				'ignoreWhenEmpty': true,
+				'ignores': [
+					'pre',
+					'textarea',
+				],
+				'allowEmptyLines': false,
+			},
+		],
+		'vue/no-reserved-component-names': 0,
 		'vue/no-side-effects-in-computed-properties': 0,
 		'vue/no-v-html': 0,
-		'vue/order-in-components': 2,
 		'vue/require-default-prop': 0,
 		'vue/script-indent': [
 			2,
