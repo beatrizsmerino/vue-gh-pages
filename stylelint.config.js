@@ -141,6 +141,6 @@ module.exports = {
 		'selector-pseudo-element-colon-notation': 'single',
 		'selector-class-pattern': null,
 		'selector-type-case': 'lower',
-		'value-keyword-case': 'lower',
+		'value-keyword-case': 'lower'
 	}
 };
