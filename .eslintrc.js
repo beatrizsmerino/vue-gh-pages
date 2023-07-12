@@ -15,6 +15,7 @@ module.exports = {
 	],
 	plugins: [
 		'vue',
+		'json',
 		'prettier'
 	],
 	rules: {
