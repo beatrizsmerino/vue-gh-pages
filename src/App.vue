@@ -35,7 +35,7 @@
 </script>
 
 <style lang="scss">
-	@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600&display=swap');
+	@import 'https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600&display=swap';
 
 	// PARTIALS SASS
 	// =================================================
@@ -51,11 +51,11 @@
 
 	// BASE
 	//----------------------------------------------------------------------
-	@import url('@/assets/scss/base/base-reset');
-	@import url('@/assets/scss/base/base-global');
+	@import '@/assets/scss/base/base-reset';
+	@import '@/assets/scss/base/base-global';
 
 	// COMPONENTS
 	//----------------------------------------------------------------------
-	@import url('@/assets/scss/components/components-page');
-	@import url('@/assets/scss/components/components-link');
+	@import '@/assets/scss/components/components-page';
+	@import '@/assets/scss/components/components-link';
 </style>
