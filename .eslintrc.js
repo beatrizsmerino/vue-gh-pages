@@ -30,8 +30,8 @@ module.exports = {
 	},
 	"plugins": [
 		"vue",
-		"json",
 		"prettier",
+		"json",
 	],
 	"root": true,
 	"rules": {
