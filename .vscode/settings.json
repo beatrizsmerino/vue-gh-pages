@@ -1,4 +1,7 @@
 {
+	"[vue]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
 	"editor.accessibilitySupport": "on",
 	"editor.bracketPairColorization.enabled": true,
 	"editor.codeActionsOnSave": {
@@ -8,9 +11,6 @@
 		"source.fixAll.stylelint": true
 	},
 	"editor.defaultFormatter": "esbenp.prettier-vscode",
-	"[vue]": {
-		"editor.defaultFormatter": "esbenp.prettier-vscode"
-	},
 	"editor.detectIndentation": false,
 	"editor.fontFamily": "Menlo, Monaco, 'Courier New', monospace",
 	"editor.fontSize": 12,
