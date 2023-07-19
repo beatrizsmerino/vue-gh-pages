@@ -1,5 +1,8 @@
 {
-	"editor.accessibilitySupport": "on",
+	"[vue]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	"editor.accessibilitySupport": "off",
 	"editor.bracketPairColorization.enabled": true,
 	"editor.codeActionsOnSave": {
 		"source.fixAll.eslint": true,
@@ -8,11 +11,9 @@
 		"source.fixAll.stylelint": true
 	},
 	"editor.defaultFormatter": "esbenp.prettier-vscode",
-	"[vue]": {
-		"editor.defaultFormatter": "esbenp.prettier-vscode"
-	},
 	"editor.detectIndentation": false,
-	"editor.fontFamily": "Menlo, Monaco, 'Courier New', monospace",
+	"editor.fontFamily": "JetBrains Mono, Menlo, Monaco, 'Courier New', monospace",
+	"editor.fontLigatures": false,
 	"editor.fontSize": 12,
 	"editor.formatOnSave": true,
 	"editor.guides.bracketPairs": "active",
@@ -28,6 +29,8 @@
 	},
 	"editor.suggestSelection": "first",
 	"editor.tabSize": 4,
+	"editor.wordWrap": "off",
+	"editor.wordWrapColumn": 120,
 	"emojisense.languages": {
 		"markdown": true,
 		"plaintext": {
