@@ -20,13 +20,13 @@ module.exports = {
 		},
 	],
 	"parserOptions": {
-		"parser": "@babel/eslint-parser",
 		"ecmaFeatures": {
 			"jsx": true,
 		},
 		"ecmaVersion": "latest",
-		"sourceType": "module",
+		"parser": "@babel/eslint-parser",
 		"requireConfigFile": false,
+		"sourceType": "module",
 	},
 	"plugins": [
 		"vue",
@@ -51,8 +51,8 @@ module.exports = {
 		"array-element-newline": [
 			2,
 			{
-				"multiline": true,
 				"minItems": 1,
+				"multiline": true,
 			},
 		],
 		"arrow-body-style": [
@@ -319,8 +319,8 @@ module.exports = {
 		"object-curly-newline": [
 			2,
 			{
-				"multiline": false,
 				"consistent": true,
+				"multiline": false,
 			},
 		],
 		"object-curly-spacing": [
@@ -440,10 +440,10 @@ module.exports = {
 		"vue/max-attributes-per-line": [
 			2,
 			{
-				"singleline": {
+				"multiline": {
 					"max": 1,
 				},
-				"multiline": {
+				"singleline": {
 					"max": 1,
 				},
 			},
@@ -452,12 +452,12 @@ module.exports = {
 		"vue/multiline-html-element-content-newline": [
 			2,
 			{
-				"ignoreWhenEmpty": true,
+				"allowEmptyLines": false,
 				"ignores": [
 					"pre",
 					"textarea",
 				],
-				"allowEmptyLines": false,
+				"ignoreWhenEmpty": true,
 			},
 		],
 		"vue/no-reserved-component-names": 0,
@@ -476,10 +476,10 @@ module.exports = {
 		"vue/singleline-html-element-content-newline": [
 			2,
 			{
-				"ignoreWhenEmpty": true,
 				"ignores": [
 					"pre",
 				],
+				"ignoreWhenEmpty": true,
 			},
 		],
 		"wrap-iife": 2,
