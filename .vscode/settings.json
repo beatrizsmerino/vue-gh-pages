@@ -12,7 +12,8 @@
 	},
 	"editor.defaultFormatter": "esbenp.prettier-vscode",
 	"editor.detectIndentation": false,
-	"editor.fontFamily": "Menlo, Monaco, 'Courier New', monospace",
+	"editor.fontFamily": "JetBrains Mono, Menlo, Monaco, 'Courier New', monospace",
+	"editor.fontLigatures": true,
 	"editor.fontSize": 12,
 	"editor.formatOnSave": true,
 	"editor.guides.bracketPairs": "active",
@@ -28,6 +29,8 @@
 	},
 	"editor.suggestSelection": "first",
 	"editor.tabSize": 4,
+	"editor.wordWrap": "wordWrapColumn",
+	"editor.wordWrapColumn": 120,
 	"emojisense.languages": {
 		"markdown": true,
 		"plaintext": {
