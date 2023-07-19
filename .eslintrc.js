@@ -463,6 +463,7 @@ module.exports = {
 		"vue/no-reserved-component-names": 0,
 		"vue/no-side-effects-in-computed-properties": 0,
 		"vue/no-v-html": 0,
+		"vue/order-in-components": 2,
 		"vue/require-default-prop": 0,
 		"vue/script-indent": [
 			2,
