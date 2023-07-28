@@ -15,7 +15,7 @@
 		"deploy": "node deploy.mjs"
 	},
 	"dependencies": {
-		"core-js": "^3.31.1",
+		"core-js": "^3.32.0",
 		"execa": "^7.1.1",
 		"svg-symbol-sprite-loader": "^5.1.0",
 		"vue": "^2.7.14",
