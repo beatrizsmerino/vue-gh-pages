@@ -1,10 +1,15 @@
 {
-	"name": "vue-gh-pages",
 	"version": "0.1.0",
 	"private": true,
+	"name": "vue-gh-pages",
+	"description": "Tutorial to publish a public repository made with Vue in GithubPages.",
+	"author": "beatrizsmerino@gmail.com",
+	"license": "ISC",
+	"main": "index.js",
 	"scripts": {
 		"install:clean": "rm -rf node_modules package-lock.json",
-		"preinstall": "npm run install:clean && npm install --package-lock-only --ignore-scripts && npx npm-force-resolutions",
+		"dependencies:fix": "npm install --package-lock-only --ignore-scripts && npx npm-force-resolutions",
+		"preinstall": "npm run install:clean && npm run dependencies:fix",
 		"postinstall": "npm run lint",
 		"serve": "vue-cli-service serve",
 		"build": "vue-cli-service build",
@@ -29,7 +34,7 @@
 		"@vue/cli-plugin-router": "^5.0.8",
 		"@vue/cli-service": "^5.0.8",
 		"@vue/eslint-config-prettier": "^7.1.0",
-		"eslint": "^8.45.0",
+		"eslint": "^8.46.0",
 		"eslint-config-prettier": "^8.9.0",
 		"eslint-plugin-json": "^3.1.0",
 		"eslint-plugin-prettier": "^5.0.0",
@@ -51,7 +56,7 @@
 	},
 	"resolutions": {},
 	"volta": {
-		"node": "14.19.3",
-		"npm": "6.14.17"
+		"node": "14.21.3",
+		"npm": "6.14.18"
 	}
 }
