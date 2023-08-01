@@ -2,6 +2,7 @@
 	"version": "0.1.0",
 	"private": true,
 	"name": "vue-gh-pages",
+	"description": "Tutorial to publish a public repository made with Vue in GithubPages.",
 	"scripts": {
 		"install:clean": "rm -rf node_modules package-lock.json",
 		"dependencies:fix": "npm install --package-lock-only --ignore-scripts && npx npm-force-resolutions",
