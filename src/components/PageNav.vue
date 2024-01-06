@@ -19,21 +19,21 @@
 
 <script>
 	export default {
-		name: 'PageNav',
+		"name": "PageNav",
 		data() {
 			return {
-				navList: [
+				"navList": [
 					{
-						name: 'Home',
-						path: '/'
+						"name": "Home",
+						"path": "/",
 					},
 					{
-						name: 'About',
-						path: '/about'
-					}
-				]
+						"name": "About",
+						"path": "/about",
+					},
+				],
 			};
-		}
+		},
 	};
 </script>
 
@@ -55,7 +55,7 @@
 
 			&:not(:last-child) {
 				&:after {
-					content: '|';
+					content: "|";
 					display: inline-block;
 					padding: 0 1rem;
 				}
