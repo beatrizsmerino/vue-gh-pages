@@ -38,25 +38,25 @@ Version features:
 
 ## 🚀 Commands
 
-### Install npm packages
+### Install dependencies
 
 ```bash
 npm install
 ```
 
-### Create a Server for development (compiles and hot-reloads the code)
+### Compiles and hot-reloads for development
 
 ```bash
 npm run serve
 ```
 
-### Build the files for production (compile and minify the code)
+### Compiles and minifies for production
 
 ```bash
 npm run build
 ```
 
-### Format the code (lints and fix bugs)
+### Lints and fixes files
 
 ```bash
 npm run lint
