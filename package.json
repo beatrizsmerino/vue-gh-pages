@@ -1,5 +1,5 @@
 {
-	"version": "0.1.0",
+	"version": "1.0.0",
 	"private": true,
 	"name": "vue-gh-pages",
 	"description": "Tutorial to publish a public repository made with Vue in GithubPages.",
