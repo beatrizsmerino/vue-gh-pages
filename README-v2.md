@@ -1,4 +1,4 @@
-# 🌱 v2.0.0
+# 🔖 v2.0.0
 
 This version executes the `deploy.js` file using the same npm `deploy` script declared in the `package.json` file. In contrast to the previous version, it has been developed in javascript, although `shell` scripts in `bash` language are still used inside it. The npm script has been improved, now it is simpler, **it is not necessary to enable the execution permissions**, in the root of the project, before executing the js file with node.
 
