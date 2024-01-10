@@ -70,9 +70,9 @@ npm run deploy
 
 ## 🔗 References
 
--  🔖&nbsp; Title: [Deployment. Platform Guides. GitHub Pages. Pushing updates manually](https://cli.vuejs.org/guide/deployment.html#github-pages). Author: [Vue.js](https://cli.vuejs.org/). Website: Vue. Date: 2021
--  🔖&nbsp; Title: [Cómo publicar una aplicación Vue en GitHub Pages](https://www.neoguias.com/como-publicar-aplicacion-vue-github-pages/). Author: [Edu Lázaro](https://www.neoguias.com/tutoriales/vue/). Website: Neoguias. Date: 2021
--  🔖&nbsp; Title: [How I Use GitHub Actions to Auto-deploy my Vue.js Site to GitHub Pages](https://dev.to/juniordevforlife/how-i-use-github-actions-to-auto-deploy-my-vue-js-site-to-github-pages-49bf). Author: [Jason F](https://dev.to/juniordevforlife). Website: DEV. Date: 2021
--  🔖&nbsp; Title: [Deploy to Github Pages like a pro with Github Actions](https://dev.to/rolanddoda/deploy-to-github-pages-like-a-pro-with-github-actions-4hdg#create-a-github-action-to-automate-deployment). Author: [Roland Doda](https://dev.to/rolanddoda). Website: DEV. Date: 2020
--  🔖&nbsp; Title: [Deploying Vue Apps to Github Pages](https://medium.com/swlh/deploy-vue-app-to-github-pages-2ada48d7397e). Author: [Bobby Allen](https://medium.com/@protonbobby). Website: Medium. Date: 2020
--  🔖&nbsp; Title: [vue-gh-pages](https://github.com/cristinafsanz/vue-gh-pages). Author: [Cristina Sanz](https://github.com/cristinafsanz). Website: GitHub. Date: 2017
+-  Title: [Deployment. Platform Guides. GitHub Pages. Pushing updates manually](https://cli.vuejs.org/guide/deployment.html#github-pages). Author: [Vue.js](https://cli.vuejs.org/). Website: Vue. Date: 2021
+-  Title: [Cómo publicar una aplicación Vue en GitHub Pages](https://www.neoguias.com/como-publicar-aplicacion-vue-github-pages/). Author: [Edu Lázaro](https://www.neoguias.com/tutoriales/vue/). Website: Neoguias. Date: 2021
+-  Title: [How I Use GitHub Actions to Auto-deploy my Vue.js Site to GitHub Pages](https://dev.to/juniordevforlife/how-i-use-github-actions-to-auto-deploy-my-vue-js-site-to-github-pages-49bf). Author: [Jason F](https://dev.to/juniordevforlife). Website: DEV. Date: 2021
+-  Title: [Deploy to Github Pages like a pro with Github Actions](https://dev.to/rolanddoda/deploy-to-github-pages-like-a-pro-with-github-actions-4hdg#create-a-github-action-to-automate-deployment). Author: [Roland Doda](https://dev.to/rolanddoda). Website: DEV. Date: 2020
+-  Title: [Deploying Vue Apps to Github Pages](https://medium.com/swlh/deploy-vue-app-to-github-pages-2ada48d7397e). Author: [Bobby Allen](https://medium.com/@protonbobby). Website: Medium. Date: 2020
+-  Title: [vue-gh-pages](https://github.com/cristinafsanz/vue-gh-pages). Author: [Cristina Sanz](https://github.com/cristinafsanz). Website: GitHub. Date: 2017
