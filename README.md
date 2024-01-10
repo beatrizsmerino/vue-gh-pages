@@ -22,7 +22,7 @@ For more information, see:
 -   "[Using a custom domain with GitHub Pages](https://docs.github.com/en/articles/using-a-custom-domain-with-github-pages)": You can host your site on GitHub's `github.io` domain or on your own custom domain.
 -   "[Creating a GitHub Pages site](https://docs.github.com/en/pages/getting-started-with-github-pages/about-github-pages)": To start, you need to **enable the service of GitHub Pages** in your Github repository.
 
-## 🔖 Tags to versions
+## 🔖 Tags versions
 
 ### v1.0.0
 
