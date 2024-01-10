@@ -24,7 +24,7 @@ This repository has been created from the [vue-gh-pages](https://github.com/cris
 - In the terminal you can see the execution steps.
 - To use it you need to customize some data.
 
-## v2.0.0
+### v2.0.0
 
 Version features:
 
