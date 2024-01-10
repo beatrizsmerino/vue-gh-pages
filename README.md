@@ -9,7 +9,7 @@
 
 ![Deploy Vue app](./README/images/vue-gh-pages.jpg)
 
-## Description
+## 🎯 Description
 
 This repository has been created with the idea of serving as a tutorial to publish a public repository on the `github.io` domain using GitHub Pages.
 
