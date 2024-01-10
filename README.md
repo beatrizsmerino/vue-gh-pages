@@ -23,9 +23,9 @@ For more information, see:
 
 -   "[Creating a GitHub Pages site](https://docs.github.com/en/pages/getting-started-with-github-pages/about-github-pages)": To start, you need to **enable the service of GitHub Pages** in your Github repository.
 
-# 🌱 Tags to versions
+## 🌱 Tags to versions
 
-## v1.0.0
+### v1.0.0
 
 Version features:
 
@@ -40,39 +40,39 @@ Version features:
 🔗 &nbsp; Demo: [Tag 1.0.0](https://github.com/beatrizsmerino/vue-gh-pages/tree/1.0.0)  
 🔗 &nbsp; Documentation: [README 1.0.0](./README-v1.md)
 
-# 🚀 Commands
+## 🚀 Commands
 
-## Install npm packages
+### Install npm packages
 
 ```bash
 npm install
 ```
 
-## Create a Server for development (compiles and hot-reloads the code)
+### Create a Server for development (compiles and hot-reloads the code)
 
 ```bash
 npm run serve
 ```
 
-## Build the files for production (compile and minify the code)
+### Build the files for production (compile and minify the code)
 
 ```bash
 npm run build
 ```
 
-## Format the code (lints and fix bugs)
+### Format the code (lints and fix bugs)
 
 ```bash
 npm run lint
 ```
 
-## Publish the code for production in GitHub Pages
+### Publish the code for production in GitHub Pages
 
 ```bash
 npm run deploy
 ```
 
-# 🧐 References
+## 🧐 References
 
 1.  🔖&nbsp; Title: [Deployment. Platform Guides. GitHub Pages. Pushing updates manually](https://cli.vuejs.org/guide/deployment.html#github-pages). Author: [Vue.js](https://cli.vuejs.org/). Website: Vue. Date: 2021
 
