@@ -17,7 +17,7 @@ To use it you need to customize some data. Change the `<USER_NAME>` and `<REPO_N
 
 ## ⚙️ How it works
 
-### 1️⃣ . The `.gitignore` file
+### 1️⃣ The `.gitignore` file
 
 1.1. In the root of the project, there is a file called `.gitignore`, which was created when creating the [vue app](https://cli.vuejs.org/guide/creating-a-project.html), if not create it with the next command:
 
@@ -33,7 +33,7 @@ node_modules
 /dist
 ```
 
-### 2️⃣ . The `vue.config.js` file
+### 2️⃣ The `vue.config.js` file
 
 2.1. In the root of the project, there is also a `vue.config.js` file, if not create it with the next command:
 
@@ -51,7 +51,7 @@ module.exports = {
 
 2.3. In the previous code, update the [`publicPath`](https://cli.vuejs.org/config/#publicpath) changing the `<REPO_NAME>` variable for the name of the repository where the application will be deployed.
 
-### 3️⃣ . The `deploy.sh` file
+### 3️⃣ The `deploy.sh` file
 
 3.1. In the root of the project create the `deploy.sh` file:
 
@@ -119,7 +119,7 @@ git push -f https://github.com/<USER_NAME>/<REPO_NAME>.git master:gh-pages
 git push -f git@github.com:<USER_NAME>/<REPO_NAME>.git master:gh-pages
 ```
 
-### 4️⃣ . The `package.json` file
+### 4️⃣ The `package.json` file
 
 4.1. Create the next npm script inside of `package.json` file:
 
@@ -134,7 +134,7 @@ The script executes 2 commands, one after the other:
 1. `chmod +x deploy.sh`: Assign the execution permission in the root of the project.
 2. `./deploy.sh`: Execute the `deploy.sh` file with `node`.
 
-### 5️⃣ . Deploy the application
+### 5️⃣ Deploy the application
 
 5.1. Finally, you can deploy the application by running the `npm run deploy` command with the terminal while in the root of the project.
 
