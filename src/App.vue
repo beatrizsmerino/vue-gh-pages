@@ -3,7 +3,7 @@
 		id="app"
 		class="page__app"
 	>
-		<Nav />
+		<PageNav />
 		<main class="page__main">
 			<router-view />
 		</main>
@@ -11,31 +11,31 @@
 </template>
 
 <script>
-	import Nav from '@/components/Nav';
+	import PageNav from "@/components/PageNav";
 	export default {
-		name: 'App',
-		components: {
-			Nav
+		"name": "App",
+		"components": {
+			PageNav,
 		},
-		watch: {
-			$route: {
+		"watch": {
+			"$route": {
 				handler(to, from) {
-					const html = document.getElementsByTagName('html')[0];
-					const body = document.getElementsByTagName('body')[0];
-					if (typeof from !== 'undefined') {
-						html.classList.remove('page', `page-${from.name.toLowerCase()}`);
+					const html = document.getElementsByTagName("html")[0];
+					const body = document.getElementsByTagName("body")[0];
+					if (typeof from !== "undefined") {
+						html.classList.remove("page", `page-${from.name.toLowerCase()}`);
 					}
-					html.classList.add('page', `page-${to.name.toLowerCase()}`);
-					body.classList.add('page__body');
+					html.classList.add("page", `page-${to.name.toLowerCase()}`);
+					body.classList.add("page__body");
 				},
-				immediate: true
-			}
-		}
+				"immediate": true,
+			},
+		},
 	};
 </script>
 
 <style lang="scss">
-	@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600&display=swap');
+	@import "https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600&display=swap";
 
 	// PARTIALS SASS
 	// =================================================
@@ -51,11 +51,11 @@
 
 	// BASE
 	//----------------------------------------------------------------------
-	@import '@/assets/scss/base/base-reset';
-	@import '@/assets/scss/base/base-global';
+	@import "@/assets/scss/base/base-reset";
+	@import "@/assets/scss/base/base-global";
 
 	// COMPONENTS
 	//----------------------------------------------------------------------
-	@import '@/assets/scss/components/components-page';
-	@import '@/assets/scss/components/components-link';
+	@import "@/assets/scss/components/components-page";
+	@import "@/assets/scss/components/components-link";
 </style>

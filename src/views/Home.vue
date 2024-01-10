@@ -7,13 +7,13 @@
 <script>
 
 	// @ is an alias to /src
-	import HelloWorld from '@/components/HelloWorld.vue';
+	import HelloWorld from "@/components/HelloWorld.vue";
 
 	export default {
-		name: 'Home',
-		components: {
-			HelloWorld
-		}
+		"name": "Home",
+		"components": {
+			HelloWorld,
+		},
 	};
 </script>
 
@@ -21,7 +21,7 @@
 	.home {
 		text-align: center;
 
-		::v-deep {
+		:deep() {
 			.icon-logo-vue {
 				width: 12rem;
 				height: 12rem;

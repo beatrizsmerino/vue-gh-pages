@@ -15,29 +15,29 @@
 </template>
 
 <script>
-	import { iconMap } from '@/assets/images/icons/icons-list.js';
+	import { iconMap } from "@/assets/images/icons/icons-list.js";
 
 	export default {
-		props: {
-			name: {
-				type: String,
-				required: true,
-				validate: name => Object.keys(iconMap).includes(name)
+		"props": {
+			"name": {
+				"type": String,
+				"required": true,
+				"validate": name => Object.keys(iconMap).includes(name),
 			},
-			ariaLabel: {
-				type: String,
-				default: ''
+			"ariaLabel": {
+				"type": String,
+				"default": "",
 			},
-			title: {
-				type: String,
-				default: ''
-			}
+			"title": {
+				"type": String,
+				"default": "",
+			},
 		},
-		computed: {
+		"computed": {
 			iconId() {
 				return iconMap[this.name];
-			}
-		}
+			},
+		},
 	};
 </script>
 
