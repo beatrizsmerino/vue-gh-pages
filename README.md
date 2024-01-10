@@ -19,8 +19,6 @@ This repository has been created from the [vue-gh-pages](https://github.com/cris
 
 ### v1.0.0
 
-Version features:
-
 - Runs a bash file using a script npm.
 - It does not require the installation npm packages.
 - In the terminal you can see the execution steps.
