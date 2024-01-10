@@ -21,10 +21,10 @@ This repository has been created with the idea of serving as a tutorial to publi
 
 Version features:
 
--   Runs a bash file using a script npm.
--   It does not require the installation npm packages.
--   In the terminal you can see the execution steps.
--   To use it you need to customize some data.
+- Runs a bash file using a script npm.
+- It does not require the installation npm packages.
+- In the terminal you can see the execution steps.
+- To use it you need to customize some data.
 
 🔗 &nbsp; Demo: [Tag 1.0.0](https://github.com/beatrizsmerino/vue-gh-pages/tree/1.0.0)  
 🔗 &nbsp; Documentation: [README 1.0.0](./README-v1.md)
@@ -69,7 +69,7 @@ npm run deploy
 -  Title: [Deploy to Github Pages like a pro with Github Actions](https://dev.to/rolanddoda/deploy-to-github-pages-like-a-pro-with-github-actions-4hdg#create-a-github-action-to-automate-deployment). Author: [Roland Doda](https://dev.to/rolanddoda). Website: DEV. Date: 2020
 -  Title: [Deploying Vue Apps to Github Pages](https://medium.com/swlh/deploy-vue-app-to-github-pages-2ada48d7397e). Author: [Bobby Allen](https://medium.com/@protonbobby). Website: Medium. Date: 2020
 -  Title: [vue-gh-pages](https://github.com/cristinafsanz/vue-gh-pages). Author: [Cristina Sanz](https://github.com/cristinafsanz). Website: GitHub. Date: 2017
--   [About GitHub Pages](https://docs.github.com/en/pages/getting-started-with-github-pages/about-github-pages): To learn about the different types of GitHub Pages sites.
--   [Changing the visibility of your GitHub Pages site](https://docs.github.com/en/pages/getting-started-with-github-pages/changing-the-visibility-of-your-github-pages-site): You can manage access control by publishing the site as public or private.
--   [Using a custom domain with GitHub Pages](https://docs.github.com/en/articles/using-a-custom-domain-with-github-pages): You can host your site on GitHub's `github.io` domain or on your own custom domain.
--   [Creating a GitHub Pages site](https://docs.github.com/en/pages/getting-started-with-github-pages/about-github-pages): To start, you need to **enable the service of GitHub Pages** in your Github repository.
+- [About GitHub Pages](https://docs.github.com/en/pages/getting-started-with-github-pages/about-github-pages): To learn about the different types of GitHub Pages sites.
+- [Changing the visibility of your GitHub Pages site](https://docs.github.com/en/pages/getting-started-with-github-pages/changing-the-visibility-of-your-github-pages-site): You can manage access control by publishing the site as public or private.
+- [Using a custom domain with GitHub Pages](https://docs.github.com/en/articles/using-a-custom-domain-with-github-pages): You can host your site on GitHub's `github.io` domain or on your own custom domain.
+- [Creating a GitHub Pages site](https://docs.github.com/en/pages/getting-started-with-github-pages/about-github-pages): To start, you need to **enable the service of GitHub Pages** in your Github repository.
