@@ -40,7 +40,7 @@ Version features:
 🔗 &nbsp; Demo: [Tag 1.0.0](https://github.com/beatrizsmerino/vue-gh-pages/tree/1.0.0)  
 🔗 &nbsp; Documentation: [README 1.0.0](./README-v1.md)
 
-# 🚀 Project setup
+# 🚀 Commands
 
 ## Install npm packages
 
