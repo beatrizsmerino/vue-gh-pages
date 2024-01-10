@@ -17,15 +17,12 @@ This repository has been created from the [vue-gh-pages](https://github.com/cris
 
 ## 🔖 Tags versions
 
-### v1.0.0
+### [v1.x.x](./README-v1.md)
 
 - Runs a bash file using a script npm.
 - It does not require the installation npm packages.
 - In the terminal you can see the execution steps.
 - To use it you need to customize some data.
-
-🔗 &nbsp; Demo: [Tag 1.0.0](https://github.com/beatrizsmerino/vue-gh-pages/tree/1.0.0)  
-🔗 &nbsp; Documentation: [README 1.0.0](./README-v1.md)
 
 ## 🚀 Commands
 
