@@ -19,7 +19,7 @@ On the other hand, another advantage of this version is that you only have to **
 
 In this version the points 1️⃣&nbsp;, 2️⃣&nbsp; and 5️⃣&nbsp;, you can omit them, they work exactly the same as in version [1.0.0](https://github.com/beatrizsmerino/vue-gh-pages/tree/1.0.0).
 
-## 1️⃣ . The `.gitignore` file
+## 1️⃣ The `.gitignore` file
 
 1.1. In the root of the project, there is a file called `.gitignore`, which was created when creating the [vue app](https://cli.vuejs.org/guide/creating-a-project.html), if not create it with the next command:
 
@@ -35,7 +35,7 @@ node_modules
 /dist
 ```
 
-## 2️⃣ . The `vue.config.js` file
+## 2️⃣ The `vue.config.js` file
 
 2.1. In the root of the project, there is also a `vue.config.js` file, if not create it with the next command:
 
@@ -53,7 +53,7 @@ module.exports = {
 
 2.3. In the previous code, update the [`publicPath`](https://cli.vuejs.org/config/#publicpath) changing the `<REPO_NAME>` variable for the name of the repository where the application will be deployed.
 
-## 3️⃣ . The `deploy.js` file
+## 3️⃣ The `deploy.js` file
 
 3.1. In the root of the project create the `deploy.js` file:
 
@@ -109,7 +109,7 @@ The `deploy.js` file is executed at the root of the project, it contains the ser
 8. `git checkout -f master`: Switches back to the `master` branch
 9. `git branch -D gh-pages`: Deletes the `gh-pages` branch
 
-## 4️⃣ . The `package.json` file
+## 4️⃣ The `package.json` file
 
 4.1. Create the next npm script inside of `package.json` file:
 
@@ -119,7 +119,7 @@ The `deploy.js` file is executed at the root of the project, it contains the ser
 }
 ```
 
-## 5️⃣ . Deploy the application
+## 5️⃣ Deploy the application
 
 5.1. Finally, you can deploy the application by running the `npm run deploy` command with the terminal while in the root of the project.
 
