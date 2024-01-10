@@ -9,7 +9,7 @@
 
 ![Deploy Vue app](./README/images/vue-gh-pages.jpg)
 
-> This repository has been created with the idea of serving as a tutorial to publish a public repository on the `github.io` domain using GitHub Pages.
+This repository has been created with the idea of serving as a tutorial to publish a public repository on the `github.io` domain using GitHub Pages.
 
 **GitHub Pages** is a free service that provides a simple way to host your own website about yourself, your organization, or your project. It takes `HTML`, `CSS` and `JavaScript` files directly from a repository on GitHub, optionally runs the files through a build process, and publishes a website. It is therefore a static site hosting service and **does not support server-side code** such as `PHP`, `Ruby` or `Python`.
 
