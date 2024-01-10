@@ -1,5 +1,7 @@
 # 🌱 v1.0.0
 
+## 🎯 Description
+
 This version runs the `deploy.sh` file using the npm `deploy` script declared in the `package.json` file.
 
 It does not require the installation of additional npm packages to work.
