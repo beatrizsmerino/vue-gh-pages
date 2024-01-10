@@ -149,5 +149,4 @@ https://<USER_NAME>.github.io/<REPO_NAME>/
 ```
 
 Here I leave you the example of mine:
-
 [https://beatrizsmerino.github.io/vue-gh-pages/](https://beatrizsmerino.github.io/vue-gh-pages/)
