@@ -2,6 +2,7 @@
 	"[vue]": {
 		"editor.defaultFormatter": "esbenp.prettier-vscode"
 	},
+	"commentTranslate.source": "Google",
 	"editor.accessibilitySupport": "off",
 	"editor.bracketPairColorization.enabled": true,
 	"editor.codeActionsOnSave": {
