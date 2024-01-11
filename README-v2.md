@@ -51,7 +51,7 @@ touch vue.config.js
 
 ```javascript
 module.exports = {
-	publicPath: process.env.NODE_ENV === 'production' ? '/<REPO_NAME>/' : '/'
+	publicPath: process.env.NODE_ENV === "production" ? "/<REPO_NAME>/" : "/"
 };
 ```
 
@@ -69,31 +69,31 @@ touch deploy-v2.mjs
 
 ```javascript
 /* eslint-disable no-console */
-const execa = require('execa');
-const fs = require('fs');
+const execa = require("execa");
+const fs = require("fs");
 
 (async () => {
 	try {
-		await execa('git', ['checkout', '--orphan', 'gh-pages']);
+		await execa("git", ["checkout", "--orphan", "gh-pages"]);
 
-		console.log('Building started...');
-		await execa('npm', ['run', 'build']);
+		console.log("Building started...");
+		await execa("npm", ["run", "build"]);
 
-		const folderName = fs.existsSync('dist') ? 'dist' : 'build';
-		await execa('git', ['--work-tree', folderName, 'add', '--all']);
+		const folderName = fs.existsSync("dist") ? "dist" : "build";
+		await execa("git", ["--work-tree", folderName, "add", "--all"]);
 
-		await execa('git', ['--work-tree', folderName, 'commit', '-m', 'ci(deploy): build files for production in the dist folder']);
+		await execa("git", ["--work-tree", folderName, "commit", "-m", "ci(deploy): build files for production in the dist folder"]);
 
-		console.log('Pushing to gh-pages...');
-		await execa('git', ['push', 'origin', 'HEAD:gh-pages', '--force']);
+		console.log("Pushing to gh-pages...");
+		await execa("git", ["push", "origin", "HEAD:gh-pages", "--force"]);
 
-		await execa('rm', ['-r', folderName]);
+		await execa("rm", ["-r", folderName]);
 
-		await execa('git', ['checkout', '-f', 'master']);
+		await execa("git", ["checkout", "-f", "master"]);
 
-		await execa('git', ['branch', '-D', 'gh-pages']);
+		await execa("git", ["branch", "-D", "gh-pages"]);
 
-		console.log('Successfully deployed, check your settings');
+		console.log("Successfully deployed, check your settings");
 	} catch (e) {
 		console.log(e.message);
 		process.exit(1);
@@ -107,7 +107,7 @@ The `deploy-v2.mjs` file is executed at the root of the project. It contains the
 2. `npm run build`: Builds the files for production.
 3. `folderName`: If the `dist` folder exists, it is used; otherwise, the `build` folder is used.
 4. `git --work-tree folderName add --all`: Adds all files to the new branch.
-5. `git --work-tree folderName commit -m ci(deploy): build files for production in the dist folder`: Commits the new branch.
+5. `git --work-tree folderName commit -m "ci(deploy): build files for production in the dist folder"`: Commits the new branch.
 6. `git push origin HEAD:gh-pages --force`: Pushes the new branch to the `gh-pages` branch of the repository.
 7. `rm -r folderName`: Removes the `dist` folder.
 8. `git checkout -f master`: Switches back to the `master` branch.
