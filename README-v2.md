@@ -1,6 +1,10 @@
-# 🌱 v2.0.0
+# 🔖 v2.0.0
 
-This version executes the `deploy.js` file using the same npm `deploy` script declared in the `package.json` file. In contrast to the previous version, it has been developed in javascript, although `shell` scripts in `bash` language are still used inside it. The npm script has been improved, now it is simpler, **it is not necessary to enable the execution permissions**, in the root of the project, before executing the js file with node.
+## 🎯 Description
+
+This version executes the `deploy.mjs` file using the same npm `deploy` script declared in the `package.json` file. In contrast to the previous version, it has been developed in JavaScript, although `shell` scripts in `bash` language are still used inside it. The npm script has been improved; now it is simpler, **it is not necessary to enable the execution permissions** in the root of the project before executing the JS file with Node.
+
+The choice of the file extension `.mjs` or `.cjs` instead of the traditional `.js` is related to the use of ECMAScript modules. The `.mjs` extension signifies that the file is using ESModules syntax, which allows for better compatibility with modern JavaScript features. It's a convention to differentiate files that use ESModules from the ones using CommonJS modules. This distinction can be important, especially when working in an environment that supports both module systems, as is the case in this project.
 
 This javascript file **depends on the installation of additional npm packages to work**, which can be inconvenient.
 
@@ -15,11 +19,11 @@ On the other hand, another advantage of this version is that you only have to **
 
 1. In the `vue.config.js` file you have to change the `<REPO_NAME>` variable to the name of your repository in the `pathPublic` property.
 
-# ⚙️ How it works
+## ⚙️ How it works
 
 In this version the points 1️⃣&nbsp;, 2️⃣&nbsp; and 5️⃣&nbsp;, you can omit them, they work exactly the same as in version [1.0.0](https://github.com/beatrizsmerino/vue-gh-pages/tree/1.0.0).
 
-## 1️⃣ . The `.gitignore` file
+### 1️⃣ The `.gitignore` file
 
 1.1. In the root of the project, there is a file called `.gitignore`, which was created when creating the [vue app](https://cli.vuejs.org/guide/creating-a-project.html), if not create it with the next command:
 
@@ -35,7 +39,7 @@ node_modules
 /dist
 ```
 
-## 2️⃣ . The `vue.config.js` file
+### 2️⃣ The `vue.config.js` file
 
 2.1. In the root of the project, there is also a `vue.config.js` file, if not create it with the next command:
 
@@ -53,15 +57,15 @@ module.exports = {
 
 2.3. In the previous code, update the [`publicPath`](https://cli.vuejs.org/config/#publicpath) changing the `<REPO_NAME>` variable for the name of the repository where the application will be deployed.
 
-## 3️⃣ . The `deploy.js` file
+### 3️⃣ The `deploy.mjs` file
 
-3.1. In the root of the project create the `deploy.js` file:
+3.1. In the root of the project create the `deploy.mjs` file:
 
 ```bash
-touch deploy.js
+touch deploy.mjs
 ```
 
-3.2. Inside of the `deploy.js` file paste the next code:
+3.2. Inside of the `deploy.mjs` file paste the next code:
 
 ```javascript
 /* eslint-disable no-console */
@@ -97,7 +101,7 @@ const fs = require('fs');
 })();
 ```
 
-The `deploy.js` file is executed at the root of the project, it contains the serial execution of the commands necessary for the project release:
+The `deploy.mjs` file is executed at the root of the project, it contains the serial execution of the commands necessary for the project release:
 
 1. `git checkout --orphan gh-pages`: Creates a new branch named `gh-pages`
 2. `npm run build`: Build the files for production
@@ -109,17 +113,17 @@ The `deploy.js` file is executed at the root of the project, it contains the ser
 8. `git checkout -f master`: Switches back to the `master` branch
 9. `git branch -D gh-pages`: Deletes the `gh-pages` branch
 
-## 4️⃣ . The `package.json` file
+### 4️⃣ The `package.json` file
 
 4.1. Create the next npm script inside of `package.json` file:
 
 ```json
 "scripts": {
-	"deploy": "node deploy.js"
+	"deploy": "node deploy.mjs"
 }
 ```
 
-## 5️⃣ . Deploy the application
+### 5️⃣ Deploy the application
 
 5.1. Finally, you can deploy the application by running the `npm run deploy` command with the terminal while in the root of the project.
 
@@ -134,5 +138,4 @@ https://<USER_NAME>.github.io/<REPO_NAME>/
 ```
 
 Here I leave you the example of mine:
-
-### [https://beatrizsmerino.github.io/vue-gh-pages/](https://beatrizsmerino.github.io/vue-gh-pages/)
+[https://beatrizsmerino.github.io/vue-gh-pages/](https://beatrizsmerino.github.io/vue-gh-pages/)
