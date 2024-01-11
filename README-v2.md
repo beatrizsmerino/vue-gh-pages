@@ -4,6 +4,8 @@
 
 This version executes the `deploy.mjs` file using the same npm `deploy` script declared in the `package.json` file. In contrast to the previous version, it has been developed in JavaScript, although `shell` scripts in `bash` language are still used inside it. The npm script has been improved; now it is simpler, **it is not necessary to enable the execution permissions** in the root of the project before executing the JS file with Node.
 
+The choice of the file extension `.mjs` or `.cjs` instead of the traditional `.js` is related to the use of ECMAScript modules. The `.mjs` extension signifies that the file is using ESModules syntax, which allows for better compatibility with modern JavaScript features. It's a convention to differentiate files that use ESModules from the ones using CommonJS modules. This distinction can be important, especially when working in an environment that supports both module systems, as is the case in this project.
+
 This javascript file **depends on the installation of additional npm packages to work**, which can be inconvenient.
 
 -   The [`execa`](https://www.npmjs.com/package/execa) allows us to use `shell` scripts from a javascript file.
