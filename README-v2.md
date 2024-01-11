@@ -68,7 +68,6 @@ touch deploy-v2.mjs
 3.2. Inside the `deploy-v2.mjs` file, paste the following code:
 
 ```javascript
-/* eslint-disable no-console */
 const execa = require("execa");
 const fs = require("fs");
 
