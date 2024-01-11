@@ -16,7 +16,7 @@ git init
 git add -A
 
 # Commit the changes
-git commit -m 'ci(deploy): build files for production in the dist folder'
+git commit -m "ci(deploy): build files for production in the dist folder"
 
 # Push the new files to the remote repository if you are deploying to github.io
 git push -f https://github.com/beatrizsmerino/vue-gh-pages.git master:gh-pages
