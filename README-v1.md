@@ -80,7 +80,7 @@ git init
 git add -A
 
 # Commit the changes
-git commit -m 'deploy'
+git commit -m 'ci(deploy): build files for production in the dist folder'
 
 # Push the new files to the remote repository if you are deploying to github.io
 git push -f https://github.com/<USER_NAME>/<REPO_NAME>.git master:gh-pages
@@ -97,7 +97,7 @@ The `bash` script built in the `deploy-v1.sh` file is executed at the root of th
 4. `cd dist`: Navigates into the `dist` folder, the output directory.
 5. `git init`: Initializes a new empty Git repository.
 6. `git add .`: Adds all folders and files to the `staging area` of the new Git repository.
-7. `git commit -m "deploy"`: Creates the first commit with the changes and the `deploy` message in the `master` branch of this new repository.
+7. `git commit -m "ci(deploy): build files for production in the dist folder"`: Creates the first commit with the changes in the `master` branch of this new repository.
 8. `git push -f https://github.com/<USER_NAME>/<REPO_NAME>.git master:gh-pages`: Pushes the changes from the `master` branch of the new repository to the `gh-pages` branch, which is automatically created if it does not exist, in our main repository.
 9. `cd -`: Returns to the previous directory.
 

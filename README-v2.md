@@ -82,7 +82,7 @@ const fs = require('fs');
 		const folderName = fs.existsSync('dist') ? 'dist' : 'build';
 		await execa('git', ['--work-tree', folderName, 'add', '--all']);
 
-		await execa('git', ['--work-tree', folderName, 'commit', '-m', 'gh-pages']);
+		await execa('git', ['--work-tree', folderName, 'commit', '-m', 'ci(deploy): build files for production in the dist folder']);
 
 		console.log('Pushing to gh-pages...');
 		await execa('git', ['push', 'origin', 'HEAD:gh-pages', '--force']);
@@ -107,7 +107,7 @@ The `deploy-v2.mjs` file is executed at the root of the project. It contains the
 2. `npm run build`: Builds the files for production.
 3. `folderName`: If the `dist` folder exists, it is used; otherwise, the `build` folder is used.
 4. `git --work-tree folderName add --all`: Adds all files to the new branch.
-5. `git --work-tree folderName commit -m gh-pages`: Commits the new branch.
+5. `git --work-tree folderName commit -m ci(deploy): build files for production in the dist folder`: Commits the new branch.
 6. `git push origin HEAD:gh-pages --force`: Pushes the new branch to the `gh-pages` branch of the repository.
 7. `rm -r folderName`: Removes the `dist` folder.
 8. `git checkout -f master`: Switches back to the `master` branch.
