@@ -2,7 +2,7 @@
 
 ## 🎯 Description
 
-This version executes the `deploy.mjs` file using the same npm `deploy` script declared in the `package.json` file. In contrast to the previous version, it has been developed in JavaScript, although `shell` scripts in `bash` language are still used inside it. The npm script has been improved; now it is simpler, **it is not necessary to enable the execution permissions** in the root of the project before executing the JS file with Node.
+This version executes the `deploy-v2.mjs` file using the npm `deploy:v2` script declared in the `package.json` file. In contrast to the previous version, it has been developed in JavaScript, although `shell` scripts in `bash` language are still used inside it. The npm script has been improved; now it is simpler, **it is not necessary to enable the execution permissions** in the root of the project before executing the JS file with Node.
 
 The choice of the file extension `.mjs` or `.cjs` instead of the traditional `.js` is related to the use of ECMAScript modules. The `.mjs` extension signifies that the file is using ESModules syntax, which allows for better compatibility with modern JavaScript features. It's a convention to differentiate files that use ESModules from the ones using CommonJS modules. This distinction can be important, especially when working in an environment that supports both module systems, as is the case in this project.
 
@@ -11,7 +11,7 @@ This javascript file **depends on the installation of additional npm packages to
 - The [`execa`](https://www.npmjs.com/package/execa) allows us to use `shell` scripts from a javascript file.
 - The [`fs`](https://nodejs.org/api/fs.html) module, you do not need to install it as a dependency in the `package.json` file, as you can access it if you have node installed globally on your computer. It allows you to interact with the file system in a way modeled on the standard `POSIX` functions. The Portable Operating System Interface (POSIX) is a family of standards specified by the IEEE Computer Society to maintain compatibility between operating systems.
 
-The process is the same as in version `1.x.x`, it consists in pushing manually (only when we execute the `npm run deploy` command in the terminal) the updates from the `master` branch to the `gh-pages` branch of a `git` repository uploaded to GitHub.
+The process is the same as in version `1.x.x`, it consists in pushing manually (only when we execute the `npm run deploy:v2` command in the terminal) the updates from the `master` branch to the `gh-pages` branch of a `git` repository uploaded to GitHub.
 
 During the execution process, **minimal information is displayed on the terminal**. The messages are created with `console.log` to indicate its start, push and successful or unsuccessful completion. So this would be another disadvantage of this version, as it is not specified which files are extracted, their weight and further compression.
 
@@ -57,15 +57,15 @@ module.exports = {
 
 2.3. In the previous code, update the [`publicPath`](https://cli.vuejs.org/config/#publicpath) changing the `<REPO_NAME>` variable for the name of the repository where the application will be deployed.
 
-### 3️⃣ The `deploy.mjs` file
+### 3️⃣ The `deploy-v2.mjs` file
 
-3.1. In the root of the project create the `deploy.mjs` file:
+3.1. In the root of the project create the `deploy-v2.mjs` file:
 
 ```bash
-touch deploy.mjs
+touch deploy-v2.mjs
 ```
 
-3.2. Inside of the `deploy.mjs` file paste the next code:
+3.2. Inside of the `deploy-v2.mjs` file paste the next code:
 
 ```javascript
 /* eslint-disable no-console */
@@ -101,7 +101,7 @@ const fs = require('fs');
 })();
 ```
 
-The `deploy.mjs` file is executed at the root of the project, it contains the serial execution of the commands necessary for the project release:
+The `deploy-v2.mjs` file is executed at the root of the project, it contains the serial execution of the commands necessary for the project release:
 
 1. `git checkout --orphan gh-pages`: Creates a new branch named `gh-pages`
 2. `npm run build`: Build the files for production
@@ -119,13 +119,13 @@ The `deploy.mjs` file is executed at the root of the project, it contains the se
 
 ```json
 "scripts": {
-	"deploy": "node deploy.mjs"
+	"deploy:v2": "node deploy-v2.mjs"
 }
 ```
 
 ### 5️⃣ Deploy the application
 
-5.1. Finally, you can deploy the application by running the `npm run deploy` command with the terminal while in the root of the project.
+5.1. Finally, you can deploy the application by running the `npm run deploy:v2` command with the terminal while in the root of the project.
 
 ![Info of Vue deployment in the terminal](./README/images/deploy-v2.jpg)
 

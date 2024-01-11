@@ -2,18 +2,18 @@
 
 ## 🎯 Description
 
-This version runs the `deploy.sh` file using the npm `deploy` script declared in the `package.json` file.
+This version runs the `deploy-v1.sh` file using the npm `deploy:v1` script declared in the `package.json` file.
 
 It does not require the installation of additional npm packages to work.
 
-The process consists of pushing manually (only when we execute the `npm run deploy` command in the terminal) the updates from the `master` branch to the `gh-pages` branch of a `git` repository uploaded to GitHub.
+The process consists of pushing manually (only when we execute the `npm run deploy:v1` command in the terminal) the updates from the `master` branch to the `gh-pages` branch of a `git` repository uploaded to GitHub.
 
 During the execution process you can see in the terminal what files it builds and where it publishes them.
 
 To use it you need to customize some data. Change the `<USER_NAME>` and `<REPO_NAME>` variables in the files to your user name of GitHub account and repository name:
 
 1. In the `vue.config.js` file you need to modify the repository name in the `pathPublic` property.
-2. In the `deploy.sh` file you need to modify the user name and repository name in the path of the `git` command.
+2. In the `deploy-v1.sh` file you need to modify the user name and repository name in the path of the `git` command.
 
 ## ⚙️ How it works
 
@@ -51,15 +51,15 @@ module.exports = {
 
 2.3. In the previous code, update the [`publicPath`](https://cli.vuejs.org/config/#publicpath) changing the `<REPO_NAME>` variable for the name of the repository where the application will be deployed.
 
-### 3️⃣ The `deploy.sh` file
+### 3️⃣ The `deploy-v1.sh` file
 
-3.1. In the root of the project create the `deploy.sh` file:
+3.1. In the root of the project create the `deploy-v1.sh` file:
 
 ```bash
-touch deploy.sh
+touch deploy-v1.sh
 ```
 
-3.2. Inside of the `deploy.sh` file paste the next code:
+3.2. Inside of the `deploy-v1.sh` file paste the next code:
 
 ```bash
 #!/usr/bin/env sh
@@ -89,7 +89,7 @@ git push -f https://github.com/<USER_NAME>/<REPO_NAME>.git master:gh-pages
 cd -
 ```
 
-The `bash` script built in the `deploy.sh` file is executed at the root of the project, it contains the serial execution of the commands necessary for the project release:
+The `bash` script built in the `deploy-v1.sh` file is executed at the root of the project, it contains the serial execution of the commands necessary for the project release:
 
 1.  `#!/usr/bin/env sh`: Run the next `shell` script writted in the `bash` language.
 2.  `set -e`: Abort the execution if there are errors.
@@ -125,18 +125,18 @@ git push -f git@github.com:<USER_NAME>/<REPO_NAME>.git master:gh-pages
 
 ```json
 "scripts": {
-	"deploy": "chmod +x ./deploy.sh && ./deploy.sh"
+	"deploy:v1": "chmod +x ./deploy-v1.sh && ./deploy-v1.sh"
 }
 ```
 
 The script executes 2 commands, one after the other:
 
-1. `chmod +x deploy.sh`: Assign the execution permission in the root of the project.
-2. `./deploy.sh`: Execute the `deploy.sh` file with `node`.
+1. `chmod +x deploy-v1.sh`: Assign the execution permission in the root of the project.
+2. `./deploy-v1.sh`: Execute the `deploy-v1.sh` file with `node`.
 
 ### 5️⃣ Deploy the application
 
-5.1. Finally, you can deploy the application by running the `npm run deploy` command with the terminal while in the root of the project.
+5.1. Finally, you can deploy the application by running the `npm run deploy:v1` command with the terminal while in the root of the project.
 
 ![Info of Vue deployment in the terminal](./README/images/deploy-v1.jpg)
 

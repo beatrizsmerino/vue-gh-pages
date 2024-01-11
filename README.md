@@ -60,7 +60,11 @@ npm run lint
 ### Publish the code for production in GitHub Pages
 
 ```bash
-npm run deploy
+npm run deploy:v1
+```
+
+```bash
+npm run deploy:v2
 ```
 
 ## 🔗 References
