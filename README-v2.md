@@ -2,7 +2,7 @@
 
 ## 🎯 Description
 
-This version executes the `deploy.mjs` file using the same npm `deploy` script declared in the `package.json` file. In contrast to the previous version, it has been developed in javascript, although `shell` scripts in `bash` language are still used inside it. The npm script has been improved, now it is simpler, **it is not necessary to enable the execution permissions**, in the root of the project, before executing the js file with node.
+This version executes the `deploy.mjs` file using the same npm `deploy` script declared in the `package.json` file. In contrast to the previous version, it has been developed in JavaScript, although `shell` scripts in `bash` language are still used inside it. The npm script has been improved; now it is simpler, **it is not necessary to enable the execution permissions** in the root of the project before executing the JS file with Node.
 
 This javascript file **depends on the installation of additional npm packages to work**, which can be inconvenient.
 
