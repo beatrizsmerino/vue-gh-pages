@@ -11,25 +11,25 @@
 
 ## 🎯 Description
 
-This repository has been created from the [vue-gh-pages](https://github.com/cristinafsanz/vue-gh-pages) repository, with the idea of serving as a tutorial to publish a public repository made with `Vue` in the `github.io` domain using `GitHub Pages`.
+This repository has been created from the [vue-gh-pages](https://github.com/cristinafsanz/vue-gh-pages) repository, with the idea of serving as a tutorial to publish a public repository made with `Vue` on the `github.io` domain using `GitHub Pages`.
 
-**GitHub Pages** is a free service that provides a simple way to host your own website about yourself, your organization, or your project. It takes `HTML`, `CSS` and `JavaScript` files directly from a repository on GitHub, optionally runs the files through a build process, and publishes a website. It is therefore a static site hosting service and **does not support server-side code** such as `PHP`, `Ruby` or `Python`.
+**GitHub Pages** is a free service that provides a simple way to host your own website about yourself, your organization, or your project. It takes `HTML`, `CSS` and `JavaScript` files directly from a repository on GitHub, optionally runs the files through a build process, and publishes a website. It is, therefore, a static site hosting service and **does not support server-side code** such as `PHP`, `Ruby` or `Python`.
 
 ## 🔖 Tags versions
 
 ### [v1.x.x](./README-v1.md)
 
-- Runs a bash file using a script npm.
-- It does not require the installation npm packages.
-- In the terminal you can see the execution steps.
-- To use it you need to customize some data.
+- Runs a bash file using a NPM script.
+- It does not require the installation of NPM packages.
+- In the terminal, you can see the execution steps.
+- To use it, you need to customize some data.
 
 ### [v2.x.x](./README-v1.md)
 
-- Runs a javascript file using a script npm.
-- It does require the installation npm packages.
-- In the terminal you can see few execution steps.
-- To use it you need to customize few data.
+- Runs a JavaScript file using a NPM script.
+- It does require the installation of NPM packages.
+- In the terminal, you can see a few execution steps.
+- To use it, you need to customize a few data.
 
 ## 🚀 Commands
 
