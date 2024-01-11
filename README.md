@@ -24,6 +24,13 @@ This repository has been created from the [vue-gh-pages](https://github.com/cris
 - In the terminal you can see the execution steps.
 - To use it you need to customize some data.
 
+### [v2.x.x](./README-v1.md)
+
+-   Runs a javascript file using a script npm.
+-   It does require the installation npm packages.
+-   In the terminal you can see few execution steps.
+-   To use it you need to customize few data.
+
 ## 🚀 Commands
 
 ### Install dependencies
