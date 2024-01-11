@@ -2,7 +2,7 @@
 
 ## 🎯 Description
 
-This version executes the `deploy.js` file using the same npm `deploy` script declared in the `package.json` file. In contrast to the previous version, it has been developed in javascript, although `shell` scripts in `bash` language are still used inside it. The npm script has been improved, now it is simpler, **it is not necessary to enable the execution permissions**, in the root of the project, before executing the js file with node.
+This version executes the `deploy.mjs` file using the same npm `deploy` script declared in the `package.json` file. In contrast to the previous version, it has been developed in javascript, although `shell` scripts in `bash` language are still used inside it. The npm script has been improved, now it is simpler, **it is not necessary to enable the execution permissions**, in the root of the project, before executing the js file with node.
 
 This javascript file **depends on the installation of additional npm packages to work**, which can be inconvenient.
 
@@ -55,15 +55,15 @@ module.exports = {
 
 2.3. In the previous code, update the [`publicPath`](https://cli.vuejs.org/config/#publicpath) changing the `<REPO_NAME>` variable for the name of the repository where the application will be deployed.
 
-### 3️⃣ The `deploy.js` file
+### 3️⃣ The `deploy.mjs` file
 
-3.1. In the root of the project create the `deploy.js` file:
+3.1. In the root of the project create the `deploy.mjs` file:
 
 ```bash
-touch deploy.js
+touch deploy.mjs
 ```
 
-3.2. Inside of the `deploy.js` file paste the next code:
+3.2. Inside of the `deploy.mjs` file paste the next code:
 
 ```javascript
 /* eslint-disable no-console */
@@ -99,7 +99,7 @@ const fs = require('fs');
 })();
 ```
 
-The `deploy.js` file is executed at the root of the project, it contains the serial execution of the commands necessary for the project release:
+The `deploy.mjs` file is executed at the root of the project, it contains the serial execution of the commands necessary for the project release:
 
 1. `git checkout --orphan gh-pages`: Creates a new branch named `gh-pages`
 2. `npm run build`: Build the files for production
@@ -117,7 +117,7 @@ The `deploy.js` file is executed at the root of the project, it contains the ser
 
 ```json
 "scripts": {
-	"deploy": "node deploy.js"
+	"deploy": "node deploy.mjs"
 }
 ```
 
