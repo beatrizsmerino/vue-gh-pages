@@ -18,7 +18,8 @@
 		"eslint:fix": "vue-cli-service lint \"**/*.{json,js,vue}\" --fix --ignore-path .eslintignore",
 		"stylelint:fix": "stylelint \"**/*.{css,scss,sass,vue}\" --fix --ignore-path .stylelintignore",
 		"lint": "npm run prettier:fix && npm run eslint:fix && npm run stylelint:fix",
-		"deploy": "node deploy.mjs"
+		"deploy:v1": "chmod +x ./deploy-v1.sh && ./deploy-v1.sh",
+		"deploy:v2": "node deploy-v2.mjs"
 	},
 	"dependencies": {
 		"core-js": "^3.35.0",
