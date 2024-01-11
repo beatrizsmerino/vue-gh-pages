@@ -144,7 +144,7 @@ The script executes 2 commands, one after the other:
 
 Use the next link replacing the `<USER_NAME>` and `<REPO_NAME>` variables with your data.
 
-```
+```bash
 https://<USER_NAME>.github.io/<REPO_NAME>/
 ```
 

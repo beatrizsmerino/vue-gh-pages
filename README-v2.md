@@ -133,7 +133,7 @@ The `deploy.mjs` file is executed at the root of the project, it contains the se
 
 Use the next link replacing the `<USER_NAME>` and `<REPO_NAME>` variables with your data.
 
-```
+```bash
 https://<USER_NAME>.github.io/<REPO_NAME>/
 ```
 
