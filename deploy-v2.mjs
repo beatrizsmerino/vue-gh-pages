@@ -31,7 +31,7 @@ import * as fs from "fs";
 			folderName,
 			"commit",
 			"-m",
-			"gh-pages",
+			"ci(deploy): build files for production in the dist folder",
 		]);
 
 		console.log("Pushing to gh-pages...");
