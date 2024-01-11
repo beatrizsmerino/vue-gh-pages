@@ -91,15 +91,15 @@ cd -
 
 The `bash` script built in the `deploy-v1.sh` file is executed at the root of the project, it contains the serial execution of the commands necessary for the project release:
 
-1.  `#!/usr/bin/env sh`: Run the next `shell` script writted in the `bash` language.
-2.  `set -e`: Abort the execution if there are errors.
-3.  `npm run build`: Build the files for production, this creates the `dist` folder.
-4.  `cd dist`: Navigate into the `dist` folder, the output directory.
-5.  `git init`: Inizialize a new empty Git repository.
-6.  `git add`: Add all folders and files to the `staging area` of the new git repository.
-7.  `git commit`: Create the first commit with the changes and the `deploy` message in the `master` branch of this new repository.
-8.  `git push`: Pushes the changes from the `master` branch of the new repository to the `gh-pages` branch, which is automatically created, if it does not exist, in our main repository.
-9.  `cd -`: Return to the previous directory.
+1. `#!/usr/bin/env sh`: Run the next `shell` script writted in the `bash` language.
+2. `set -e`: Abort the execution if there are errors.
+3. `npm run build`: Build the files for production, this creates the `dist` folder.
+4. `cd dist`: Navigate into the `dist` folder, the output directory.
+5. `git init`: Inizialize a new empty Git repository.
+6. `git add`: Add all folders and files to the `staging area` of the new git repository.
+7. `git commit`: Create the first commit with the changes and the `deploy` message in the `master` branch of this new repository.
+8. `git push`: Pushes the changes from the `master` branch of the new repository to the `gh-pages` branch, which is automatically created, if it does not exist, in our main repository.
+9. `cd -`: Return to the previous directory.
 
 The name `GitHub Pages` originates from the name of the `gh-pages` branch, where the deployment version of the project is located.
 
@@ -107,13 +107,13 @@ The name `GitHub Pages` originates from the name of the `gh-pages` branch, where
 
 The **last git command** must be replaced with any the next commands:
 
--   If you are deploying to `https://<USER_NAME>.github.io/<REPO_NAME>`.
+- If you are deploying to `https://<USER_NAME>.github.io/<REPO_NAME>`.
 
 ```bash
 git push -f https://github.com/<USER_NAME>/<REPO_NAME>.git master:gh-pages
 ```
 
--   If you do have your GitHub account configured to connect via SSH.
+- If you do have your GitHub account configured to connect via SSH.
 
 ```bash
 git push -f git@github.com:<USER_NAME>/<REPO_NAME>.git master:gh-pages
