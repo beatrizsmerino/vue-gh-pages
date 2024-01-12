@@ -78,14 +78,19 @@ touch deploy-v2.mjs
 3.2. Inside the `deploy-v2.mjs` file, paste the following code:
 
 ```javascript
-const execa = require("execa");
-const fs = require("fs");
+import { execa } from "execa";
+import * as emoji from "node-emoji";
+import chalk from "chalk";
+import * as fs from "fs";
+
+const iconArrows = emoji.get("fast_forward");
+const iconRocket = emoji.get("rocket");
 
 (async () => {
 	try {
 		await execa("git", ["checkout", "--orphan", "gh-pages"]);
 
-		console.log("Building started...");
+		console.log(`${iconArrows} ${chalk.yellow("Building started...")}`);
 		await execa("npm", ["run", "build"]);
 
 		const folderName = fs.existsSync("dist") ? "dist" : "build";
@@ -93,7 +98,7 @@ const fs = require("fs");
 
 		await execa("git", ["--work-tree", folderName, "commit", "-m", "ci(deploy): build files for production in the dist folder"]);
 
-		console.log("Pushing to gh-pages...");
+		console.log(`${iconArrows} ${chalk.yellow("Pushing to gh-pages...")}`);
 		await execa("git", ["push", "origin", "HEAD:gh-pages", "--force"]);
 
 		await execa("rm", ["-r", folderName]);
@@ -102,7 +107,7 @@ const fs = require("fs");
 
 		await execa("git", ["branch", "-D", "gh-pages"]);
 
-		console.log("Successfully deployed, check your settings");
+		console.log(`${iconRocket} ${chalk.green("Successfully deployed")}`);
 	} catch (e) {
 		console.log(e.message);
 		process.exit(1);
