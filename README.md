@@ -5,7 +5,7 @@
 ![GitHub stars](https://img.shields.io/github/stars/beatrizsmerino/vue-gh-pages)
 ![GitHub watchers](https://img.shields.io/github/watchers/beatrizsmerino/vue-gh-pages)
 
-# Deploy a Vue app to GitHub Pages
+# Deploy Vue app to GitHub Pages
 
 ![Deploy Vue app](./README/images/vue-gh-pages.jpg)
 
