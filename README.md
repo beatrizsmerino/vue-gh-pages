@@ -19,17 +19,17 @@ This repository was inspired by the [vue-gh-pages](https://github.com/cristinafs
 
 ### [v1.x.x](./README-v1.md)
 
-- Runs a bash file using a NPM script.
-- It does not require the installation of NPM packages.
-- In the terminal, you can see the execution steps.
-- To use it, you need to customize some data.
+- Executes a bash file through a NPM script command.
+- Does not require the installation of additional NPM packages to work.
+- To use it, you need to customize some data in multiple files.
+- Provides a complete information about the files extracted, their weight and subsequent compression in the terminal.
 
 ### [v2.x.x](./README-v1.md)
 
-- Runs a JavaScript file using a NPM script.
-- It does require the installation of NPM packages.
-- In the terminal, you can see a few execution steps.
-- To use it, you need to customize a few data.
+- Executes a JavaScript file with NodeJS through a NPM script command.
+- Requires the installation of NPM packages to work.
+- To use it, you need to customize one data in a single file.
+- Provides a concise information about execution steps in the terminal, using colors and emojis for enhanced visibility.
 
 ## 🚀 Commands
 
