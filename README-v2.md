@@ -6,10 +6,7 @@ This version executes the `deploy-v2.mjs` file using one NPM script declared in 
 
 The choice of the file extension `.mjs` or `.cjs` instead of the traditional `.js` is related to the use of ECMAScript modules. The `.mjs` extension signifies that the file is using ESModules syntax, which allows for better compatibility with modern JavaScript features. It's a convention to differentiate files that use ESModules from the ones using CommonJS modules. This distinction can be important, especially when working in an environment that supports both module systems, as is the case in this project.
 
-This JavaScript file **depends on the installation of additional NPM packages to work**, which can be inconvenient.
-
-- The [`execa`](https://www.npmjs.com/package/execa) package allows us to use `shell` scripts from a JavaScript file.
-- The [`fs`](https://nodejs.org/api/fs.html) module does not need to be installed as a dependency in the `package.json` file, as you can access it if you have Node installed globally on your computer. It allows you to interact with the file system in a way modeled on the standard `POSIX` functions. The Portable Operating System Interface (POSIX) is a family of standards specified by the IEEE Computer Society to maintain compatibility between operating systems.
+This JavaScript file **depends of additional NPM packages to work** (`execa`, `chalk`, `node-emoji`, `fs`), which can be inconvenient.
 
 The process is the same as in version `1.x.x`; it consists of pushing manually (only when we execute the `npm run deploy:v2` command in the terminal) the updates from the `master` branch to the `gh-pages` branch of a `git` repository uploaded to GitHub.
 
@@ -22,6 +19,19 @@ On the other hand, another advantage of this version is that you only have to **
 ## ⚙️ How it works
 
 In this version, points 1️⃣&nbsp;, 2️⃣&nbsp;, and 5️⃣&nbsp; can be omitted; they work exactly the same as in version `1.x.x`.
+
+### 0️⃣ Required NPM packages
+
+Before diving into the deployment process with the `deploy` file, it's crucial to install the following NPM packages that enhance the functionality and user experience:
+
+- The [`execa`](https://www.npmjs.com/package/execa) package allows the execution of `shell` scripts directly from a JavaScript file. It provides an easy way to execute commands in a cross-platform manner, making it an essential tool for smooth script execution within `Node.js` applications.
+- The [`chalk`](https://www.npmjs.com/package/chalk) package adds a touch of color to your terminal output, making it visually appealing and easier to interpret. This package enables the creation of colored text, allowing you to convey information more clearly during the deployment process.
+- The [`node-emoji`](https://www.npmjs.com/package/node-emoji) package allows the inclusion of emojis in your logs. This package provides a nice way to express messages or status updates, making the deployment experience more engaging.
+- The [`fs`](https://nodejs.org/api/fs.html) module facilitates file system interaction, ensuring compatibility across multiple operating systems. It does not need to be installed as a dependency in the `package.json` file, as it is included with Node.js, so it can be accessed if you have Node installed globally on your computer.
+
+```bash
+npm install execa chalk node-emoji --save
+```
 
 ### 1️⃣ The `.gitignore` file
 
