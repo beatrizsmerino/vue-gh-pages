@@ -2,7 +2,7 @@
 
 ## 🎯 Description
 
-This version executes the `deploy-v2.mjs` file using the `deploy:v2` NPM script declared in the `package.json` file. In contrast to the previous version, it has been developed in JavaScript, although `shell` scripts in `bash` language are still used inside it. The NPM script has been improved; now it is simpler, **it is not necessary to enable the execution permissions** in the root of the project before executing the JS file with Node.
+This version executes the `deploy-v2.mjs` file using one NPM script declared in the `package.json` file. In contrast to the previous version, it has been developed in JavaScript, although `shell` scripts in `bash` language are still used inside it. The NPM script has been improved; now it is simpler, **it is not necessary to enable the execution permissions** in the root of the project before executing the JS file with Node.
 
 The choice of the file extension `.mjs` or `.cjs` instead of the traditional `.js` is related to the use of ECMAScript modules. The `.mjs` extension signifies that the file is using ESModules syntax, which allows for better compatibility with modern JavaScript features. It's a convention to differentiate files that use ESModules from the ones using CommonJS modules. This distinction can be important, especially when working in an environment that supports both module systems, as is the case in this project.
 

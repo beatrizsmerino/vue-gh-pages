@@ -2,7 +2,7 @@
 
 ## 🎯 Description
 
-This version runs the `deploy-v1.sh` file using the `deploy:v1` NPM script declared in the `package.json` file.
+This version runs the `deploy-v1.sh` file using the one NPM script declared in the `package.json` file.
 
 It does not require the installation of additional NPM packages to work.
 
