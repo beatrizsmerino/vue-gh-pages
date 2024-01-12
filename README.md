@@ -11,9 +11,9 @@
 
 ## 🎯 Description
 
-This repository has been created from the [vue-gh-pages](https://github.com/cristinafsanz/vue-gh-pages) repository, with the idea of serving as a tutorial to publish a public repository made with `Vue` on the `github.io` domain using `GitHub Pages`.
+This repository was inspired by the [vue-gh-pages](https://github.com/cristinafsanz/vue-gh-pages) repository. It is designed with the purpose is to serve as step-by-step tutorial for publishing a `Vue` project on the `github.io` domain using `GitHub Pages`.
 
-**GitHub Pages** is a free service that provides a simple way to host your own website about yourself, your organization, or your project. It takes `HTML`, `CSS` and `JavaScript` files directly from a repository on GitHub, optionally runs the files through a build process, and publishes a website. It is, therefore, a static site hosting service and **does not support server-side code** such as `PHP`, `Ruby` or `Python`.
+**GitHub Pages** is a free service that provides a simple way to host your own website about yourself, your organization, or your project. It takes `HTML`, `CSS` and `JavaScript` files directly from a repository on GitHub, optionally runs the files through a build process, and publishes a website. Therefore, it is a static site hosting service and **does not support server-side code** such as `PHP`, `Ruby` or `Python`.
 
 ## 🔖 Tags versions
 
