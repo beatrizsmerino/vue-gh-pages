@@ -1,6 +1,11 @@
 /* eslint-disable no-console */
 import { execa } from "execa";
+import * as emoji from "node-emoji";
+import chalk from "chalk";
 import * as fs from "fs";
+
+const iconArrows = emoji.get("fast_forward");
+const iconRocket = emoji.get("rocket");
 
 // eslint-disable-next-line max-statements
 (async () => {
@@ -11,7 +16,7 @@ import * as fs from "fs";
 			"gh-pages",
 		]);
 
-		console.log("Building started...");
+		console.log(`${iconArrows} ${chalk.yellow("Building started...")}`);
 		await execa("npm", [
 			"run",
 			"build",
@@ -34,7 +39,7 @@ import * as fs from "fs";
 			"ci(deploy): build files for production in the dist folder",
 		]);
 
-		console.log("Pushing to gh-pages...");
+		console.log(`${iconArrows} ${chalk.yellow("Pushing to gh-pages...")}`);
 		await execa("git", [
 			"push",
 			"origin",
@@ -59,7 +64,7 @@ import * as fs from "fs";
 			"gh-pages",
 		]);
 
-		console.log("Successfully deployed, check your settings");
+		console.log(`${iconRocket} ${chalk.green("Successfully deployed")}`);
 	} catch (e) {
 		console.log(e.message);
 		// eslint-disable-next-line no-process-exit
