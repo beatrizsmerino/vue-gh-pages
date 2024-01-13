@@ -78,8 +78,43 @@ module.exports = {
 touch deploy-v2.mjs
 ```
 
-3.2. Inside the `deploy-v2.mjs` file, paste the following code:
+3.2. Inside the `deploy-v2.mjs` file, you can use two ways to deploy depending on the number of packages you want to install, so choose one of them, and copy and paste the following code:
 
+1. Installing only the `execa` and `fs` packages, you get simple text messages on the terminal.
+```javascript
+const execa = require("execa");
+const fs = require("fs");
+
+(async () => {
+	try {
+		await execa("git", ["checkout", "--orphan", "gh-pages"]);
+
+		console.log("Building started...");
+		await execa("npm", ["run", "build"]);
+
+		const folderName = fs.existsSync("dist") ? "dist" : "build";
+		await execa("git", ["--work-tree", folderName, "add", "--all"]);
+
+		await execa("git", ["--work-tree", folderName, "commit", "-m", "ci(deploy): build files for production in the dist folder"]);
+
+		console.log("Pushing to gh-pages...");
+		await execa("git", ["push", "origin", "HEAD:gh-pages", "--force"]);
+
+		await execa("rm", ["-r", folderName]);
+
+		await execa("git", ["checkout", "-f", "master"]);
+
+		await execa("git", ["branch", "-D", "gh-pages"]);
+
+		console.log("Successfully deployed, check your settings");
+	} catch (e) {
+		console.log(e.message);
+		process.exit(1);
+	}
+})();
+```
+
+2. Installing the `execa`, `fs`, `chalk` and `node-emoji` packages you can improve the display and user experience by using colors and emojis in terminal messages.
 ```javascript
 import { execa } from "execa";
 import * as emoji from "node-emoji";
