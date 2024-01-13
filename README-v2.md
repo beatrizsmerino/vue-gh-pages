@@ -27,11 +27,14 @@ Before diving into the deployment process with the `deploy` file, it's crucial t
 - The [`execa`](https://www.npmjs.com/package/execa) package allows the execution of `shell` scripts directly from a JavaScript file. It provides an easy way to execute commands in a cross-platform manner, making it an essential tool for smooth script execution within `Node.js` applications.
 - The [`chalk`](https://www.npmjs.com/package/chalk) package adds a touch of color to your terminal output, making it visually appealing and easier to interpret. This package enables the creation of colored text, allowing you to convey information more clearly during the deployment process.
 - The [`node-emoji`](https://www.npmjs.com/package/node-emoji) package allows the inclusion of emojis in your logs. This package provides a nice way to express messages or status updates, making the deployment experience more engaging.
-- The [`fs`](https://nodejs.org/api/fs.html) module facilitates file system interaction, ensuring compatibility across multiple operating systems. It does not need to be installed as a dependency in the `package.json` file, as it is included with Node.js, so it can be accessed if you have Node installed globally on your computer.
 
 ```bash
 npm install execa chalk node-emoji --save
 ```
+
+There are also other packages that are required but do not need to be installed:
+
+- The [`fs`](https://nodejs.org/api/fs.html) package facilitates file system interaction, ensuring compatibility across multiple operating systems. It does not need to be installed as a dependency in the `package.json` file, as it is included with Node.js, so it can be accessed if you have Node installed globally on your computer.
 
 ### 1️⃣ The `.gitignore` file
 
