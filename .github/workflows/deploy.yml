@@ -1,25 +1,25 @@
 # For more information see: https://github.com/beatrizsmerino/vue-gh-pages
 
-name: Deploy to GitHub Pages
+name: 🚀 Deploy to GitHub Pages
 on:
   push:
     branches: [ master ]
 jobs:
   gh-pages-deploy:
-    name: Deploying to gh-pages
+    name: 🧩 Deploying to gh-pages
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout code from repository
+      - name: 🔀 Checkout code from repository
         uses: actions/checkout@v4
-      - name: Setup Node.js
+      - name: 🛠️ Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: 20.x
-      - name: Install dependencies
+      - name: 📦 Install dependencies
         run: npm ci
-      - name: Configure Git User
+      - name: 🙍‍♂️ Configure Git User
         run: |
           git config user.name "Beatriz Sopeña Merino"
           git config user.email "beatrizsmerino@gmail.com"
-      - name: Run deploy script
+      - name: 🏗️ Run deploy script
         run: npm run deploy:v2
