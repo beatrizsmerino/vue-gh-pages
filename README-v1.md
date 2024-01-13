@@ -131,6 +131,22 @@ The script executes 2 commands, one after the other:
 1. `chmod +x ./deploy-v1.sh`: Assign the execution permission in the root of the project.
 2. `./deploy-v1.sh`: Execute the `deploy-v1.sh` file using `shell`.
 
+4.2. If you have unexpected changes in the `deploy-v1.sh` file after deployment follow the next step:
+
+When you run the command `deploy:v1` which contains `chmod +x ./deploy-v1.sh`, it modifies the file permissions of `deploy-v1.sh` to make it executable. This change in file permissions is considered a modification by version control systems like Git, which is likely why you're seeing the file as modified.
+
+The `chmod +x` command is changing the file's mode to add execute permissions for the user. This is a write operation on the file's metadata, not its content. Even though the content of the `deploy-v1.sh` script remains unchanged, the file system updates the metadata to reflect the new permissions, and hence Git recognizes this as a change.
+
+If you're using Git and the file permissions were not previously committed as executable, the first time you run this command and then check the status with `git status`, you'll see the file listed as modified because of the permission change. To stop seeing it as modified, you can commit this change in permissions to the repository. After that, unless the permissions are changed again, it should not appear as modified in future.
+
+If you commit this change and continue to see the file as modified after running the script, it might be due to a Git configuration that automatically changes file permissions when performing operations like `git add` or `git commit`. You can check and change this behavior by looking at the `core.fileMode` configuration in Git:
+
+```bash
+git config core.fileMode false
+```
+
+Setting `core.fileMode` to `false` tells Git to ignore file mode changes, which can be helpful if you're working on a project across different operating systems or environments where file permissions may be handled differently.
+
 ### 5️⃣ Deploy the application
 
 5.1. Finally, you can deploy the application by running the `npm run deploy:v1` command in the terminal while in the root of the project.
