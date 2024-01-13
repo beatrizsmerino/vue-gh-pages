@@ -1,6 +1,6 @@
 # For more information see: https://help.github.com/actions/language-and-framework-guides/using-nodejs-with-github-actions
 
-name: 🚀 Check project in different node versions
+name: 🚀 Check project in different Node versions
 on:
   push:
     branches: [ master ]
@@ -16,7 +16,7 @@ jobs:
     steps:
     - name: 🔀 Checkout code from repository
       uses: actions/checkout@v4
-    - name: 🛠️ Setup node version ${{ matrix.node-version }}
+    - name: 🛠️ Setup Node version ${{ matrix.node-version }}
       uses: actions/setup-node@v4
       with:
         node-version: ${{ matrix.node-version }}
