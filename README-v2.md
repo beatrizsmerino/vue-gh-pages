@@ -54,7 +54,7 @@ node_modules
 
 ### 2️⃣ The `vue.config.js` file
 
-2.1. In the root of the project, there is also a `vue.config.js` file. If it doesn't exist, create it with the following command:
+2.1. In the root of the project, there is the `vue.config.js` file, also created by Vue. If it doesn't exist, create it with the following command:
 
 ```bash
 touch vue.config.js
@@ -118,7 +118,7 @@ const iconRocket = emoji.get("rocket");
 })();
 ```
 
-The `deploy-v2.mjs` file is executed at the root of the project. It contains the serial execution of the commands necessary for the project release:
+The `JavaScript` script built in the `deploy-v2.mjs` file is executed at the root of the project. It contains the serial execution of the commands necessary for the project release:
 
 1. `git checkout --orphan gh-pages`: Creates a new branch named `gh-pages`.
 2. `npm run build`: Builds the files for production.
@@ -139,6 +139,10 @@ The `deploy-v2.mjs` file is executed at the root of the project. It contains the
 	"deploy:v2": "node deploy-v2.mjs"
 }
 ```
+
+The script executes 1 command:
+
+1. `node deploy-v2.mjs`: Execute the `deploy-v2.mjs` file using `node`.
 
 ### 5️⃣ Deploy the application
 

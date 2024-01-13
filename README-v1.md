@@ -32,7 +32,7 @@ node_modules
 
 ### 2️⃣ The `vue.config.js` file
 
-2.1. In the root of the project, there is also a `vue.config.js` file. If it doesn't exist, create it with the following command:
+2.1. In the root of the project, there is the `vue.config.js` file, also created by Vue. If it doesn't exist, create it with the following command:
 
 ```bash
 touch vue.config.js
@@ -128,8 +128,8 @@ git push -f git@github.com:<USER_NAME>/<REPO_NAME>.git master:gh-pages
 
 The script executes 2 commands, one after the other:
 
-1. `chmod +x deploy-v1.sh`: Assign the execution permission in the root of the project.
-2. `./deploy-v1.sh`: Execute the `deploy-v1.sh` file with `node`.
+1. `chmod +x ./deploy-v1.sh`: Assign the execution permission in the root of the project.
+2. `./deploy-v1.sh`: Execute the `deploy-v1.sh` file using `shell`.
 
 ### 5️⃣ Deploy the application
 
