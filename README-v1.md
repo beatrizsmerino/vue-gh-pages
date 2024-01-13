@@ -2,18 +2,15 @@
 
 ## 🎯 Description
 
-This version runs the `deploy-v1.sh` file using the NPM `deploy:v1` script declared in the `package.json` file.
+This version executes the `deploy-v1.sh` file using the `npm run deploy:v1` command specified in the `package.json` file.
 
-It does not require the installation of additional NPM packages to work.
+It does **not require the installation of additional NPM packages** for it to work.
 
-The process consists of manually pushing updates (only when we execute the `npm run deploy:v1` command in the terminal) from the `master` branch to the `gh-pages` branch of a `git` repository uploaded to GitHub.
+To use it, you'll need to **customize some data** in the `vue.config.js` and `deploy-v1.sh` files, changing the `<USER_NAME>` and `<REPO_NAME>` variables to match the username and repository name of your GitHub account.
 
-During the execution process, you can see in the terminal what files it builds and where it publishes them.
+The process involves **manually pushing updates** from the `master` branch to the `gh-pages` branch of a `git` repository uploaded to GitHub.
 
-To use it, you need to customize some data. Change the `<USER_NAME>` and `<REPO_NAME>` variables in the files to your GitHub account's username and repository name:
-
-1. In the `vue.config.js` file, modify the repository name in the `pathPublic` property.
-2. In the `deploy-v1.sh` file, modify the username and repository name in the path of the `git` command.
+Throughout the execution process, the terminal displays **detailed information** about the files being built and their publishing locations.
 
 ## ⚙️ How it works
 
@@ -35,7 +32,7 @@ node_modules
 
 ### 2️⃣ The `vue.config.js` file
 
-2.1. In the root of the project, there is also a `vue.config.js` file. If it doesn't exist, create it with the following command:
+2.1. In the root of the project, there is the `vue.config.js` file, also created by Vue. If it doesn't exist, create it with the following command:
 
 ```bash
 touch vue.config.js
@@ -131,8 +128,8 @@ git push -f git@github.com:<USER_NAME>/<REPO_NAME>.git master:gh-pages
 
 The script executes 2 commands, one after the other:
 
-1. `chmod +x deploy-v1.sh`: Assign the execution permission in the root of the project.
-2. `./deploy-v1.sh`: Execute the `deploy-v1.sh` file with `node`.
+1. `chmod +x ./deploy-v1.sh`: Assign the execution permission in the root of the project.
+2. `./deploy-v1.sh`: Execute the `deploy-v1.sh` file using `shell`.
 
 ### 5️⃣ Deploy the application
 
