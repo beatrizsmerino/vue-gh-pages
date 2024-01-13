@@ -2,18 +2,15 @@
 
 ## 🎯 Description
 
-This version runs the `deploy-v1.sh` file using the one NPM script declared in the `package.json` file.
+This version executes the `deploy-v1.sh` file using the `npm run deploy:v1` command specified in the `package.json` file.
 
-It does not require the installation of additional NPM packages to work.
+It does **not require the installation of additional NPM packages** for it to work.
 
-The process consists of manually pushing updates (only when we execute the `npm run deploy:v1` command in the terminal) from the `master` branch to the `gh-pages` branch of a `git` repository uploaded to GitHub.
+To use it, you'll need to **customize some data** in the `vue.config.js` and `deploy-v1.sh` files, changing the `<USER_NAME>` and `<REPO_NAME>` variables to match the username and repository name of your GitHub account.
 
-During the execution process, you can see in the terminal what files it builds and where it publishes them.
+The process involves **manually pushing updates** from the `master` branch to the `gh-pages` branch of a `git` repository uploaded to GitHub.
 
-To use it, you need to customize some data. Change the `<USER_NAME>` and `<REPO_NAME>` variables in the files to your GitHub account's username and repository name:
-
-1. In the `vue.config.js` file, modify the repository name in the `pathPublic` property.
-2. In the `deploy-v1.sh` file, modify the username and repository name in the path of the `git` command.
+Throughout the execution process, the terminal displays **detailed information** about the files being built and their publishing locations.
 
 ## ⚙️ How it works
 

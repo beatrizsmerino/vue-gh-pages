@@ -2,19 +2,19 @@
 
 ## 🎯 Description
 
-This version executes the `deploy-v2.mjs` file using one NPM script declared in the `package.json` file. In contrast to the previous version, it has been developed in JavaScript, although `shell` scripts in `bash` language are still used inside it. The NPM script has been improved; now it is simpler, **it is not necessary to enable the execution permissions** in the root of the project before executing the JS file with Node.
+This version executes the `deploy-v2.mjs` file using the `npm run deploy:v2` command specified in the `package.json` file.
 
-The choice of the file extension `.mjs` or `.cjs` instead of the traditional `.js` is related to the use of ECMAScript modules. The `.mjs` extension signifies that the file is using ESModules syntax, which allows for better compatibility with modern JavaScript features. It's a convention to differentiate files that use ESModules from the ones using CommonJS modules. This distinction can be important, especially when working in an environment that supports both module systems, as is the case in this project.
+In contrast to the previous version, it has been developed in JavaScript, although `shell` scripts in `bash` language are still used within it. The NPM script command has been improved; now it is simpler, **there is no need to enable the execution permissions** in the root of the project before executing the JS file with Node.
 
-This JavaScript file **depends of additional NPM packages to work** (`execa`, `chalk`, `node-emoji`, `fs`), which can be inconvenient.
+The choice of the **file extension** `.mjs` or `.cjs` instead of the traditional `.js` is related to the use of **ECMAScript** modules. The `.mjs` extension indicates that the file is using **ESModules** syntax, which allows for better compatibility with modern JavaScript features. It's a convention to differentiate files that use **ESModules** from the ones using **CommonJS** modules. This distinction can be crucial, especially when working in an environment that supports both module systems, as is the case in this project.
 
-The process is the same as in version `1.x.x`; it consists of pushing manually (only when we execute the `npm run deploy:v2` command in the terminal) the updates from the `master` branch to the `gh-pages` branch of a `git` repository uploaded to GitHub.
+This JavaScript file **depends on additional NPM packages to work** (`execa`, `chalk`, `node-emoji`, `fs`), which may be considered inconvenient.
 
-During the execution process, **minimal information is displayed on the terminal**. The messages are created with `console.log` to indicate its start, push, and successful or unsuccessful completion. So this would be another disadvantage of this version, as it is not specified which files are extracted, their weight, and further compression.
+However, the advantage of this version is that you only need to **customize one data in one file to be able to use it**. In the `vue.config.js` file, you need to change the `<REPO_NAME>` variable to match the repository name of your GitHub account.
 
-On the other hand, another advantage of this version is that you only have to **customize one data in one file to be able to use it**:
+The process is the same as in version `1.x.x`; it involves **manually pushing updates** from the `master` branch to the `gh-pages` branch of a `git` repository uploaded to GitHub.
 
-1. In the `vue.config.js` file, you have to change the `<REPO_NAME>` variable to the name of your repository in the `pathPublic` property.
+Throughout the execution process, the terminal displays a **minimal information**, since it is not specified which files are extracted, their weight and subsequent compression. However you have the possibility to customize the messages created with `console.log` using colors and emojis to indicate their start, push, and successful or unsuccessful completion.
 
 ## ⚙️ How it works
 
