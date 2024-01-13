@@ -148,7 +148,15 @@ The script executes 1 command:
 
 5.1. Finally, you can deploy the application by running the `npm run deploy:v2` command in the terminal while in the root of the project.
 
+There are two terminal outputs depending on the packages you use:
+
+1. Using the `execa` and `fs` packages.  
+It has a simple text messages that you can customize in the each `console.log` of the `deploy-v2.mjs` file.
 ![Info of Vue deployment in the terminal](./README/images/deploy-v2.jpg)
+
+2. Or using the `execa`, `fs`, `chalk` and `node-emoji` packages.  
+It is simmilar to the first way but the output messages include texts with colors and emoji characters. So the inclusion of the additional packages `chalk` and `node-emoji`, can enhance the visual output, making it more friendly and easier to read.
+![Info of Vue deployment in the terminal](./README/images/deploy-v2.2.jpg)
 
 5.2. To see the result, wait for the script execution to finish and open the application in the browser:
 
