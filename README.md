@@ -24,7 +24,7 @@ This repository was inspired by the [vue-gh-pages](https://github.com/cristinafs
 - To use it, you need to customize some data in multiple files.
 - Provides a complete information about the files extracted, their weight and subsequent compression in the terminal.
 
-### [v2.x.x](./README-v1.md)
+### [v2.x.x](./README-v2.md)
 
 - Executes a JavaScript file with NodeJS through a NPM script command.
 - Requires the installation of NPM packages to work.
