@@ -15,3 +15,12 @@ When some changes are pushed to the `master` branch, the `deploy.yml` workflow i
 This process will **no longer be seen in the terminal** so you will have to go to the github website, search for your repository and watch each step to see if it finishes correctly.
 
 In this configuration I will detail how `GithubActions` can be used to automate the `Deployment` process. But I will also describe how to configure the `Dependabot` file and the workflow for `Node`.
+
+## ⚙️ How it works
+
+Begin by following the steps 0️⃣&nbsp;, 1️⃣&nbsp;, 2️⃣&nbsp;, 3️⃣&nbsp;, 4️⃣&nbsp; and 5️⃣&nbsp; outlined in the [README-v2.md](./README-v2.md) file.
+This includes the installation of the required packages, the creation of the files and their configuration.
+
+Then return to this version to follow the instructions below.
+You should know that the following steps 1️⃣&nbsp; and 2️⃣&nbsp; are an extra to enhance your configuration, they are not required for the deployment.
+
