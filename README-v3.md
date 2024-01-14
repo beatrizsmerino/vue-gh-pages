@@ -105,3 +105,57 @@ In the previous code, the configuration specifies how `Dependabot` checks for up
     assignees:
       - beatrizsmerino
 ```
+
+### 2️⃣ Github Actions. Workflow Node
+
+2.1 In the root of the project, there is a file called `.github/workflows/node.yml`. If it doesn't exist, create it with the following command:
+
+```bash
+mkdir -p .github/workflows && touch node.yml
+```
+
+2.2 Inside the `node.yml` file, paste the following code:
+
+```yml
+# For more information see: https://help.github.com/actions/language-and-framework-guides/using-nodejs-with-github-actions
+
+name: 🚀 Check project in different Node versions
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+jobs:
+  check-node-build:
+    name: 🧩 Build, test and validate code
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [14, 16, 18]
+    steps:
+    - name: 🔀 Checkout code from repository
+      uses: actions/checkout@v4
+    - name: 🛠️ Setup Node version ${{ matrix.node-version }}
+      uses: actions/setup-node@v4
+      with:
+        node-version: ${{ matrix.node-version }}
+    - name: 📦 Install dependencies
+      run: npm install
+    - name: 🏗️ Run NPM script to build
+      run: npm run build --if-present
+    - name: 🧪 Run NPM script to test
+      run: npm test --if-present
+    - name: 🔍 Validate commits to use the commitlint syntax
+      run: npx commitlint --from ${{ github.event.pull_request.base.sha }} --to ${{ github.event.pull_request.head.sha }} --verbose
+```
+
+The previous code, check the project build on different versions of Node.js, run tests and validate commit messages using commitlint.
+You can see the whole process of the steps of this workflow in GitHub Actions:
+- **🔀 Checkout code from repository**: Clones your project repository into the GitHub Actions runner, providing access to its codebase.
+- **🛠️ Setup Node version x.x**: Specifies Node.js versions (14.x, 16.x, 18.x) to ensure compatibility across multiple versions.
+- **📦 Install Dependencies**: Runs `npm install` command to install all the necessary dependencies defined in your `package.json`.
+- **🏗️ Run NPM script to build**: Executes `npm run build` command if exist, to build your project. This step is crucial for compiling the project and preparing it for testing.
+- **🧪 Run NPM script to test**: Conducts automated tests by running `npm test` command. This step is essential for ensuring that your code works as expected.
+- **🔍 Validate commits to use the commitlint syntax**: Ensures that all commit messages in the pull request adhere to the predefined standards, using commitlint. This step is vital for maintaining a clean and consistent commit history.
+
+This GitHub Actions workflow is an integral part of maintaining a robust and compatible Node.js project, ensuring that every change is automatically tested and validated across different Node.js environments.
