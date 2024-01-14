@@ -31,6 +31,13 @@ This repository was inspired by the [vue-gh-pages](https://github.com/cristinafs
 - To use it, you need to customize one data in a single file.
 - Provides a concise information about execution steps in the terminal, using colors and emojis for enhanced visibility.
 
+### [v3.x.x](./README-v3.md)
+
+- Executes a JavaScript file with NodeJS triggered by an NPM script command, which runs automatically through a GitHub Actions workflow.
+- Requires the installation of the NPM packages used in the version 2.x.x to work.
+- To use it, you need to customize some data in multiple files.
+- Displays steps information about the deployment process in the GitHub Actions log, rather than in the terminal.
+
 ## 🚀 Commands
 
 ### Install dependencies
