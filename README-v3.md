@@ -159,3 +159,87 @@ You can see the whole process of the steps of this workflow in GitHub Actions:
 - **🔍 Validate commits to use the commitlint syntax**: Ensures that all commit messages in the pull request adhere to the predefined standards, using commitlint. This step is vital for maintaining a clean and consistent commit history.
 
 This GitHub Actions workflow is an integral part of maintaining a robust and compatible Node.js project, ensuring that every change is automatically tested and validated across different Node.js environments.
+
+### 3️⃣ Github Actions. Workflow deploy
+
+3.1 In the root of the project, there is a file called `.github/workflows/deploy.yml`. If it doesn't exist, create it with the following command:
+
+```bash
+mkdir -p .github/workflows && touch deploy.yml
+```
+
+3.2 Inside the `deploy.yml` file, paste the following code:
+
+```yml
+# For more information see: https://github.com/beatrizsmerino/vue-gh-pages
+
+name: 🚀 Project deployment in GitHub Pages
+on:
+  push:
+    branches: [ master ]
+jobs:
+  gh-pages-deploy:
+    name: 🧩 Deploying code to gh-pages branch
+    runs-on: ubuntu-latest
+    steps:
+      - name: 🔀 Checkout code from repository
+        uses: actions/checkout@v4
+      - name: 🛠️ Setup Node version
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20.x
+      - name: 📦 Install dependencies
+        run: npm ci
+      - name: 🙍‍♂️ Setup git user
+        run: |
+          git config user.name <USER_NAME>
+          git config user.email <USER_EMAIL>
+      - name: 🏗️ Run NPM script to deploy
+        run: npm run deploy:v2
+```
+
+This workflow is designed to streamline your project's deployment to `GitHub Pages`.
+It automatically triggers a new deployment with every push to the `master` branch, ensuring the live version of your site is consistently synchronized with the latest updates.
+You can see the whole process of the steps of this workflow in GitHub Actions:
+1. **🔀 Checkout code from repository**: Retrieves the code from your repository, making it available for the workflow.
+2. **🛠️ Setup Node version**: Prepares the GitHub Actions runner with Node.js version 20.x. It's important to ensure compatibility with your project's Node.js version requirements.
+3. **📦 Install dependencies**: Executes `npm ci` command for a clean install of your project's dependencies, ensuring a consistent environment for the deployment.
+4. **🙍‍♂️ Setup git user**: Sets up Git with your name and email. This is crucial for commits made during the deployment process, as it associates them with your identity.
+5. **🏗️ Run NPM script to deploy**: Runs the `npm run deploy:v2` command, which triggers the deployment script defined in your `package.json`. This script is responsible for building and deploying your project to the `gh-pages` branch.
+
+3.3. In this file it is necessary to update the values of `user.name` and `user.email` replacing the variables `<USER_NAME>` and `<USER_EMAIL>` with the name and email of the user who will make sure to deploy the repository.
+
+```yml
+      - name: 🙍‍♂️ Setup git user
+        run: |
+          git config user.name <USER_NAME>
+          git config user.email <USER_EMAIL>
+```
+
+```yml
+      - name: 🙍‍♂️ Setup git user
+        run: |
+          git config user.name "Beatriz Sopeña Merino"
+          git config user.email "beatrizsmerino@gmail.com"
+```
+
+3.4. Finally, to deploy the application, simply push your changes to the `master` branch, this action will automatically trigger the deployment workflow.
+You can track the progress of the deployment by visiting your repository's GitHub page. Navigate to the `Actions` tab to view the workflow in real-time. Here, you'll find detailed logs and status updates for each step of the deployment process, allowing you to monitor and verify the successful deployment of your application.
+
+Use the following link, replacing the `<USER_NAME>` and `<REPO_NAME>` variables with your data.
+
+```bash
+https://github.com/<USER_NAME>/<REPO_NAME>/actions
+```
+
+Here is an example of mine: [https://github.com/beatrizsmerino/vue-gh-pages/actions](https://github.com/beatrizsmerino/vue-gh-pages/actions)
+
+3.5. To see the result, wait for the script execution to finish and open the application in the browser:
+
+Use the following link, replacing the `<USER_NAME>` and `<REPO_NAME>` variables with your data.
+
+```bash
+https://<USER_NAME>.github.io/<REPO_NAME>/
+```
+
+Here is an example of mine: [https://beatrizsmerino.github.io/vue-gh-pages/](https://beatrizsmerino.github.io/vue-gh-pages/)
