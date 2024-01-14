@@ -18,7 +18,7 @@ Throughout the execution process, the terminal displays a **minimal information*
 
 ## ⚙️ How it works
 
-In this version, points 1️⃣&nbsp;, 2️⃣&nbsp; and 5️⃣&nbsp; can be omitted; they work exactly the same as in version `1.x.x`.
+In this version, points 1️⃣, 2️⃣ and 5️⃣ can be omitted; they work exactly the same as in version `1.x.x`.
 
 ### 0️⃣ Required NPM packages
 
