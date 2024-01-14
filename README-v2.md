@@ -18,7 +18,7 @@ Throughout the execution process, the terminal displays a **minimal information*
 
 ## ⚙️ How it works
 
-In this version, points 1️⃣&nbsp;, 2️⃣&nbsp; and 5️⃣&nbsp; can be omitted; they work exactly the same as in version `1.x.x`.
+In this version, points 1️⃣, 2️⃣ and 5️⃣ can be omitted; they work exactly the same as in version `1.x.x`.
 
 ### 0️⃣ Required NPM packages
 
@@ -81,6 +81,7 @@ touch deploy-v2.mjs
 3.2. Inside the `deploy-v2.mjs` file, you can use two ways to deploy depending on the number of packages you want to install, so choose one of them, and copy and paste the following code:
 
 1. Installing only the `execa` and `fs` packages, you get simple text messages on the terminal.
+
 ```javascript
 const execa = require("execa");
 const fs = require("fs");
@@ -115,6 +116,7 @@ const fs = require("fs");
 ```
 
 2. Installing the `execa`, `fs`, `chalk` and `node-emoji` packages you can improve the display and user experience by using colors and emojis in terminal messages.
+
 ```javascript
 import { execa } from "execa";
 import * as emoji from "node-emoji";
