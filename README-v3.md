@@ -2,19 +2,19 @@
 
 ## 🎯 Description
 
-This version, building upon the v2.x.x deployment strategy, executes the `deploy-v2.mjs` file using the `npm run deploy:v2` command specified in the `package.json` file.
+This version, based on the v2.x.x, executes the `deploy-v2.mjs` file using the `npm run deploy:v2` command specified in the `package.json` file.
 
 It does **not require the installation of additional NPM packages** specific to the deployment process, except for those already used in v2.x.x.
-But note, that the new `deploy.yml` file uses `actions/checkout` and `actions/setup-node` to make it work.
+But note, that the new `.github/workflows/deploy.yml` file that we will create in this version, uses `actions/checkout` and `actions/setup-node` to make it work.
 
-To use it, you'll need to **customize some data** in the `vue.config.js` and `deploy.yml` files, changing the `<USER_NAME>`, `<USER_EMAIL>` and `<REPO_NAME>` variables to match the username, the user email and repository name of your GitHub account.
+In this version, you'll need to **customize some data** in the `vue.config.js` and `.github/workflows/deploy.yml` files, changing the `<USER_NAME>`, `<USER_EMAIL>` and `<REPO_NAME>` variables to match the username, the user email and repository name of your GitHub account.
 
-The process still uses the script from the previous version, but incorporates **automatic deployment** via `GitHubActions`, which is a significant shift towards automation and CI/CD best practices.
-When some changes are pushed to the `master` branch, the `deploy.yml` workflow is executed, which automatically performs certain steps to upload the changes to the `gh-pages` branch of a `git` repository uploaded to GitHub.
+The process still uses the script from the previous version, but incorporates **automatic deployment** via `GitHub Actions`, which is a significant shift towards automation and CI/CD best practices.
+The process works as follows: when some changes are pushed to the `master` branch, the `.github/workflows/deploy.yml` workflow is executed, which automatically performs certain steps to upload the changes from the `dist` folder to the `gh-pages` branch of a `git` repository uploaded to GitHub.
 
-This process will **no longer be seen in the terminal** so you will have to go to the github website, search for your repository and watch each step to see if it finishes correctly.
+This process **will no longer be seen in the terminal** so you will have to go to the github website, search for your repository and watch each step in the `Actions` tab to see if it finishes correctly.
 
-In this configuration I will detail how `GithubActions` can be used to automate the `Deployment` process. But I will also describe how to configure the `Dependabot` file and the workflow for `Node`.
+In this documentation, in addition to detailing how to use `Github Actions` to automate the `Deployment workflow` in the file `.github/workflows/deploy.yml`, I will describe how to build the `Dependabot configuration` in the `.github/dependabot.yml` file and the `Node workflow` in the `.github/workflows/node.yml` file.
 
 ## ⚙️ How it works
 
