@@ -18,11 +18,10 @@ In this configuration I will detail how `GithubActions` can be used to automate 
 
 ## ⚙️ How it works
 
-Begin by following the steps 0️⃣, 1️⃣, 2️⃣, 3️⃣, 4️⃣ and 5️⃣ outlined in the [README-v2.md](./README-v2.md) file.
-This includes the installation of the required packages, the creation of the files and their configuration.
-
+Begin by following the steps outlined in the [README-v2.md](./README-v2.md) file. This includes the installation of the required packages, the creation of the files and their configuration.
 Then return to this version to follow the instructions below.
-You should know that the following steps 1️⃣ and 2️⃣ are an extra to enhance your configuration, they are not required for the deployment.
+
+You should know that the following steps 1️⃣ and 2️⃣ are a recommendation to enhance your configuration, they are not required for the deployment, so you can go to step 3️⃣ directely.
 
 ### 1️⃣ Github Actions. Dependabot configuration
 
