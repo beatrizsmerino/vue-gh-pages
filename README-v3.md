@@ -9,7 +9,7 @@ But note, that the new `.github/workflows/deploy.yml` file that we will create i
 
 In this version, you'll need to **customize some data** in the `vue.config.js` and `.github/workflows/deploy.yml` files, changing the `<USER_NAME>`, `<USER_EMAIL>` and `<REPO_NAME>` variables to match the username, the user email and repository name of your GitHub account.
 
-The process still uses the script from the previous version, but incorporates **automatic deployment** via `GitHub Actions`, which is a significant shift towards automation and CI/CD best practices.
+The process still uses the script from the previous version, but incorporates **automatic deployment** via `GitHub Actions`, which is a significant shift towards automation and CI/CD (Continuous Integration & Continuous Deployment) best practices.
 The process works as follows: when some changes are pushed to the `master` branch, the `.github/workflows/deploy.yml` workflow is executed, which automatically performs certain steps to upload the changes from the `dist` folder to the `gh-pages` branch of a `git` repository uploaded to GitHub.
 
 This process **will no longer be seen in the terminal** so you will have to go to the github website, search for your repository and watch each step in the `Actions` tab to see if it finishes correctly.
