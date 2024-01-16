@@ -178,6 +178,11 @@ This GitHub Actions workflow is an integral part of maintaining a robust and com
 5. `🧪 Run NPM script to test`: Conducts automated tests by running `npm test` command if exist, ensuring that the code works as expected.
 6. `🔍 Validate commits to use the commitlint syntax`: Ensures that all commit messages in the pull request adhere to the predefined standards of commitlint, maintaining a clean and consistent commit history.
 
+2.3. This GitHub Actions workflow in Node.js, defined in `.github/workflows/node.yml` file, is automatically triggered by any `push` to the `master` branch or when a Pull Request is opened against it. This includes instances where Dependabot generates a PR for dependency updates.
+This verification is particularly crucial in scenarios where a dependency may work with one version of Node but not another. For example, `node-emoji@2.1.3` is only compatible with Node versions >=18.
+The workflow rigorously checks that these updates are compatible and do not introduce problems or break code, before merging with the `master` branch, ensuring that each change maintains the integrity and functionality of the project.
+During the workflow checking process, if the `install`, `build` or `test` commands fail, we can go to our repository uploaded to GitHub, click on the `Actions` tab and see what has failed ([https://github.com/beatrizsmerino/vue-gh-pages/actions/runs/7578245898/job/20640527864#step:4:136](https://github.com/beatrizsmerino/vue-gh-pages/actions/runs/7578245898/job/20640527864#step:4:136)).
+
 ### 3️⃣ Github Actions. Workflow deploy
 
 3.1 In the root of the project, there is a file called `.github/workflows/deploy.yml`. If it doesn't exist, create it with the following command:
