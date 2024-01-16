@@ -170,16 +170,13 @@ jobs:
       run: npx commitlint --from ${{ github.event.pull_request.base.sha }} --to ${{ github.event.pull_request.head.sha }} --verbose
 ```
 
-The previous code, check the project build on different versions of Node.js, run tests and validate commit messages using commitlint.
-You can see the whole process of the steps of this workflow in GitHub Actions:
-1. `🔀 Checkout code from repository`: Clones your project repository into the GitHub Actions runner, providing access to its codebase.
-2. `🛠️ Setup Node version x.x`: Specifies Node.js versions (16.x, 18.x, 20.x) to ensure compatibility across multiple versions.
+This GitHub Actions workflow is an integral part of maintaining a robust and compatible `Node.js` project, ensuring that every change is automatically tested and validated across different environments:
+1. `🔀 Checkout code from repository`: Clones your project repository into the GitHub Actions runtime environment (runner), providing access to its codebase.
+2. `🛠️ Setup Node version x.x`: Specifies Node.js versions (16.x, 18.x, 20.x) to be checked to ensure compatibility between various versions.
 3. `📦 Install Dependencies`: Runs `npm install` command to install all the necessary dependencies defined in your `package.json`.
-4. `🏗️ Run NPM script to build`: Executes `npm run build` command if exist, to build your project. This step is crucial for compiling the project and preparing it for testing.
-5. `🧪 Run NPM script to test`: Conducts automated tests by running `npm test` command. This step is essential for ensuring that your code works as expected.
-6. `🔍 Validate commits to use the commitlint syntax`: Ensures that all commit messages in the pull request adhere to the predefined standards, using commitlint. This step is vital for maintaining a clean and consistent commit history.
-
-This GitHub Actions workflow is an integral part of maintaining a robust and compatible Node.js project, ensuring that every change is automatically tested and validated across different Node.js environments.
+4. `🏗️ Run NPM script to build`: Run the `npm run build` command, if present, to compile your project and prepare it for testing.
+5. `🧪 Run NPM script to test`: Conducts automated tests by running `npm test` command if exist, ensuring that the code works as expected.
+6. `🔍 Validate commits to use the commitlint syntax`: Ensures that all commit messages in the pull request adhere to the predefined standards of commitlint, maintaining a clean and consistent commit history.
 
 ### 3️⃣ Github Actions. Workflow deploy
 
