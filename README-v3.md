@@ -113,7 +113,19 @@ On the Github website where the repository is uploaded, inside the `Pull Request
 If everything is correct, the user assigned in `reviewer`, will go to the `Modified files` tab ([https://github.com/beatrizsmerino/vue-gh-pages/pull/478/files](https://github.com/beatrizsmerino/vue-gh-pages/pull/478/files)), mark each file as `viewed`, click on the `Review changes` button and check the `Approve` option.
 Then a user with permissions, at the end of the main page of the PR ([https://github.com/beatrizsmerino/vue-gh-pages/pull/478](https://github.com/beatrizsmerino/vue-gh-pages/pull/478)), will be able to close it by merging the changes with the `master` branch.
 
+![Info of Vue deployment in the terminal](./README/images/deploy-v3-1.1.jpg)
+![Info of Vue deployment in the terminal](./README/images/deploy-v3-1.2.jpg)
+![Info of Vue deployment in the terminal](./README/images/deploy-v3-1.3.jpg)
+![Info of Vue deployment in the terminal](./README/images/deploy-v3-1.4.jpg)
+![Info of Vue deployment in the terminal](./README/images/deploy-v3-1.5.jpg)
+
 If for some reason, you want to force the execution of the `.github/dependabot.yml` file instead of waiting for its execution you can do it by going to the `Insights` tab, clicking on the `Dependency graph` option on the left menu, then clicking on the `Dependabot` tab, clicking on the `Recent update jobs` link and finally clicking on the `Check for updates` button.
+
+![Info of Vue deployment in the terminal](./README/images/deploy-v3-2.1.jpg)
+![Info of Vue deployment in the terminal](./README/images/deploy-v3-2.2.jpg)
+![Info of Vue deployment in the terminal](./README/images/deploy-v3-2.3.jpg)
+![Info of Vue deployment in the terminal](./README/images/deploy-v3-2.4.jpg)
+![Info of Vue deployment in the terminal](./README/images/deploy-v3-2.5.jpg)
 
 ### 2️⃣ Github Actions. Workflow Node
 
