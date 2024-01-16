@@ -183,6 +183,8 @@ This verification is particularly crucial in scenarios where a dependency may wo
 The workflow rigorously checks that these updates are compatible and do not introduce problems or break code, before merging with the `master` branch, ensuring that each change maintains the integrity and functionality of the project.
 During the workflow checking process, if the `install`, `build` or `test` commands fail, we can go to our repository uploaded to GitHub, click on the `Actions` tab and see what has failed ([https://github.com/beatrizsmerino/vue-gh-pages/actions/runs/7578245898/job/20640527864#step:4:136](https://github.com/beatrizsmerino/vue-gh-pages/actions/runs/7578245898/job/20640527864#step:4:136)).
 
+![Info of Vue deployment in the terminal](./README/images/deploy-v3-3.1.jpg)
+
 ### 3️⃣ Github Actions. Workflow deploy
 
 3.1 In the root of the project, there is a file called `.github/workflows/deploy.yml`. If it doesn't exist, create it with the following command:
