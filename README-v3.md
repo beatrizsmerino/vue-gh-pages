@@ -105,6 +105,16 @@ In the above code, the configuration specifies how `Dependabot` looks for depend
       - beatrizsmerino
 ```
 
+2.4. So this configuration is expected to work like this:
+1. Dependabot is configured in the `.github/dependabot.yml` file, to routinely monitor your project's dependencies. Specifically, on the first Saturday of each month at 09:00 (Madrid time), it will scan your project for any updates needed for your dependencies. This includes both your Node.js packages (`npm`) and your GitHub Actions workflows (`github-actions`).
+2. When updates are found, Dependabot will automatically create Pull Requests, which will follow the specified confirmation message format and have one or more specific users assigned to review it and merge it with the `master` branch.
+On the Github website where the repository is uploaded, inside the `Pull Request` section ([https://github.com/beatrizsmerino/vue-gh-pages/pulls](https://github.com/beatrizsmerino/vue-gh-pages/pulls)) you can see a list of them.
+3. Once inside a PR ([https://github.com/beatrizsmerino/vue-gh-pages/pull/478](https://github.com/beatrizsmerino/vue-gh-pages/pull/478)), the user assigned in `assignees` will be in charge of correcting the possible errors that prevent the merging of that PR.
+If everything is correct, the user assigned in `reviewer`, will go to the `Modified files` tab ([https://github.com/beatrizsmerino/vue-gh-pages/pull/478/files](https://github.com/beatrizsmerino/vue-gh-pages/pull/478/files)), mark each file as `viewed`, click on the `Review changes` button and check the `Approve` option.
+Then a user with permissions, at the end of the main page of the PR ([https://github.com/beatrizsmerino/vue-gh-pages/pull/478](https://github.com/beatrizsmerino/vue-gh-pages/pull/478)), will be able to close it by merging the changes with the `master` branch.
+
+If for some reason, you want to force the execution of the `.github/dependabot.yml` file instead of waiting for its execution you can do it by going to the `Insights` tab, clicking on the `Dependency graph` option on the left menu, then clicking on the `Dependabot` tab, clicking on the `Recent update jobs` link and finally clicking on the `Check for updates` button.
+
 ### 2️⃣ Github Actions. Workflow Node
 
 2.1 In the root of the project, there is a file called `.github/workflows/node.yml`. If it doesn't exist, create it with the following command:
