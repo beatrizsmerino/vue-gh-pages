@@ -113,19 +113,19 @@ On the Github website where the repository is uploaded, inside the `Pull Request
 If everything is correct, the user assigned in `reviewer`, will go to the `Modified files` tab ([https://github.com/beatrizsmerino/vue-gh-pages/pull/478/files](https://github.com/beatrizsmerino/vue-gh-pages/pull/478/files)), mark each file as `viewed`, click on the `Review changes` button and check the `Approve` option.
 Then a user with permissions, at the end of the main page of the PR ([https://github.com/beatrizsmerino/vue-gh-pages/pull/478](https://github.com/beatrizsmerino/vue-gh-pages/pull/478)), will be able to close it by merging the changes with the `master` branch.
 
-![Info of Vue deployment in the terminal](./README/images/deploy-v3-1.1.jpg)
-![Info of Vue deployment in the terminal](./README/images/deploy-v3-1.2.jpg)
-![Info of Vue deployment in the terminal](./README/images/deploy-v3-1.3.jpg)
-![Info of Vue deployment in the terminal](./README/images/deploy-v3-1.4.jpg)
-![Info of Vue deployment in the terminal](./README/images/deploy-v3-1.5.jpg)
+![Dependabot PR - List of open](./README/images/deploy-v3-1.1.jpg)
+![Dependabot PR - Reviewers and assignees](./README/images/deploy-v3-1.2.jpg)
+![Dependabot PR - Review changes](./README/images/deploy-v3-1.3.jpg)
+![Dependabot PR - Approve changes](./README/images/deploy-v3-1.4.jpg)
+![Dependabot PR - Merge changes](./README/images/deploy-v3-1.5.jpg)
 
 If for some reason, you want to force the execution of the `.github/dependabot.yml` file instead of waiting for its execution you can do it by going to the `Insights` tab, clicking on the `Dependency graph` option on the left menu, then clicking on the `Dependabot` tab, clicking on the `Recent update jobs` link and finally clicking on the `Check for updates` button.
 
-![Info of Vue deployment in the terminal](./README/images/deploy-v3-2.1.jpg)
-![Info of Vue deployment in the terminal](./README/images/deploy-v3-2.2.jpg)
-![Info of Vue deployment in the terminal](./README/images/deploy-v3-2.3.jpg)
-![Info of Vue deployment in the terminal](./README/images/deploy-v3-2.4.jpg)
-![Info of Vue deployment in the terminal](./README/images/deploy-v3-2.5.jpg)
+![Dependabot updates - Insights](./README/images/deploy-v3-2.1.jpg)
+![Dependabot updates - Dependency graph](./README/images/deploy-v3-2.2.jpg)
+![Dependabot updates - Dependabot](./README/images/deploy-v3-2.3.jpg)
+![Dependabot updates - Recent update jobs](./README/images/deploy-v3-2.4.jpg)
+![Dependabot updates - Check for updates](./README/images/deploy-v3-2.5.jpg)
 
 ### 2️⃣ Github Actions. Workflow Node
 
@@ -183,7 +183,7 @@ This verification is particularly crucial in scenarios where a dependency may wo
 The workflow rigorously checks that these updates are compatible and do not introduce problems or break code, before merging with the `master` branch, ensuring that each change maintains the integrity and functionality of the project.
 During the workflow checking process, if the `install`, `build` or `test` commands fail, we can go to our repository uploaded to GitHub, click on the `Actions` tab and see what has failed ([https://github.com/beatrizsmerino/vue-gh-pages/actions/runs/7578245898/job/20640527864#step:4:136](https://github.com/beatrizsmerino/vue-gh-pages/actions/runs/7578245898/job/20640527864#step:4:136)).
 
-![Info of Vue deployment in the terminal](./README/images/deploy-v3-3.1.jpg)
+![Node workflow failing](./README/images/deploy-v3-3.1.jpg)
 
 ### 3️⃣ Github Actions. Workflow deploy
 
