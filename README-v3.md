@@ -190,7 +190,7 @@ This GitHub Actions workflow is an integral part of maintaining a robust and com
 2. When the workflow auto-runs you will have to make some checks such as that all dependencies are installed correctly, that the project can be built for production and that it passes all tests.
 This verification is particularly crucial in scenarios where a dependency may work with one version of Node but not another. For example, `node-emoji@2.1.3` is only compatible with Node versions >=18.  
 The workflow rigorously checks that these updates are compatible and do not introduce problems or break code, before the merge, ensuring that each change maintains the integrity and functionality of the project.
-3. During his ejecution, upon detection of any issues, such as failed tests or incompatible code, the workflow halts the integration process, signaling the need for intervention.  
+3. During his execution, upon detection of any issues, such as failed tests or incompatible code, the workflow halts the integration process, signaling the need for intervention.  
 Contributors are then notified of the failed status of the process via an alert on GitHub and also by email. And they have to swiftly identify the cause of the failure thanks to detailed logs accessible on the `Actions` tab ([https://github.com/beatrizsmerino/vue-gh-pages/actions/runs/7578245898/job/20640527864#step:4:136](https://github.com/beatrizsmerino/vue-gh-pages/actions/runs/7578245898/job/20640527864#step:4:136)).  
 Finally, once the developers resolve the issues and upload the changes, the workflow runs again to confirm that the changes are safe to merge with the `master` branch this time.
 
