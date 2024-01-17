@@ -119,6 +119,8 @@ Finally a user with permissions, will go at the end of the main page of the PR (
 ![Dependabot PR - Approve changes](./README/images/deploy-v3-1.4.jpg)
 ![Dependabot PR - Merge changes](./README/images/deploy-v3-1.5.jpg)
 
+<p id="force"></p>
+
 If for some reason, you want to force the execution of the `.github/dependabot.yml` file instead of waiting for its execution, you can do it in the following way:
 1. First, access the `Insights` tab in your repository interface.
 2. Select the `Dependency graph` option located in the left menu.
@@ -194,7 +196,7 @@ Finally, once the developers resolve the issues and upload the changes, the work
 
 ![Node workflow failing](./README/images/deploy-v3-3.1.jpg)
 
-This process can also be forced in the same way as described in the `Dependabot` process.
+This process can also be forced in the same way as described in the `Dependabot` process. Go [here](#force) to read the steps.
 
 ### 3️⃣ Github Actions. Workflow deploy
 
