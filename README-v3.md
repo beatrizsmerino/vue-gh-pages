@@ -236,14 +236,12 @@ jobs:
         run: npm run deploy:v2
 ```
 
-This workflow is designed to streamline your project's deployment to `GitHub Pages`.
-It automatically triggers a new deployment with every push to the `master` branch, ensuring the live version of your site is consistently synchronized with the latest updates.
-You can see the whole process of the steps of this workflow in GitHub Actions:
-1. `🔀 Checkout code from repository`: Retrieves the code from your repository, making it available for the workflow.
-2. `🛠️ Setup Node version`: Prepares the GitHub Actions runner with Node.js version 20.x. It's important to ensure compatibility with your project's Node.js version requirements.
+This GitHub Actions workflow is designed to streamline the deployment of your project to `GitHub Pages` automatically every time a contributor uploads new changes, reflecting changes in real time:
+1. `🔀 Checkout code from repository`: Retrieve the code from your repository, cloning it into the GitHub Actions runner and making it available to the workflow.
+2. `🛠️ Setup Node version`: Prepares the GitHub Actions runner with Node.js version 20.x, to ensure compatibility with your project's Node.js version requirements.
 3. `📦 Install dependencies`: Executes `npm ci` command for a clean install of your project's dependencies, ensuring a consistent environment for the deployment.
-4. `🙍‍♂️ Setup git user`: Sets up Git with your name and email. This is crucial for commits made during the deployment process, as it associates them with your identity.
-5. `🏗️ Run NPM script to deploy`: Runs the `npm run deploy:v2` command, which triggers the deployment script defined in your `package.json`. This script is responsible for building and deploying your project to the `gh-pages` branch.
+4. `🙍‍♂️ Setup git user`: Sets up Git with your name and email, to associate your identity with the commits made during the deployment process.
+5. `🏗️ Run NPM script to deploy`: Runs the `npm run deploy:v2` command defined in your `package.json`, which triggers the script of `deploy-v2.mjs` file, for building and deploying your project to the `gh-pages` branch.
 
 3.3. In this file it is necessary to update the values of `user.name` and `user.email` replacing the variables `<USER_NAME>` and `<USER_EMAIL>` with the name and email of the user who will make sure to deploy the repository.
 
