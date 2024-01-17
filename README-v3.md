@@ -184,14 +184,17 @@ This GitHub Actions workflow is an integral part of maintaining a robust and com
 6. `🔍 Validate commits to use the commitlint syntax`: Ensures that all commit messages in the pull request adhere to the predefined standards of commitlint, maintaining a clean and consistent commit history.
 
 2.3. So this configuration is expected to work like this:
-1. This GitHub Actions workflow in Node.js, defined in `.github/workflows/node.yml` file, is automatically triggered by any `push` to the `master` branch or when a Pull Request is opened against it.  
-This verification is particularly crucial in scenarios where a dependency may work with one version of Node but not another. This includes instances where Dependabot generates a PR for dependency updates. For example, `node-emoji@2.1.3` is only compatible with Node versions >=18.  
+1. This GitHub Actions workflow in Node.js, defined in `.github/workflows/node.yml` file, will be automatically triggered by any `push` to the `master` branch or when a Pull Request is opened against it. This includes instances where Dependabot generates PRs for dependencies updates.  
+2. When the workflow auto-runs you will have to make some checks such as that all dependencies are installed correctly, that the project can be built for production and that it passes all tests.
+This verification is particularly crucial in scenarios where a dependency may work with one version of Node but not another. For example, `node-emoji@2.1.3` is only compatible with Node versions >=18.  
 The workflow rigorously checks that these updates are compatible and do not introduce problems or break code, before the merge, ensuring that each change maintains the integrity and functionality of the project.
-2. During the workflow checking process, if the `install`, `build` or `test` commands fail, we can go to our repository uploaded to GitHub, click on the `Actions` tab and see what has failed ([https://github.com/beatrizsmerino/vue-gh-pages/actions/runs/7578245898/job/20640527864#step:4:136](https://github.com/beatrizsmerino/vue-gh-pages/actions/runs/7578245898/job/20640527864#step:4:136)).  
-Upon detection of any issues, such as failed tests or incompatible code, the workflow halts the integration process, signaling the need for intervention. Contributors are notified of the process status and can swiftly identify the cause of the failure thanks to detailed logs accessible on the `Actions` tab.  
-Once the developers resolve the issues and upload the changes, the workflow runs again to confirm that the changes are safe to merge with the master branch this time.
+3. During his ejecution, upon detection of any issues, such as failed tests or incompatible code, the workflow halts the integration process, signaling the need for intervention.  
+Contributors are then notified of the failed status of the process via an alert on GitHub and also by email. And they have to swiftly identify the cause of the failure thanks to detailed logs accessible on the `Actions` tab ([https://github.com/beatrizsmerino/vue-gh-pages/actions/runs/7578245898/job/20640527864#step:4:136](https://github.com/beatrizsmerino/vue-gh-pages/actions/runs/7578245898/job/20640527864#step:4:136)).  
+Finally, once the developers resolve the issues and upload the changes, the workflow runs again to confirm that the changes are safe to merge with the `master` branch this time.
 
 ![Node workflow failing](./README/images/deploy-v3-3.1.jpg)
+
+This process can also be forced in the same way as described in the `Dependabot` process.
 
 ### 3️⃣ Github Actions. Workflow deploy
 
