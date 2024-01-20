@@ -219,6 +219,8 @@ Finally, once the developers resolve the issues and upload the changes, the work
 
 ![Node workflow failing](./README/images/deploy-v3-3.1.jpg)
 
+#### 2.5. Manual execution of the workflow
+
 This process can also be forced in the same way as described in the `Dependabot` process. Go [here](#16-manual-execution-of-the-workflow) to read the steps.
 
 ### 3️⃣ Github Actions. Workflow deploy
@@ -310,3 +312,7 @@ Here is an example of mine: [https://beatrizsmerino.github.io/vue-gh-pages/](htt
 ![Deploy workflow success](./README/images/deploy-v3-4.1.jpg)
 ![Deploy workflow success](./README/images/deploy-v3-4.2.jpg)
 ![Deploy workflow success](./README/images/deploy-v3-4.3.jpg)
+
+#### 3.6. Manual execution of the workflow
+
+This deployment process can also be forced manually, at any time, by directly using the `npm run deploy:v2` command in your terminal.
