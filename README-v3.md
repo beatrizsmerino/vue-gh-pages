@@ -81,6 +81,7 @@ updates:
 ```
 
 In the above code, the configuration specifies how `Dependabot` looks for dependency updates and creates Pull Requests (PR) for them:
+
 1. `package-ecosystem`: Specifies the environment of the dependencies to update (e.g., `npm` for Node.js packages, `github-actions` for GitHub Actions).
 2. `directory`: Indicates the main location of the dependencies (e.g., `package.json` and `package-lock.json` files for NPM and `.github` folder for GitHub Actions).
 3. `schedule`: Defines when Dependabot checks for updates. It includes the `interval` (how often), `day` of the week, `time`, and `timezone`.
@@ -106,6 +107,7 @@ In the above code, the configuration specifies how `Dependabot` looks for depend
 ```
 
 #### 1.4. So this configuration is expected to work like this:
+
 1. Dependabot is configured in the `.github/dependabot.yml` file, so the first thing it will do is to routinely monitor your project's dependencies. Specifically, on the first Saturday of each month at 09:00 (Madrid time), it will scan your project for any updates needed for your dependencies. This includes both your Node.js packages (`npm`) and your GitHub Actions workflows (`github-actions`).
 2. Then, when updates are found, Dependabot will automatically create Pull Requests, which will follow the specified confirmation message format and have one or more specific users assigned to solve it, review it and, if they have permissions, merge it with the `master` branch.  
 On the Github website where the repository is uploaded, inside the `Pull Request` section ([https://github.com/beatrizsmerino/vue-gh-pages/pulls](https://github.com/beatrizsmerino/vue-gh-pages/pulls)) you can see a list of them.
@@ -122,6 +124,7 @@ Finally a user with permissions, will go at the end of the main page of the PR (
 <p id="force"></p>
 
 If for some reason, you want to force the execution of the `.github/dependabot.yml` file instead of waiting for its execution, you can do it in the following way:
+
 1. First, access the `Insights` tab in your repository interface.
 2. Select the `Dependency graph` option located in the left menu.
 3. Then, go to the `Dependabot` tab.
@@ -178,6 +181,7 @@ jobs:
 ```
 
 This GitHub Actions workflow is an integral part of maintaining a robust and compatible `Node.js` project, ensuring that every change is automatically tested and validated across different environments:
+
 1. `🔀 Checkout code from repository`: Clones your project repository into the GitHub Actions runtime environment (runner), providing access to its codebase.
 2. `🛠️ Setup Node version x.x`: Specifies Node.js versions (16.x, 18.x, 20.x) to be checked to ensure compatibility between various versions.
 3. `📦 Install Dependencies`: Runs `npm install` command to install all the necessary dependencies defined in your `package.json`.
@@ -186,6 +190,7 @@ This GitHub Actions workflow is an integral part of maintaining a robust and com
 6. `🔍 Validate commits to use the commitlint syntax`: Ensures that all commit messages in the pull request adhere to the predefined standards of commitlint, maintaining a clean and consistent commit history.
 
 #### 2.3. So this configuration is expected to work like this:
+
 1. This GitHub Actions workflow in Node.js, defined in `.github/workflows/node.yml` file, will be automatically triggered by any `push` to the `master` branch or when a Pull Request is opened against it. This includes instances where Dependabot generates PRs for dependencies updates.  
 2. When the workflow auto-runs you will have to make some checks such as that all dependencies are installed correctly, that the project can be built for production and that it passes all tests.
 This verification is particularly crucial in scenarios where a dependency may work with one version of Node but not another. For example, `node-emoji@2.1.3` is only compatible with Node versions >=18.  
@@ -237,6 +242,7 @@ jobs:
 ```
 
 This GitHub Actions workflow is designed to streamline the deployment of your project to `GitHub Pages` automatically every time a contributor uploads new changes, reflecting changes in real time:
+
 1. `🔀 Checkout code from repository`: Retrieve the code from your repository, cloning it into the GitHub Actions runner and making it available to the workflow.
 2. `🛠️ Setup Node version`: Prepares the GitHub Actions runner with Node.js version 20.x, to ensure compatibility with your project's Node.js version requirements.
 3. `📦 Install dependencies`: Executes `npm ci` command for a clean install of your project's dependencies, ensuring a consistent environment for the deployment.
@@ -261,6 +267,7 @@ This GitHub Actions workflow is designed to streamline the deployment of your pr
 
 
 #### 3.4. So this configuration is expected to work like this:
+
 1. This GitHub Actions workflow of Deployment is defined in `.github/workflows/deploy.yml` file.  
 Therefore, to deploy the application, simply `push` your changes to the `master` branch, this action will automatically trigger this deployment workflow.
 2. Then, you can track the progress of the deployment by visiting your repository's GitHub page. Navigate to the `Actions` tab to see the workflow in real-time ([https://github.com/beatrizsmerino/vue-gh-pages/actions/runs/7596714083](https://github.com/beatrizsmerino/vue-gh-pages/actions/runs/7596714083)). There you'll find detailed logs and status updates for each step of the deployment process, allowing you to monitor and verify the successful deployment of your application.
