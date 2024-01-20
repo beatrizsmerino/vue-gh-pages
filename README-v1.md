@@ -48,6 +48,12 @@ module.exports = {
 
 2.3. In the previous code, update the [`publicPath`](https://cli.vuejs.org/config/#publicpath) by replacing the `<REPO_NAME>` variable with the name of the repository where the application will be deployed.
 
+```javascript
+module.exports = {
+	publicPath: process.env.NODE_ENV === "production" ? "/vue-gh-pages/" : "/"
+};
+```
+
 ### 3️⃣ The `deploy-v1.sh` file
 
 3.1. In the root of the project, create the `deploy-v1.sh` file:
@@ -110,10 +116,18 @@ The **last git command** must be replaced with any of the following commands:
 git push -f https://github.com/<USER_NAME>/<REPO_NAME>.git master:gh-pages
 ```
 
+```bash
+git push -f https://github.com/beatrizsmerino/vue-gh-pages.git master:gh-pages
+```
+
 - If you have your GitHub account configured to connect via SSH.
 
 ```bash
 git push -f git@github.com:<USER_NAME>/<REPO_NAME>.git master:gh-pages
+```
+
+```bash
+git push -f git@github.com:beatrizsmerino/vue-gh-pages.git master:gh-pages
 ```
 
 ### 4️⃣ The `package.json` file

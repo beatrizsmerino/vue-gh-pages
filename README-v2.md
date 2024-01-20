@@ -70,6 +70,12 @@ module.exports = {
 
 2.3. In the previous code, update the [`publicPath`](https://cli.vuejs.org/config/#publicpath) by replacing the `<REPO_NAME>` variable with the name of the repository where the application will be deployed.
 
+```javascript
+module.exports = {
+	publicPath: process.env.NODE_ENV === "production" ? "/vue-gh-pages/" : "/"
+};
+```
+
 ### 3️⃣ The `deploy-v2.mjs` file
 
 3.1. In the root of the project, create the `deploy-v2.mjs` file:
