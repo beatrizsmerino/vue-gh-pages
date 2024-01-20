@@ -84,6 +84,8 @@ updates:
     open-pull-requests-limit: 10
 ```
 
+#### 1.3. Explain the code
+
 In the above code, the configuration specifies how `Dependabot` looks for dependency updates and creates Pull Requests (PR) for them:
 
 1. `package-ecosystem`: Specifies the environment of the dependencies to update (e.g., `npm` for Node.js packages, `github-actions` for GitHub Actions).
@@ -94,7 +96,7 @@ In the above code, the configuration specifies how `Dependabot` looks for depend
 6. `ignore`: Allows to ignore dependencies and versions, which should not be automatically updated, preventing a PR to be created for them. For example, major version upgrades.
 7. `open-pull-requests-limit`: Defines the maximum number of Pull Requests Dependabot will create. Once this limit is reached, it will stop creating new ones until some are merged or closed.
 
-#### 1.3. Customize data
+#### 1.4. Customize data
 
 You can configure the rest of the options if you wish, but for this file to work, the most important thing is to update the `reviewers` and `assignees` by replacing the `<USER_NAME>` variable with the username of the person responsible for reviewing and merging Dependabot Pull Requests.
 
@@ -112,7 +114,7 @@ You can configure the rest of the options if you wish, but for this file to work
       - beatrizsmerino
 ```
 
-#### 1.4. How execute the script and watch the results
+#### 1.5. How execute the script and watch the results
 
 So this configuration is expected to work like this:
 
@@ -192,6 +194,8 @@ jobs:
       run: npx commitlint --from ${{ github.event.pull_request.base.sha }} --to ${{ github.event.pull_request.head.sha }} --verbose
 ```
 
+#### 2.3. Explain the code
+
 This GitHub Actions workflow is an integral part of maintaining a robust and compatible `Node.js` project, ensuring that every change is automatically tested and validated across different environments:
 
 1. `🔀 Checkout code from repository`: Clones your project repository into the GitHub Actions runtime environment (runner), providing access to its codebase.
@@ -201,7 +205,7 @@ This GitHub Actions workflow is an integral part of maintaining a robust and com
 5. `🧪 Run NPM script to test`: Conducts automated tests by running `npm test` command if exist, ensuring that the code works as expected.
 6. `🔍 Validate commits to use the commitlint syntax`: Ensures that all commit messages in the pull request adhere to the predefined standards of commitlint, maintaining a clean and consistent commit history.
 
-#### 2.3. How execute the script and watch the results
+#### 2.4. How execute the script and watch the results
 
 So this configuration is expected to work like this:
 
@@ -259,6 +263,8 @@ jobs:
         run: npm run deploy:v2
 ```
 
+#### 3.3. Explain the code
+
 This GitHub Actions workflow is designed to streamline the deployment of your project to `GitHub Pages` automatically every time a contributor uploads new changes, reflecting changes in real time:
 
 1. `🔀 Checkout code from repository`: Retrieve the code from your repository, cloning it into the GitHub Actions runner and making it available to the workflow.
@@ -267,7 +273,7 @@ This GitHub Actions workflow is designed to streamline the deployment of your pr
 4. `🙍‍♂️ Setup git user`: Sets up Git with your name and email, to associate your identity with the commits made during the deployment process.
 5. `🏗️ Run NPM script to deploy`: Runs the `npm run deploy:v2` command defined in your `package.json`, which triggers the script of `deploy-v2.mjs` file, for building and deploying your project to the `gh-pages` branch.
 
-#### 3.3. Customize data
+#### 3.4. Customize data
 
 In this file it is necessary to update the values of `user.name` and `user.email` replacing the variables `<USER_NAME>` and `<USER_EMAIL>` with the name and email of the GitHub account that will make sure to deploy the repository.
 
@@ -286,7 +292,7 @@ In this file it is necessary to update the values of `user.name` and `user.email
 ```
 
 
-#### 3.4. How execute the script and watch the results
+#### 3.5. How execute the script and watch the results
 
 So this configuration is expected to work like this:
 

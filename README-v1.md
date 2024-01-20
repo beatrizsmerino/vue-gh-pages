@@ -106,6 +106,8 @@ git push -f https://github.com/<USER_NAME>/<REPO_NAME>.git master:gh-pages
 cd -
 ```
 
+#### 3.3. Explain the code
+
 The `bash` script built in the `deploy-v1.sh` file is executed at the root of the project. It contains the serial execution of the commands necessary for the project release:
 
 1. `#!/usr/bin/env sh`: Runs the next `shell` script written in the `bash` language.
@@ -120,7 +122,7 @@ The `bash` script built in the `deploy-v1.sh` file is executed at the root of th
 
 The name `GitHub Pages` originates from the name of the `gh-pages` branch, where the deployment version of the project is located.
 
-#### 3.3. Customize data
+#### 3.4. Customize data
 
 Replace the word `<USER_NAME>` with your GitHub username and `<REPO_NAME>` with the name of your repository.
 The **last git command** must be replaced with any of the following commands:
@@ -157,12 +159,14 @@ Create the following NPM script inside the `package.json` file:
 }
 ```
 
+#### 4.2. Explain the code
+
 The script executes 2 commands, one after the other:
 
 1. `chmod +x ./deploy-v1.sh`: Assign the execution permission in the root of the project.
 2. `./deploy-v1.sh`: Execute the `deploy-v1.sh` file using `shell`.
 
-#### 4.2. Unexpected error
+#### 4.3. Unexpected error
 
 If you have unexpected changes in the `deploy-v1.sh` file after deployment follow the next step:
 

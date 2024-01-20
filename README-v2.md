@@ -175,6 +175,8 @@ const iconRocket = emoji.get("rocket");
 })();
 ```
 
+#### 3.3. Explain the code
+
 The `JavaScript` script built in the `deploy-v2.mjs` file is executed at the root of the project. It contains the serial execution of the commands necessary for the project release:
 
 1. `git checkout --orphan gh-pages`: Creates a new branch named `gh-pages`.
@@ -198,6 +200,8 @@ Create the following NPM script inside the `package.json` file:
 	"deploy:v2": "node deploy-v2.mjs"
 }
 ```
+
+#### 4.2. Explain the code
 
 The script executes 1 command:
 
