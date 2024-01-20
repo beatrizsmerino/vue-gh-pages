@@ -25,7 +25,7 @@ You should know that the following steps 1️⃣ and 2️⃣ are a recommendatio
 
 ### 1️⃣ Github Actions. Dependabot configuration
 
-#### 1.1 In the root of the project, there is a file called `.github/dependabot.yml`. If it doesn't exist, create it with the following command:
+#### 1.1. In the root of the project, there is a file called `.github/dependabot.yml`. If it doesn't exist, create it with the following command:
 
 ```bash
 mkdir -p .github && touch .github/dependabot.yml
@@ -33,7 +33,7 @@ mkdir -p .github && touch .github/dependabot.yml
 
 Note: The `-p` or `--parents` option of the `mkdir` command will help you create the directory only if it does not already exist.
 
-#### 1.2 Inside the `dependabot.yml` file, paste the following code:
+#### 1.2. Inside the `dependabot.yml` file, paste the following code:
 
 ```yml
 # For more information see: https://help.github.com/github/administering-a-repository/configuration-options-for-dependency-updates
@@ -136,13 +136,13 @@ If for some reason, you want to force the execution of the `.github/dependabot.y
 
 ### 2️⃣ Github Actions. Workflow Node
 
-#### 2.1 In the root of the project, there is a file called `.github/workflows/node.yml`. If it doesn't exist, create it with the following command:
+#### 2.1. In the root of the project, there is a file called `.github/workflows/node.yml`. If it doesn't exist, create it with the following command:
 
 ```bash
 mkdir -p .github/workflows && touch node.yml
 ```
 
-#### 2.2 Inside the `node.yml` file, paste the following code:
+#### 2.2. Inside the `node.yml` file, paste the following code:
 
 ```yml
 # For more information see: https://help.github.com/actions/language-and-framework-guides/using-nodejs-with-github-actions
@@ -200,13 +200,13 @@ This process can also be forced in the same way as described in the `Dependabot`
 
 ### 3️⃣ Github Actions. Workflow deploy
 
-#### 3.1 In the root of the project, there is a file called `.github/workflows/deploy.yml`. If it doesn't exist, create it with the following command:
+#### 3.1. In the root of the project, there is a file called `.github/workflows/deploy.yml`. If it doesn't exist, create it with the following command:
 
 ```bash
 mkdir -p .github/workflows && touch deploy.yml
 ```
 
-#### 3.2 Inside the `deploy.yml` file, paste the following code:
+#### 3.2. Inside the `deploy.yml` file, paste the following code:
 
 ```yml
 # For more information see: https://github.com/beatrizsmerino/vue-gh-pages
