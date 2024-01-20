@@ -89,7 +89,7 @@ In the above code, the configuration specifies how `Dependabot` looks for depend
 6. `ignore`: Allows to ignore dependencies and versions, which should not be automatically updated, preventing a PR to be created for them. For example, major version upgrades.
 7. `open-pull-requests-limit`: Defines the maximum number of Pull Requests Dependabot will create. Once this limit is reached, it will stop creating new ones until some are merged or closed.
 
-2.3. You can configure the rest of the options if you wish, but for this file to work, the most important thing is to update the `reviewers` and `assignees` by replacing the `<USER_NAME>` variable with the username of the person responsible for reviewing and merging Dependabot Pull Requests.
+1.3. You can configure the rest of the options if you wish, but for this file to work, the most important thing is to update the `reviewers` and `assignees` by replacing the `<USER_NAME>` variable with the username of the person responsible for reviewing and merging Dependabot Pull Requests.
 
 ```yml
 	reviewers:
@@ -105,7 +105,7 @@ In the above code, the configuration specifies how `Dependabot` looks for depend
       - beatrizsmerino
 ```
 
-2.4. So this configuration is expected to work like this:
+1.4. So this configuration is expected to work like this:
 1. Dependabot is configured in the `.github/dependabot.yml` file, so the first thing it will do is to routinely monitor your project's dependencies. Specifically, on the first Saturday of each month at 09:00 (Madrid time), it will scan your project for any updates needed for your dependencies. This includes both your Node.js packages (`npm`) and your GitHub Actions workflows (`github-actions`).
 2. Then, when updates are found, Dependabot will automatically create Pull Requests, which will follow the specified confirmation message format and have one or more specific users assigned to solve it, review it and, if they have permissions, merge it with the `master` branch.  
 On the Github website where the repository is uploaded, inside the `Pull Request` section ([https://github.com/beatrizsmerino/vue-gh-pages/pulls](https://github.com/beatrizsmerino/vue-gh-pages/pulls)) you can see a list of them.
@@ -260,7 +260,7 @@ This GitHub Actions workflow is designed to streamline the deployment of your pr
 ```
 
 
-2.3. So this configuration is expected to work like this:
+3.4. So this configuration is expected to work like this:
 1. This GitHub Actions workflow of Deployment is defined in `.github/workflows/deploy.yml` file.  
 Therefore, to deploy the application, simply `push` your changes to the `master` branch, this action will automatically trigger this deployment workflow.
 2. Then, you can track the progress of the deployment by visiting your repository's GitHub page. Navigate to the `Actions` tab to see the workflow in real-time ([https://github.com/beatrizsmerino/vue-gh-pages/actions/runs/7596714083](https://github.com/beatrizsmerino/vue-gh-pages/actions/runs/7596714083)). There you'll find detailed logs and status updates for each step of the deployment process, allowing you to monitor and verify the successful deployment of your application.
