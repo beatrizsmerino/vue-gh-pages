@@ -196,7 +196,6 @@ There are two terminal outputs depending on the packages you use:
 1. Using the `execa` and `fs` packages.  
 It has a simple text messages that you can customize in the each `console.log` of the `deploy-v2.mjs` file.
 ![Info of Vue deployment in the terminal](./README/images/deploy-v2.jpg)
-
 2. Or using the `execa`, `fs`, `chalk` and `node-emoji` packages.  
 It is simmilar to the first way but the output messages include texts with colors and emoji characters. So the inclusion of the additional packages `chalk` and `node-emoji`, can enhance the visual output, making it more friendly and easier to read.
 ![Info of Vue deployment in the terminal](./README/images/deploy-v2.2.jpg)
