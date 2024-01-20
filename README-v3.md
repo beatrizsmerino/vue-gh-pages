@@ -25,7 +25,9 @@ You should know that the following steps 1️⃣ and 2️⃣ are a recommendatio
 
 ### 1️⃣ Github Actions. Dependabot configuration
 
-1.1 In the root of the project, there is a file called `.github/dependabot.yml`. If it doesn't exist, create it with the following command:
+#### 1.1. Create new file
+
+In the root of the project, there is a file called `.github/dependabot.yml`. If it doesn't exist, create it with the following command:
 
 ```bash
 mkdir -p .github && touch .github/dependabot.yml
@@ -33,7 +35,9 @@ mkdir -p .github && touch .github/dependabot.yml
 
 Note: The `-p` or `--parents` option of the `mkdir` command will help you create the directory only if it does not already exist.
 
-1.2 Inside the `dependabot.yml` file, paste the following code:
+#### 1.2. Copy & Paste code
+
+Inside the `dependabot.yml` file, paste the following code:
 
 ```yml
 # For more information see: https://help.github.com/github/administering-a-repository/configuration-options-for-dependency-updates
@@ -80,7 +84,10 @@ updates:
     open-pull-requests-limit: 10
 ```
 
+#### 1.3. Explain the code
+
 In the above code, the configuration specifies how `Dependabot` looks for dependency updates and creates Pull Requests (PR) for them:
+
 1. `package-ecosystem`: Specifies the environment of the dependencies to update (e.g., `npm` for Node.js packages, `github-actions` for GitHub Actions).
 2. `directory`: Indicates the main location of the dependencies (e.g., `package.json` and `package-lock.json` files for NPM and `.github` folder for GitHub Actions).
 3. `schedule`: Defines when Dependabot checks for updates. It includes the `interval` (how often), `day` of the week, `time`, and `timezone`.
@@ -89,7 +96,9 @@ In the above code, the configuration specifies how `Dependabot` looks for depend
 6. `ignore`: Allows to ignore dependencies and versions, which should not be automatically updated, preventing a PR to be created for them. For example, major version upgrades.
 7. `open-pull-requests-limit`: Defines the maximum number of Pull Requests Dependabot will create. Once this limit is reached, it will stop creating new ones until some are merged or closed.
 
-2.3. You can configure the rest of the options if you wish, but for this file to work, the most important thing is to update the `reviewers` and `assignees` by replacing the `<USER_NAME>` variable with the username of the person responsible for reviewing and merging Dependabot Pull Requests.
+#### 1.4. Customize data
+
+You can configure the rest of the options if you wish, but for this file to work, the most important thing is to update the `reviewers` and `assignees` by replacing the `<USER_NAME>` variable with the username of the person responsible for reviewing and merging Dependabot Pull Requests.
 
 ```yml
 	reviewers:
@@ -105,7 +114,10 @@ In the above code, the configuration specifies how `Dependabot` looks for depend
       - beatrizsmerino
 ```
 
-2.4. So this configuration is expected to work like this:
+#### 1.5. How execute the workflow and watch the results
+
+So this configuration is expected to work like this:
+
 1. Dependabot is configured in the `.github/dependabot.yml` file, so the first thing it will do is to routinely monitor your project's dependencies. Specifically, on the first Saturday of each month at 09:00 (Madrid time), it will scan your project for any updates needed for your dependencies. This includes both your Node.js packages (`npm`) and your GitHub Actions workflows (`github-actions`).
 2. Then, when updates are found, Dependabot will automatically create Pull Requests, which will follow the specified confirmation message format and have one or more specific users assigned to solve it, review it and, if they have permissions, merge it with the `master` branch.  
 On the Github website where the repository is uploaded, inside the `Pull Request` section ([https://github.com/beatrizsmerino/vue-gh-pages/pulls](https://github.com/beatrizsmerino/vue-gh-pages/pulls)) you can see a list of them.
@@ -119,9 +131,10 @@ Finally a user with permissions, will go at the end of the main page of the PR (
 ![Dependabot PR - Approve changes](./README/images/deploy-v3-1.4.jpg)
 ![Dependabot PR - Merge changes](./README/images/deploy-v3-1.5.jpg)
 
-<p id="force"></p>
+#### 1.6. Manual execution of the workflow
 
 If for some reason, you want to force the execution of the `.github/dependabot.yml` file instead of waiting for its execution, you can do it in the following way:
+
 1. First, access the `Insights` tab in your repository interface.
 2. Select the `Dependency graph` option located in the left menu.
 3. Then, go to the `Dependabot` tab.
@@ -136,13 +149,17 @@ If for some reason, you want to force the execution of the `.github/dependabot.y
 
 ### 2️⃣ Github Actions. Workflow Node
 
-2.1 In the root of the project, there is a file called `.github/workflows/node.yml`. If it doesn't exist, create it with the following command:
+#### 2.1. Create new file
+
+In the root of the project, there is a file called `.github/workflows/node.yml`. If it doesn't exist, create it with the following command:
 
 ```bash
 mkdir -p .github/workflows && touch node.yml
 ```
 
-2.2 Inside the `node.yml` file, paste the following code:
+#### 2.2. Copy & Paste code
+
+Inside the `node.yml` file, paste the following code:
 
 ```yml
 # For more information see: https://help.github.com/actions/language-and-framework-guides/using-nodejs-with-github-actions
@@ -177,7 +194,10 @@ jobs:
       run: npx commitlint --from ${{ github.event.pull_request.base.sha }} --to ${{ github.event.pull_request.head.sha }} --verbose
 ```
 
+#### 2.3. Explain the code
+
 This GitHub Actions workflow is an integral part of maintaining a robust and compatible `Node.js` project, ensuring that every change is automatically tested and validated across different environments:
+
 1. `🔀 Checkout code from repository`: Clones your project repository into the GitHub Actions runtime environment (runner), providing access to its codebase.
 2. `🛠️ Setup Node version x.x`: Specifies Node.js versions (16.x, 18.x, 20.x) to be checked to ensure compatibility between various versions.
 3. `📦 Install Dependencies`: Runs `npm install` command to install all the necessary dependencies defined in your `package.json`.
@@ -185,7 +205,10 @@ This GitHub Actions workflow is an integral part of maintaining a robust and com
 5. `🧪 Run NPM script to test`: Conducts automated tests by running `npm test` command if exist, ensuring that the code works as expected.
 6. `🔍 Validate commits to use the commitlint syntax`: Ensures that all commit messages in the pull request adhere to the predefined standards of commitlint, maintaining a clean and consistent commit history.
 
-2.3. So this configuration is expected to work like this:
+#### 2.4. How execute the workflow and watch the results
+
+So this configuration is expected to work like this:
+
 1. This GitHub Actions workflow in Node.js, defined in `.github/workflows/node.yml` file, will be automatically triggered by any `push` to the `master` branch or when a Pull Request is opened against it. This includes instances where Dependabot generates PRs for dependencies updates.  
 2. When the workflow auto-runs you will have to make some checks such as that all dependencies are installed correctly, that the project can be built for production and that it passes all tests.
 This verification is particularly crucial in scenarios where a dependency may work with one version of Node but not another. For example, `node-emoji@2.1.3` is only compatible with Node versions >=18.  
@@ -196,17 +219,23 @@ Finally, once the developers resolve the issues and upload the changes, the work
 
 ![Node workflow failing](./README/images/deploy-v3-3.1.jpg)
 
-This process can also be forced in the same way as described in the `Dependabot` process. Go [here](#force) to read the steps.
+#### 2.5. Manual execution of the workflow
+
+This process can also be forced in the same way as described in the `Dependabot` process. Go [here](#16-manual-execution-of-the-workflow) to read the steps.
 
 ### 3️⃣ Github Actions. Workflow deploy
 
-3.1 In the root of the project, there is a file called `.github/workflows/deploy.yml`. If it doesn't exist, create it with the following command:
+#### 3.1. Create new file
+
+In the root of the project, there is a file called `.github/workflows/deploy.yml`. If it doesn't exist, create it with the following command:
 
 ```bash
 mkdir -p .github/workflows && touch deploy.yml
 ```
 
-3.2 Inside the `deploy.yml` file, paste the following code:
+#### 3.2. Copy & Paste code
+
+Inside the `deploy.yml` file, paste the following code:
 
 ```yml
 # For more information see: https://github.com/beatrizsmerino/vue-gh-pages
@@ -236,14 +265,19 @@ jobs:
         run: npm run deploy:v2
 ```
 
+#### 3.3. Explain the code
+
 This GitHub Actions workflow is designed to streamline the deployment of your project to `GitHub Pages` automatically every time a contributor uploads new changes, reflecting changes in real time:
+
 1. `🔀 Checkout code from repository`: Retrieve the code from your repository, cloning it into the GitHub Actions runner and making it available to the workflow.
 2. `🛠️ Setup Node version`: Prepares the GitHub Actions runner with Node.js version 20.x, to ensure compatibility with your project's Node.js version requirements.
 3. `📦 Install dependencies`: Executes `npm ci` command for a clean install of your project's dependencies, ensuring a consistent environment for the deployment.
 4. `🙍‍♂️ Setup git user`: Sets up Git with your name and email, to associate your identity with the commits made during the deployment process.
 5. `🏗️ Run NPM script to deploy`: Runs the `npm run deploy:v2` command defined in your `package.json`, which triggers the script of `deploy-v2.mjs` file, for building and deploying your project to the `gh-pages` branch.
 
-3.3. In this file it is necessary to update the values of `user.name` and `user.email` replacing the variables `<USER_NAME>` and `<USER_EMAIL>` with the name and email of the GitHub account that will make sure to deploy the repository.
+#### 3.4. Customize data
+
+In this file it is necessary to update the values of `user.name` and `user.email` replacing the variables `<USER_NAME>` and `<USER_EMAIL>` with the name and email of the GitHub account that will make sure to deploy the repository.
 
 ```yml
       - name: 🙍‍♂️ Setup git user
@@ -260,10 +294,13 @@ This GitHub Actions workflow is designed to streamline the deployment of your pr
 ```
 
 
-2.3. So this configuration is expected to work like this:
+#### 3.5. How execute the workflow and watch the results
+
+So this configuration is expected to work like this:
+
 1. This GitHub Actions workflow of Deployment is defined in `.github/workflows/deploy.yml` file.  
 Therefore, to deploy the application, simply `push` your changes to the `master` branch, this action will automatically trigger this deployment workflow.
-2. Then, you can track the progress of the deployment by visiting your repository's GitHub page. Navigate to the `Actions` tab to see the workflow in real-time ([https://github.com/beatrizsmerino/vue-gh-pages/actions](https://github.com/beatrizsmerino/vue-gh-pages/actions)). There you'll find detailed logs and status updates for each step of the deployment process, allowing you to monitor and verify the successful deployment of your application.
+2. Then, you can track the progress of the deployment by visiting your repository's GitHub page. Navigate to the `Actions` tab to see the workflow in real-time ([https://github.com/beatrizsmerino/vue-gh-pages/actions/runs/7596714083](https://github.com/beatrizsmerino/vue-gh-pages/actions/runs/7596714083)). There you'll find detailed logs and status updates for each step of the deployment process, allowing you to monitor and verify the successful deployment of your application.
 3. Finally, to see the result, wait for the script to finish executing and open the application in the browser. Use the following link, replacing the `<USER_NAME>` and `<REPO_NAME>` variables with your data to see your published project.
 
 ```bash
@@ -271,3 +308,11 @@ https://<USER_NAME>.github.io/<REPO_NAME>/
 ```
 
 Here is an example of mine: [https://beatrizsmerino.github.io/vue-gh-pages/](https://beatrizsmerino.github.io/vue-gh-pages/)
+
+![Deploy workflow success](./README/images/deploy-v3-4.1.jpg)
+![Deploy workflow success](./README/images/deploy-v3-4.2.jpg)
+![Deploy workflow success](./README/images/deploy-v3-4.3.jpg)
+
+#### 3.6. Manual execution of the workflow
+
+This deployment process can also be forced manually, at any time, by directly using the `npm run deploy:v2` command in your terminal.
