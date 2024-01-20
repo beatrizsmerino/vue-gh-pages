@@ -114,7 +114,7 @@ You can configure the rest of the options if you wish, but for this file to work
       - beatrizsmerino
 ```
 
-#### 1.5. How execute the script and watch the results
+#### 1.5. How execute the workflow and watch the results
 
 So this configuration is expected to work like this:
 
@@ -205,7 +205,7 @@ This GitHub Actions workflow is an integral part of maintaining a robust and com
 5. `🧪 Run NPM script to test`: Conducts automated tests by running `npm test` command if exist, ensuring that the code works as expected.
 6. `🔍 Validate commits to use the commitlint syntax`: Ensures that all commit messages in the pull request adhere to the predefined standards of commitlint, maintaining a clean and consistent commit history.
 
-#### 2.4. How execute the script and watch the results
+#### 2.4. How execute the workflow and watch the results
 
 So this configuration is expected to work like this:
 
@@ -292,7 +292,7 @@ In this file it is necessary to update the values of `user.name` and `user.email
 ```
 
 
-#### 3.5. How execute the script and watch the results
+#### 3.5. How execute the workflow and watch the results
 
 So this configuration is expected to work like this:
 
