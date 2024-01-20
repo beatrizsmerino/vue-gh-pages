@@ -38,13 +38,13 @@ There are also other packages that are required but do not need to be installed:
 
 ### 1️⃣ The `.gitignore` file
 
-1.1. In the root of the project, there is a file called `.gitignore`, which was created when creating the [Vue app](https://cli.vuejs.org/guide/creating-a-project.html). If it doesn't exist, create it with the following command:
+#### 1.1. In the root of the project, there is a file called `.gitignore`, which was created when creating the [Vue app](https://cli.vuejs.org/guide/creating-a-project.html). If it doesn't exist, create it with the following command:
 
 ```bash
 touch .gitignore
 ```
 
-1.2. It is important that the `.gitignore` file includes the `dist` folder, which will be created when building the project for production.
+#### 1.2. It is important that the `.gitignore` file includes the `dist` folder, which will be created when building the project for production.
 
 ```bash
 .DS_Store
@@ -54,13 +54,13 @@ node_modules
 
 ### 2️⃣ The `vue.config.js` file
 
-2.1. In the root of the project, there is the `vue.config.js` file, also created by Vue. If it doesn't exist, create it with the following command:
+#### 2.1. In the root of the project, there is the `vue.config.js` file, also created by Vue. If it doesn't exist, create it with the following command:
 
 ```bash
 touch vue.config.js
 ```
 
-2.2. Inside the `vue.config.js` file, paste the following code:
+#### 2.2. Inside the `vue.config.js` file, paste the following code:
 
 ```javascript
 module.exports = {
@@ -68,7 +68,7 @@ module.exports = {
 };
 ```
 
-2.3. In the previous code, update the [`publicPath`](https://cli.vuejs.org/config/#publicpath) by replacing the `<REPO_NAME>` variable with the name of the repository where the application will be deployed.
+#### 2.3. In the previous code, update the [`publicPath`](https://cli.vuejs.org/config/#publicpath) by replacing the `<REPO_NAME>` variable with the name of the repository where the application will be deployed.
 
 ```javascript
 module.exports = {
@@ -78,13 +78,13 @@ module.exports = {
 
 ### 3️⃣ The `deploy-v2.mjs` file
 
-3.1. In the root of the project, create the `deploy-v2.mjs` file:
+#### 3.1. In the root of the project, create the `deploy-v2.mjs` file:
 
 ```bash
 touch deploy-v2.mjs
 ```
 
-3.2. Inside the `deploy-v2.mjs` file, you can use two ways to deploy depending on the number of packages you want to install, so choose one of them, and copy and paste the following code:
+#### 3.2. Inside the `deploy-v2.mjs` file, you can use two ways to deploy depending on the number of packages you want to install, so choose one of them, and copy and paste the following code:
 
 1. Installing only the `execa` and `fs` packages, you get simple text messages on the terminal.
 
@@ -175,7 +175,7 @@ The `JavaScript` script built in the `deploy-v2.mjs` file is executed at the roo
 
 ### 4️⃣ The `package.json` file
 
-4.1. Create the following NPM script inside the `package.json` file:
+#### 4.1. Create the following NPM script inside the `package.json` file:
 
 ```json
 "scripts": {
@@ -189,7 +189,7 @@ The script executes 1 command:
 
 ### 5️⃣ Deploy the application
 
-5.1. Finally, you can deploy the application by running the `npm run deploy:v2` command in the terminal while in the root of the project.
+#### 5.1. Finally, you can deploy the application by running the `npm run deploy:v2` command in the terminal while in the root of the project.
 
 There are two terminal outputs depending on the packages you use:
 
@@ -201,7 +201,7 @@ It has a simple text messages that you can customize in the each `console.log` o
 It is simmilar to the first way but the output messages include texts with colors and emoji characters. So the inclusion of the additional packages `chalk` and `node-emoji`, can enhance the visual output, making it more friendly and easier to read.
 ![Info of Vue deployment in the terminal](./README/images/deploy-v2.2.jpg)
 
-5.2. To see the result, wait for the script execution to finish and open the application in the browser:
+#### 5.2. To see the result, wait for the script execution to finish and open the application in the browser:
 
 Use the following link, replacing the `<USER_NAME>` and `<REPO_NAME>` variables with your data.
 

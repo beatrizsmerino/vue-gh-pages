@@ -16,13 +16,13 @@ Throughout the execution process, the terminal displays **detailed information**
 
 ### 1️⃣ The `.gitignore` file
 
-1.1. In the root of the project, there is a file called `.gitignore`, which was created when creating the [Vue app](https://cli.vuejs.org/guide/creating-a-project.html). If it doesn't exist, create it with the following command:
+#### 1.1. In the root of the project, there is a file called `.gitignore`, which was created when creating the [Vue app](https://cli.vuejs.org/guide/creating-a-project.html). If it doesn't exist, create it with the following command:
 
 ```bash
 touch .gitignore
 ```
 
-1.2. It is important that the `.gitignore` file includes the `dist` folder, which will be created when building the project for production.
+#### 1.2. It is important that the `.gitignore` file includes the `dist` folder, which will be created when building the project for production.
 
 ```bash
 .DS_Store
@@ -32,13 +32,13 @@ node_modules
 
 ### 2️⃣ The `vue.config.js` file
 
-2.1. In the root of the project, there is the `vue.config.js` file, also created by Vue. If it doesn't exist, create it with the following command:
+#### 2.1. In the root of the project, there is the `vue.config.js` file, also created by Vue. If it doesn't exist, create it with the following command:
 
 ```bash
 touch vue.config.js
 ```
 
-2.2. Inside the `vue.config.js` file, paste the following code:
+#### 2.2. Inside the `vue.config.js` file, paste the following code:
 
 ```javascript
 module.exports = {
@@ -46,7 +46,7 @@ module.exports = {
 };
 ```
 
-2.3. In the previous code, update the [`publicPath`](https://cli.vuejs.org/config/#publicpath) by replacing the `<REPO_NAME>` variable with the name of the repository where the application will be deployed.
+#### 2.3. In the previous code, update the [`publicPath`](https://cli.vuejs.org/config/#publicpath) by replacing the `<REPO_NAME>` variable with the name of the repository where the application will be deployed.
 
 ```javascript
 module.exports = {
@@ -56,13 +56,13 @@ module.exports = {
 
 ### 3️⃣ The `deploy-v1.sh` file
 
-3.1. In the root of the project, create the `deploy-v1.sh` file:
+#### 3.1. In the root of the project, create the `deploy-v1.sh` file:
 
 ```bash
 touch deploy-v1.sh
 ```
 
-3.2. Inside the `deploy-v1.sh` file, paste the following code:
+#### 3.2. Inside the `deploy-v1.sh` file, paste the following code:
 
 ```bash
 #!/usr/bin/env sh
@@ -106,7 +106,7 @@ The `bash` script built in the `deploy-v1.sh` file is executed at the root of th
 
 The name `GitHub Pages` originates from the name of the `gh-pages` branch, where the deployment version of the project is located.
 
-3.3. Replace the word `<USER_NAME>` with your GitHub username and `<REPO_NAME>` with the name of your repository.
+#### 3.3. Replace the word `<USER_NAME>` with your GitHub username and `<REPO_NAME>` with the name of your repository.
 
 The **last git command** must be replaced with any of the following commands:
 
@@ -132,7 +132,7 @@ git push -f git@github.com:beatrizsmerino/vue-gh-pages.git master:gh-pages
 
 ### 4️⃣ The `package.json` file
 
-4.1. Create the following NPM script inside the `package.json` file:
+#### 4.1. Create the following NPM script inside the `package.json` file:
 
 ```json
 "scripts": {
@@ -145,7 +145,7 @@ The script executes 2 commands, one after the other:
 1. `chmod +x ./deploy-v1.sh`: Assign the execution permission in the root of the project.
 2. `./deploy-v1.sh`: Execute the `deploy-v1.sh` file using `shell`.
 
-4.2. If you have unexpected changes in the `deploy-v1.sh` file after deployment follow the next step:
+#### 4.2. If you have unexpected changes in the `deploy-v1.sh` file after deployment follow the next step:
 
 When you run the command `deploy:v1` which contains `chmod +x ./deploy-v1.sh`, it modifies the file permissions of `deploy-v1.sh` to make it executable. This change in file permissions is considered a modification by version control systems like Git, which is likely why you're seeing the file as modified.
 
@@ -163,11 +163,11 @@ Setting `core.fileMode` to `false` tells Git to ignore file mode changes, which 
 
 ### 5️⃣ Deploy the application
 
-5.1. Finally, you can deploy the application by running the `npm run deploy:v1` command in the terminal while in the root of the project.
+#### 5.1. Finally, you can deploy the application by running the `npm run deploy:v1` command in the terminal while in the root of the project.
 
 ![Info of Vue deployment in the terminal](./README/images/deploy-v1.jpg)
 
-5.2. To see the result, wait for the script execution to finish and open the application in the browser:
+#### 5.2. To see the result, wait for the script execution to finish and open the application in the browser:
 
 Use the following link, replacing the `<USER_NAME>` and `<REPO_NAME>` variables with your data.
 
