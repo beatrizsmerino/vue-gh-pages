@@ -1,0 +1,30 @@
+# For more information see: https://help.github.com/actions/language-and-framework-guides/using-nodejs-with-github-actions
+
+name: 🚀 Check project in different Node versions
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+jobs:
+  check-node-build:
+    name: 🧩 Build, test and validate code
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [16, 18, 20]
+    steps:
+    - name: 🔀 Checkout code from repository
+      uses: actions/checkout@v4
+    - name: 🛠️ Setup Node version ${{ matrix.node-version }}
+      uses: actions/setup-node@v4
+      with:
+        node-version: ${{ matrix.node-version }}
+    - name: 📦 Install dependencies
+      run: npm install
+    - name: 🏗️ Run NPM script to build
+      run: npm run build --if-present
+    - name: 🧪 Run NPM script to test
+      run: npm test --if-present
+    - name: 🔍 Validate commits to use the commitlint syntax
+      run: npx commitlint --from ${{ github.event.pull_request.base.sha }} --to ${{ github.event.pull_request.head.sha }} --verbose
