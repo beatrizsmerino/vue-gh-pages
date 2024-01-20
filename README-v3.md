@@ -263,7 +263,7 @@ This GitHub Actions workflow is designed to streamline the deployment of your pr
 2.3. So this configuration is expected to work like this:
 1. This GitHub Actions workflow of Deployment is defined in `.github/workflows/deploy.yml` file.  
 Therefore, to deploy the application, simply `push` your changes to the `master` branch, this action will automatically trigger this deployment workflow.
-2. Then, you can track the progress of the deployment by visiting your repository's GitHub page. Navigate to the `Actions` tab to see the workflow in real-time ([https://github.com/beatrizsmerino/vue-gh-pages/actions](https://github.com/beatrizsmerino/vue-gh-pages/actions)). There you'll find detailed logs and status updates for each step of the deployment process, allowing you to monitor and verify the successful deployment of your application.
+2. Then, you can track the progress of the deployment by visiting your repository's GitHub page. Navigate to the `Actions` tab to see the workflow in real-time ([https://github.com/beatrizsmerino/vue-gh-pages/actions/runs/7596714083](https://github.com/beatrizsmerino/vue-gh-pages/actions/runs/7596714083)). There you'll find detailed logs and status updates for each step of the deployment process, allowing you to monitor and verify the successful deployment of your application.
 3. Finally, to see the result, wait for the script to finish executing and open the application in the browser. Use the following link, replacing the `<USER_NAME>` and `<REPO_NAME>` variables with your data to see your published project.
 
 ```bash
