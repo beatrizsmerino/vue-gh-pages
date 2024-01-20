@@ -271,3 +271,7 @@ https://<USER_NAME>.github.io/<REPO_NAME>/
 ```
 
 Here is an example of mine: [https://beatrizsmerino.github.io/vue-gh-pages/](https://beatrizsmerino.github.io/vue-gh-pages/)
+
+![Deploy workflow success](./README/images/deploy-v3-4.1.jpg)
+![Deploy workflow success](./README/images/deploy-v3-4.2.jpg)
+![Deploy workflow success](./README/images/deploy-v3-4.3.jpg)
