@@ -12,6 +12,11 @@ In this version, you'll need to **customize some data** in the `vue.config.js` a
 The process still uses the script from the previous version, but incorporates **automatic deployment** via `GitHub Actions`, which is a significant shift towards automation and CI/CD (Continuous Integration & Continuous Deployment) best practices.
 The process works as follows: when some changes are pushed to the `master` branch, the `.github/workflows/deploy.yml` workflow is executed, which automatically performs certain steps to upload the changes from the `dist` folder to the `gh-pages` branch of a `git` repository uploaded to GitHub.
 
+Validation of commit messages is enforced locally through a `commit-msg` hook managed by `husky`. This ensures that every commit message adheres to our project's conventions before a commit is finalized.  
+Dependabot is configured to follow these `commitlint` conventions, using `build` as the commit type and always including a `scope` in the commit message (`build(deps-dev): bump @commitlint/cli from 18.4.4 to 18.5.0`, `build(deps): bump core-js from 3.35.0 to 3.35.1`).  
+In addition, the `Deploy` workflow is adapted to adhere to these conventions, with custom commit message following this same format (`ci(deploy): build files for production in the dist folder`).  
+By doing this, we maintain a clean and consistent commit history, which simplifies the review process and enhances the overall quality of our codebase.
+
 This process **will no longer be seen in the terminal** so you will have to go to the github website, search for your repository and watch each step in the `Actions` tab to see if it finishes correctly.
 
 In this documentation, in addition to detailing how to use `Github Actions` to automate the `Deployment workflow` in the file `.github/workflows/deploy.yml`, I will describe how to build the `Dependabot configuration` in the `.github/dependabot.yml` file and the `Node workflow` in the `.github/workflows/node.yml` file.
@@ -190,8 +195,6 @@ jobs:
       run: npm run build --if-present
     - name: 🧪 Run NPM script to test
       run: npm test --if-present
-    - name: 🔍 Validate commits to use the commitlint syntax
-      run: npx commitlint --from ${{ github.event.pull_request.base.sha }} --to ${{ github.event.pull_request.head.sha }} --verbose
 ```
 
 #### 2.3. Explain the code
@@ -203,7 +206,6 @@ This GitHub Actions workflow is an integral part of maintaining a robust and com
 3. `📦 Install Dependencies`: Runs `npm install` command to install all the necessary dependencies defined in your `package.json`.
 4. `🏗️ Run NPM script to build`: Run the `npm run build` command, if present, to compile your project and prepare it for testing.
 5. `🧪 Run NPM script to test`: Conducts automated tests by running `npm test` command if exist, ensuring that the code works as expected.
-6. `🔍 Validate commits to use the commitlint syntax`: Ensures that all commit messages in the pull request adhere to the predefined standards of commitlint, maintaining a clean and consistent commit history.
 
 #### 2.4. How execute the workflow and watch the results
 
