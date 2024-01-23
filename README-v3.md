@@ -190,8 +190,6 @@ jobs:
       run: npm run build --if-present
     - name: 🧪 Run NPM script to test
       run: npm test --if-present
-    - name: 🔍 Validate commits to use the commitlint syntax
-      run: npx commitlint --from ${{ github.event.pull_request.base.sha }} --to ${{ github.event.pull_request.head.sha }} --verbose
 ```
 
 #### 2.3. Explain the code
@@ -203,7 +201,6 @@ This GitHub Actions workflow is an integral part of maintaining a robust and com
 3. `📦 Install Dependencies`: Runs `npm install` command to install all the necessary dependencies defined in your `package.json`.
 4. `🏗️ Run NPM script to build`: Run the `npm run build` command, if present, to compile your project and prepare it for testing.
 5. `🧪 Run NPM script to test`: Conducts automated tests by running `npm test` command if exist, ensuring that the code works as expected.
-6. `🔍 Validate commits to use the commitlint syntax`: Ensures that all commit messages in the pull request adhere to the predefined standards of commitlint, maintaining a clean and consistent commit history.
 
 #### 2.4. How execute the workflow and watch the results
 
