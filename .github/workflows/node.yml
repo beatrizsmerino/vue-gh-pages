@@ -8,7 +8,7 @@ on:
     branches: [ master ]
 jobs:
   check-node-build:
-    name: 🧩 Build, test and validate code
+    name: 🧩 Build and test code
     runs-on: ubuntu-latest
     strategy:
       matrix:
