@@ -242,7 +242,7 @@ Inside the `deploy.yml` file, paste the following code:
 ```yml
 # For more information see: https://github.com/beatrizsmerino/vue-gh-pages
 
-name: 🚀 Project deployment in GitHub Pages
+name: 🚀 Deploy project in GitHub Pages
 on:
   push:
     branches: [ master ]
