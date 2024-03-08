@@ -191,9 +191,9 @@ jobs:
         node-version: ${{ matrix.node-version }}
     - name: 📦 Install dependencies
       run: npm install
-    - name: 🏗️ Run NPM script to build
+    - name: 🏗️ Build project
       run: npm run build --if-present
-    - name: 🧪 Run NPM script to test
+    - name: 🧪 Test code
       run: npm test --if-present
 ```
 
@@ -204,8 +204,8 @@ This GitHub Actions workflow is an integral part of maintaining a robust and com
 1. `🔀 Checkout code from repository`: Clones your project repository into the GitHub Actions runtime environment (runner), providing access to its codebase.
 2. `🛠️ Setup Node version x.x`: Specifies Node.js versions (16.x, 18.x, 20.x) to be checked to ensure compatibility between various versions.
 3. `📦 Install Dependencies`: Runs `npm install` command to install all the necessary dependencies defined in your `package.json`.
-4. `🏗️ Run NPM script to build`: Run the `npm run build` command, if present, to compile your project and prepare it for testing.
-5. `🧪 Run NPM script to test`: Conducts automated tests by running `npm test` command if exist, ensuring that the code works as expected.
+4. `🏗️ Build project`: Run the `npm run build` command, if present, to compile your project and prepare it for testing.
+5. `🧪 Test code`: Conducts automated tests by running `npm test` command if exist, ensuring that the code works as expected.
 
 #### 2.4. How execute the workflow and watch the results
 
