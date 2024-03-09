@@ -177,11 +177,11 @@ on:
     branches: [ master ]
 jobs:
   check-node-build:
-    name: 🧩 Build, test and validate code
+    name: 🧩 Build and test code
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        node-version: [16, 18, 20]
+        node-version: [ 16, 18, 20 ]
     steps:
     - name: 🔀 Checkout code from repository
       uses: actions/checkout@v4
@@ -191,9 +191,9 @@ jobs:
         node-version: ${{ matrix.node-version }}
     - name: 📦 Install dependencies
       run: npm install
-    - name: 🏗️ Run NPM script to build
+    - name: 🏗️ Build project
       run: npm run build --if-present
-    - name: 🧪 Run NPM script to test
+    - name: 🧪 Test code
       run: npm test --if-present
 ```
 
@@ -204,8 +204,8 @@ This GitHub Actions workflow is an integral part of maintaining a robust and com
 1. `🔀 Checkout code from repository`: Clones your project repository into the GitHub Actions runtime environment (runner), providing access to its codebase.
 2. `🛠️ Setup Node version x.x`: Specifies Node.js versions (16.x, 18.x, 20.x) to be checked to ensure compatibility between various versions.
 3. `📦 Install Dependencies`: Runs `npm install` command to install all the necessary dependencies defined in your `package.json`.
-4. `🏗️ Run NPM script to build`: Run the `npm run build` command, if present, to compile your project and prepare it for testing.
-5. `🧪 Run NPM script to test`: Conducts automated tests by running `npm test` command if exist, ensuring that the code works as expected.
+4. `🏗️ Build project`: Run the `npm run build` command, if present, to compile your project and prepare it for testing.
+5. `🧪 Test code`: Conducts automated tests by running `npm test` command if exist, ensuring that the code works as expected.
 
 #### 2.4. How execute the workflow and watch the results
 
@@ -242,7 +242,7 @@ Inside the `deploy.yml` file, paste the following code:
 ```yml
 # For more information see: https://github.com/beatrizsmerino/vue-gh-pages
 
-name: 🚀 Project deployment in GitHub Pages
+name: 🚀 Deploy project in GitHub Pages
 on:
   push:
     branches: [ master ]
@@ -263,7 +263,7 @@ jobs:
         run: |
           git config user.name <USER_NAME>
           git config user.email <USER_EMAIL>
-      - name: 🏗️ Run NPM script to deploy
+      - name: 🏗️ Deploy project
         run: npm run deploy:v2
 ```
 
@@ -275,7 +275,7 @@ This GitHub Actions workflow is designed to streamline the deployment of your pr
 2. `🛠️ Setup Node version`: Prepares the GitHub Actions runner with Node.js version 20.x, to ensure compatibility with your project's Node.js version requirements.
 3. `📦 Install dependencies`: Executes `npm ci` command for a clean install of your project's dependencies, ensuring a consistent environment for the deployment.
 4. `🙍‍♂️ Setup git user`: Sets up Git with your name and email, to associate your identity with the commits made during the deployment process.
-5. `🏗️ Run NPM script to deploy`: Runs the `npm run deploy:v2` command defined in your `package.json`, which triggers the script of `deploy-v2.mjs` file, for building and deploying your project to the `gh-pages` branch.
+5. `🏗️ Deploy project`: Runs the `npm run deploy:v2` command defined in your `package.json`, which triggers the script of `deploy-v2.mjs` file, for building and deploying your project to the `gh-pages` branch.
 
 #### 3.4. Customize data
 
