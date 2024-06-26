@@ -14,17 +14,17 @@
 // @see Used in: {@link abstracts/mixins/mixins-media-queries.scss}
 // @see Used inside: {@link abstracts/variables/abstracts-variables-breakpoints.scss}, {@link abstracts/mixins/abstracts-mixins-contains.scss}
 
-@mixin media($breakpoint, $rule: 'max', $dimension: 'width', $unit: 'px') {
-	$rules: 'max', 'min';
-	$dimensions: 'width', 'height';
-	$units: 'px', 'em', 'rem', '%', 'vw', 'vh';
+@mixin media($breakpoint, $rule: "max", $dimension: "width", $unit: "px") {
+	$rules: "max", "min";
+	$dimensions: "width", "height";
+	$units: "px", "em", "rem", "%", "vw", "vh";
 
 	@if not contains($rules, $rule) {
-		$rule: 'max';
+		$rule: "max";
 	}
 
 	@if not contains($dimensions, $dimension) {
-		$rule: 'width';
+		$rule: "width";
 	}
 
 	@if type-of($breakpoint) == number {
@@ -32,38 +32,26 @@
 			@media (#{$rule}-#{$dimension}: #{$breakpoint} + $unit) {
 				@content;
 			}
-		}
-
-		@else if contains($units, unit($breakpoint)) {
+		} @else if contains($units, unit($breakpoint)) {
 			@media (#{$rule}-#{$dimension}: #{$breakpoint}) {
 				@content;
 			}
-		}
-
-		@else {
+		} @else {
 			@error 'Invalid units provided';
 		}
-	}
-
-	@else if variable_exists(breakpoints) {
+	} @else if variable_exists(breakpoints) {
 		@if map-has-key($breakpoints, $breakpoint) {
 			@media (#{$rule}-#{$dimension}: #{inspect(map-get($breakpoints, $breakpoint))}) {
 				@content;
 			}
-		}
-
-		@else {
+		} @else {
 			@error 'Unfortunately, no value could be retrieved from `#{$breakpoint}`. ' + 'Available breakpoints are: #{map-keys($breakpoints)}.';
 		}
-	}
-
-	@else if variable_exists(breakpoint) {
+	} @else if variable_exists(breakpoint) {
 		@media (#{$rule}-#{$dimension}: #{$breakpoint}) {
 			@content;
 		}
-	}
-
-	@else {
+	} @else {
 		@error 'Neither $breakpoints map nor variable provided are defined';
 	}
 }

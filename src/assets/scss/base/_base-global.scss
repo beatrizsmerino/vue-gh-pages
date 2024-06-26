@@ -30,7 +30,7 @@ body {
 	line-height: 140%;
 	text-size-adjust: 100%;
 
-	@include media('lg') {
+	@include media("lg") {
 		font-size: 1.8rem;
 	}
 }

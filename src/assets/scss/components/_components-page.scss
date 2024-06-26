@@ -15,7 +15,7 @@
 		padding-right: 3rem;
 		padding-left: 3rem;
 
-		@include media('sm') {
+		@include media("sm") {
 			padding-right: 2rem;
 			padding-left: 2rem;
 		}
@@ -46,7 +46,7 @@
 		padding-top: 6rem;
 		padding-bottom: 6rem;
 
-		@include media('sm') {
+		@include media("sm") {
 			padding-top: 4rem;
 			padding-bottom: 4rem;
 		}
