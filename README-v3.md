@@ -258,7 +258,7 @@ jobs:
         with:
           node-version: 20.x
       - name: 📦 Install dependencies
-        run: npm ci
+        run: npm install
       - name: 🙍‍♂️ Setup git user
         run: |
           git config user.name <USER_NAME>
@@ -273,7 +273,7 @@ This GitHub Actions workflow is designed to streamline the deployment of your pr
 
 1. `🔀 Checkout code from repository`: Retrieve the code from your repository, cloning it into the GitHub Actions runner and making it available to the workflow.
 2. `🛠️ Setup Node version`: Prepares the GitHub Actions runner with Node.js version 20.x, to ensure compatibility with your project's Node.js version requirements.
-3. `📦 Install dependencies`: Executes `npm ci` command for a clean install of your project's dependencies, ensuring a consistent environment for the deployment.
+3. `📦 Install dependencies`: Executes `npm install` command to install your project's dependencies, ensuring a consistent environment for the deployment.
 4. `🙍‍♂️ Setup git user`: Sets up Git with your name and email, to associate your identity with the commits made during the deployment process.
 5. `🏗️ Deploy project`: Runs the `npm run deploy:v2` command defined in your `package.json`, which triggers the script of `deploy-v2.mjs` file, for building and deploying your project to the `gh-pages` branch.
 
