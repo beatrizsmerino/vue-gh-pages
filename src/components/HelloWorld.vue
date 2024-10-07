@@ -14,7 +14,7 @@
 			<div class="hello__description page__inner">
 				<p>
 					For a guide and recipes on how to configure / customize this project,
-					<br >
+					<br />
 					check out the
 					<a
 						class="hello__link"
