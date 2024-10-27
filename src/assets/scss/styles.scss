@@ -4,14 +4,10 @@
 
 // ABSTRACTS
 //----------------------------------------------------------------------
-// variables
+@forward "abstracts/functions/abstracts-functions-contains";
+// -----------------
+@forward "abstracts/mixins/abstracts-mixins-media-queries";
 // -----------------
 @forward "abstracts/variables/abstracts-variables-breakpoints";
 @forward "abstracts/variables/abstracts-variables-colors";
 @forward "abstracts/variables/abstracts-variables-fonts";
-// functions
-// -----------------
-@forward "abstracts/functions/abstracts-functions-contains";
-// mixins
-// -----------------
-@forward "abstracts/mixins/abstracts-mixins-media-queries";
