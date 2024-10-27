@@ -1,6 +1,7 @@
 // ABSTRACTS FUNCTIONS
 // CONTAINS
 // =================================================
+@use "sass:list";
 
 // @function contains
 // @access private
@@ -12,5 +13,5 @@
 // @example {@link http://devbible.webpac.org/en/partials-scss/scss-abstracts/scss-abstracts-functions/#function-contains}
 
 @function contains($list, $item) {
-	@return index($list, $item) != null;
+	@return list.index($list, $item) != null;
 }
