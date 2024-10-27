@@ -35,8 +35,6 @@
 </script>
 
 <style lang="scss">
-	@import "https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600&display=swap";
-
 	// PARTIALS SASS
 	// =================================================
 	// Pattern 7-1
@@ -58,4 +56,8 @@
 	//----------------------------------------------------------------------
 	@use "@/assets/scss/components/components-page";
 	@use "@/assets/scss/components/components-link";
+</style>
+
+<style>
+	@import "https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600&display=swap";
 </style>
