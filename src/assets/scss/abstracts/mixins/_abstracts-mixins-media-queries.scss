@@ -1,6 +1,8 @@
 // ABSTRACTS MIXINS
 // MEDIA QUERIES
 // =================================================
+@use "../functions/abstracts-functions-contains" as *;
+@use "../variables/abstracts-variables-breakpoints" as *;
 
 // @function media
 // @description This mixin 'media' generate the rule @media in a way more easy, passing only the parameters of size breakpoint, min/max and width/height.
