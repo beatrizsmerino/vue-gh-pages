@@ -48,12 +48,12 @@
 	// 7. VENDORS (external css code of the libraries and frameworks)
 
 	// BASE
-	//----------------------------------------------------------------------
+	// ----------------------------------------------------------------------
 	@use "@/assets/scss/base/base-reset";
 	@use "@/assets/scss/base/base-global";
 
 	// COMPONENTS
-	//----------------------------------------------------------------------
+	// ----------------------------------------------------------------------
 	@use "@/assets/scss/components/components-page";
 	@use "@/assets/scss/components/components-link";
 </style>
