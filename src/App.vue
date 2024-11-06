@@ -42,13 +42,10 @@
 	// ----------------------------------------------------------------------
 	@use "@/assets/scss/base/base-reset";
 	@use "@/assets/scss/base/base-global";
+	@use "@/assets/scss/base/base-fonts";
 
 	// COMPONENTS
 	// ----------------------------------------------------------------------
 	@use "@/assets/scss/components/components-page";
 	@use "@/assets/scss/components/components-link";
-</style>
-
-<style>
-	@import "https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600&display=swap";
 </style>
