@@ -1,23 +1,11 @@
-// ABSTRACTS MIXINS
-// MEDIA QUERIES
+// ABSTRACTS - MIXINS
+// MEDIA
 // =================================================
 @use "sass:map";
 @use "sass:math";
 @use "sass:meta";
 @use "../functions/abstracts-functions-contains" as *;
 @use "../variables/abstracts-variables-breakpoints" as *;
-
-// @function media
-// @description This mixin 'media' generate the rule @media in a way more easy, passing only the parameters of size breakpoint, min/max and width/height.
-// @access public
-// @require {Variable} breakpoints
-// @require {Function} contains
-// @param {String|Number} $breakpoint - ($var|sizePX|size%|sizeEM|sizeREM) - Breakpoint to define the media query. It accepts 'numbers' with and without units (px will be asigned if unitless) or 'key' within a previous $breakpoints map defined (see @optional), or variables previously defined.
-// @param {String} $rule - Default: max (max|min) - Defines if it will be a max-width or min-width mediaquery.
-// @param {String} $dimension - Default: width (width|height) - Defines if it will be a width or height mediaquery.
-// @return {Boolean} True/false if the item is contained in the list.
-// @see Used in: {@link abstracts/mixins/mixins-media-queries.scss}
-// @see Used inside: {@link abstracts/variables/abstracts-variables-breakpoints.scss}, {@link abstracts/mixins/abstracts-mixins-contains.scss}
 
 @mixin media($breakpoint, $rule: "max", $dimension: "width", $unit: "px") {
 	$rules: "max", "min";
@@ -30,6 +18,10 @@
 
 	@if not contains($dimensions, $dimension) {
 		$dimension: "width";
+	}
+
+	@if not contains($units, $unit) {
+		$unit: "px";
 	}
 
 	@if meta.type-of($breakpoint) == number {
