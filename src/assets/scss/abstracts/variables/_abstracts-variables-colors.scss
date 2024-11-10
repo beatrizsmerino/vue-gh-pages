@@ -1,20 +1,9 @@
-// ABSTRACTS VARIABLES
+// ABSTRACTS - VARIABLES
 // COLORS
 // =================================================
 
-// COLORS
-/////////////////
-$color-vue-1: #42b983;
-$color-vue-2: #2c3e50;
-$color-vue-3: #ffffff;
-
-// BRAND
-/////////////////
-$color-brand-1: $color-vue-1;
-$color-brand-2: $color-vue-2;
-
-// SHADES OF GRAY
-/////////////////
+// GRAY SCALE
+// ----------------------------------------------------------------------
 $color-white: #ffffff;
 $color-ghost: #f2f2f2;
 $color-light: #e1e1e1;
@@ -25,7 +14,18 @@ $color-carbon: #2a2a2a;
 $color-dark: #1f1f1f;
 $color-black: #000000;
 
+// VUE
+// ----------------------------------------------------------------------
+$color-vue-1: #42b983;
+$color-vue-2: #2c3e50;
+$color-vue-3: #ffffff;
+
+// BRAND
+// ----------------------------------------------------------------------
+$color-brand-1: $color-vue-1;
+$color-brand-2: $color-vue-2;
+
 // STATUS
-/////////////////
+// ----------------------------------------------------------------------
 $color-error: #f58688;
 $color-success: #64bdbd;
