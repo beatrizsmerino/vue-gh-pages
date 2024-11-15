@@ -1,6 +1,9 @@
 // BASE
 // RESET
 // =================================================
+// http://meyerweb.com/eric/tools/css/reset/
+// v2.0 | 20110126
+// License: none (public domain)
 
 html,
 body,
@@ -82,18 +85,16 @@ summary,
 time,
 mark,
 audio,
-video,
-button {
-	box-sizing: border-box;
+video {
 	margin: 0;
 	padding: 0;
 	border: 0;
-	font: inherit;
 	font-size: 100%;
+	font: inherit;
 	vertical-align: baseline;
 }
 
-/* HTML5 display-role reset for older browsers */
+// HTML5 display-role reset for older browsers
 article,
 aside,
 details,
@@ -120,33 +121,17 @@ ul {
 blockquote,
 q {
 	quotes: none;
+}
 
-	&:before,
-	&:after {
-		content: none;
-	}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+	content: '';
+	content: none;
 }
 
 table {
-	border-spacing: 0;
 	border-collapse: collapse;
-}
-
-button,
-input,
-select,
-textarea {
-	appearance: none;
-	border: 0;
-	outline: none;
-}
-
-button {
-	background-color: transparent;
-}
-
-select {
-	&::-ms-expand {
-		display: none;
-	}
+	border-spacing: 0;
 }
