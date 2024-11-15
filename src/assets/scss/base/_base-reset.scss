@@ -84,10 +84,6 @@ mark,
 audio,
 video,
 button {
-	box-sizing: border-box;
-	margin: 0;
-	padding: 0;
-	border: 0;
 	font: inherit;
 	font-size: 100%;
 	vertical-align: baseline;
@@ -112,11 +108,6 @@ body {
 	line-height: 1;
 }
 
-ol,
-ul {
-	list-style: none;
-}
-
 blockquote,
 q {
 	quotes: none;
@@ -128,21 +119,8 @@ q {
 }
 
 table {
-	border-spacing: 0;
 	border-collapse: collapse;
-}
-
-button,
-input,
-select,
-textarea {
-	appearance: none;
-	border: 0;
-	outline: none;
-}
-
-button {
-	background-color: transparent;
+	border-spacing: 0;
 }
 
 select {
