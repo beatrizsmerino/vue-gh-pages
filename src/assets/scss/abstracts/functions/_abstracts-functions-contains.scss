@@ -3,15 +3,6 @@
 // =================================================
 @use "sass:list";
 
-// @function contains
-// @access private
-// @description This function 'contains' check whether an item belongs to a list or not. For example it`s using in the mixin mediaquery.
-// @param {Elements} $list - List of items to check into.
-// @param {Element} $item - Item to check within the list.
-// @return {Boolean} True/false if the item is contained in the list.
-// @see Used in: {@link ../mixins/_abstracts-mixins-media-queries.scss}
-// @example {@link http://devbible.webpac.org/en/partials-scss/scss-abstracts/scss-abstracts-functions/#function-contains}
-
 @function contains($list, $item) {
 	@return list.index($list, $item) != null;
 }
