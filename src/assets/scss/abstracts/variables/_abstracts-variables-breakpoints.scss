@@ -2,20 +2,14 @@
 // BREAKPOINTS
 // =================================================
 
+/* prettier-ignore */
 $breakpoints: (
-	"xs": 380px,
-	// mobile portrait
-	"sm": 576px,
-	// mobile landscape
-	"md": 768px,
-	// tablet portrait
-	"lg": 1024px,
-	// tablet landscape
-	"xl": 1080px,
-	// tablet landscape
-	"xxl": 1280px,
-	// laptop
-	"xxxl": 1500px,
-	// desktop
+	"xs": 380px,     // mobile portrait
+	"sm": 576px,     // mobile landscape
+	"md": 768px,     // tablet portrait
+	"lg": 1024px,    // tablet landscape
+	"xl": 1080px,    // tablet landscape
+	"xxl": 1280px,   // laptop
+	"xxxl": 1500px,  // desktop
 	"xxxxl": 1700px, // desktop
 ) !default;
