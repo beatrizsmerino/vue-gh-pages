@@ -5,6 +5,20 @@
 	"description": "Tutorial to publish a public repository made with Vue in GithubPages.",
 	"author": "beatrizsmerino@gmail.com",
 	"license": "ISC",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/beatrizsmerino/vue-gh-pages.git"
+	},
+	"homepage": "https://beatrizsmerino.github.io/vue-gh-pages",
+	"bugs": {
+		"url": "https://github.com/beatrizsmerino/vue-gh-pages/issues"
+	},
+	"keywords": [
+		"vue",
+		"javascript",
+		"github-pages",
+		"tutorial"
+	],
 	"main": "index.js",
 	"scripts": {
 		"install:clean": "rm -rf node_modules package-lock.json",
