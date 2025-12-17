@@ -19,7 +19,7 @@ By doing this, we maintain a clean and consistent commit history, which simplifi
 
 This process **will no longer be seen in the terminal** so you will have to go to the github website, search for your repository and watch each step in the `Actions` tab to see if it finishes correctly.
 
-In this documentation, in addition to detailing how to use `Github Actions` to automate the `Deployment workflow` in the file `.github/workflows/deploy.yml`, I will describe how to build the `Dependabot configuration` in the `.github/dependabot.yml` file and the `Node workflow` in the `.github/workflows/node.yml` file.
+In this documentation, in addition to detailing how to use `Github Actions` to automate the `Deployment workflow` in the file `.github/workflows/deploy.yml`, I will describe how to build the `Dependabot configuration` in the `.github/dependabot.yml` file and the `Node workflow` in the `.github/workflows/check-node.yml` file.
 
 ## ⚙️ How it works
 
@@ -156,15 +156,15 @@ If for some reason, you want to force the execution of the `.github/dependabot.y
 
 #### 2.1. Create new file
 
-In the root of the project, there is a file called `.github/workflows/node.yml`. If it doesn't exist, create it with the following command:
+In the root of the project, there is a file called `.github/workflows/check-node.yml`. If it doesn't exist, create it with the following command:
 
 ```bash
-mkdir -p .github/workflows && touch node.yml
+mkdir -p .github/workflows && touch check-node.yml
 ```
 
 #### 2.2. Copy & Paste code
 
-Inside the `node.yml` file, paste the following code:
+Inside the `check-node.yml` file, paste the following code:
 
 ```yml
 # For more information see: https://help.github.com/actions/language-and-framework-guides/using-nodejs-with-github-actions
@@ -211,7 +211,7 @@ This GitHub Actions workflow is an integral part of maintaining a robust and com
 
 So this configuration is expected to work like this:
 
-1. This GitHub Actions workflow in Node.js, defined in `.github/workflows/node.yml` file, will be automatically triggered by any `push` to the `master` branch or when a Pull Request is opened against it. This includes instances where Dependabot generates PRs for dependencies updates.  
+1. This GitHub Actions workflow in Node.js, defined in `.github/workflows/check-node.yml` file, will be automatically triggered by any `push` to the `master` branch or when a Pull Request is opened against it. This includes instances where Dependabot generates PRs for dependencies updates.  
 2. When the workflow auto-runs you will have to make some checks such as that all dependencies are installed correctly, that the project can be built for production and that it passes all tests.
 This verification is particularly crucial in scenarios where a dependency may work with one version of Node but not another. For example, `node-emoji@2.1.3` is only compatible with Node versions >=18.  
 The workflow rigorously checks that these updates are compatible and do not introduce problems or break code, before the merge, ensuring that each change maintains the integrity and functionality of the project.
