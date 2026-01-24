@@ -3,7 +3,11 @@
 	"private": true,
 	"name": "vue-gh-pages",
 	"description": "Tutorial to publish a public repository made with Vue in GithubPages.",
-	"author": "beatrizsmerino@gmail.com",
+	"author": {
+		"name": "Beatriz Sopeña Merino",
+		"email": "beatrizsmerino@gmail.com",
+		"url": "https://github.com/beatrizsmerino"
+	},
 	"license": "MIT",
 	"repository": {
 		"type": "git",
