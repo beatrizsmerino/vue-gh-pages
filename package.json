@@ -83,6 +83,7 @@
 		"npm": "10.9.4"
 	},
 	"overrides": {
+		"stylelint-config-recommended": "17.0.0",
 		"cross-spawn": "^7.0.6",
 		"webpack-dev-server": "^5.2.1",
 		"yorkie": "^2.0.0",
