@@ -87,3 +87,7 @@ npm run deploy:v2
 - [Deploy to Github Pages like a pro with Github Actions](https://dev.to/rolanddoda/deploy-to-github-pages-like-a-pro-with-github-actions-4hdg#create-a-github-action-to-automate-deployment)
 - [Deploying Vue Apps to Github Pages](https://medium.com/swlh/deploy-vue-app-to-github-pages-2ada48d7397e)
 - [vue-gh-pages by Cristina Fernández Sanz](https://github.com/cristinafsanz/vue-gh-pages)
+
+## 📄 License
+
+This project is licensed under the `MIT` License, which allows free use, modification and distribution. See [LICENSE](LICENSE) for details.
