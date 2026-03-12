@@ -38,7 +38,7 @@
 		"deploy:v2": "node deploy-v2.mjs"
 	},
 	"dependencies": {
-		"chalk": "^5.6.0",
+		"chalk": "^5.6.2",
 		"core-js": "^3.48.0",
 		"execa": "^9.6.1",
 		"node-emoji": "^2.2.0",
@@ -83,10 +83,17 @@
 		"npm": "10.9.4"
 	},
 	"overrides": {
-		"stylelint-config-recommended": "17.0.0",
 		"cross-spawn": "^7.0.6",
-		"webpack-dev-server": "^5.2.1",
-		"yorkie": "^2.0.0",
+		"stylelint-config-recommended-vue": {
+			"stylelint-config-recommended": "17.0.0"
+		},
+		"@vue/cli-service": {
+			"serialize-javascript": "^7.0.4",
+			"webpack-dev-server": "^5.2.1"
+		},
+		"@vue/cli-plugin-eslint": {
+			"yorkie": "^2.0.0"
+		},
 		"@vue/component-compiler-utils": {
 			"postcss": "^8.4.47"
 		},
