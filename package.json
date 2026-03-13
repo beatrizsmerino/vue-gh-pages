@@ -1,5 +1,5 @@
 {
-	"version": "3.5.1",
+	"version": "3.6.0",
 	"private": true,
 	"name": "vue-gh-pages",
 	"description": "Tutorial to publish a public repository made with Vue in GithubPages.",
@@ -79,8 +79,8 @@
 		"vue-template-compiler": "^2.7.16"
 	},
 	"engines": {
-		"node": "22.22.1",
-		"npm": "10.9.4"
+		"node": "24.14.0",
+		"npm": "11.9.0"
 	},
 	"overrides": {
 		"cross-spawn": "^7.0.6",
