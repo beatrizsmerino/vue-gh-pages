@@ -76,6 +76,7 @@ module.exports = {
 				],
 			},
 		],
+		"declaration-property-value-no-unknown": null,
 		"font-family-no-duplicate-names": true,
 		"font-family-no-missing-generic-family-keyword": true,
 		"function-calc-no-unspaced-operator": true,
@@ -115,6 +116,7 @@ module.exports = {
 			},
 		],
 		"scss/at-rule-no-unknown": true,
+		"scss/declaration-property-value-no-unknown": true,
 		"scss/no-global-function-names": null,
 		"selector-class-pattern": [
 			"^([a-z]+[a-z0-9]*)(-[a-z0-9]+)*(__[a-z]+[a-z0-9]+(-[a-z0-9]+)*)?(--[a-z]+[a-z0-9]+(-[a-z0-9]+)*)?$",
