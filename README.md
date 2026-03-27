@@ -60,34 +60,6 @@ npm run serve
 npm run build
 ```
 
-### Lints and fixes files
+## 📜 License
 
-```bash
-npm run lint
-```
-
-### Publish the code for production in GitHub Pages
-
-```bash
-npm run deploy:v1
-```
-
-```bash
-npm run deploy:v2
-```
-
-## 🔗 References
-
-- [About GitHub Pages](https://docs.github.com/en/pages/getting-started-with-github-pages/about-github-pages)
-- [Changing the visibility of your GitHub Pages site](https://docs.github.com/en/pages/getting-started-with-github-pages/changing-the-visibility-of-your-github-pages-site)
-- [Configuring a custom domain for your GitHub Pages site](https://docs.github.com/en/articles/using-a-custom-domain-with-github-pages)
-- [Pushing updates manually on GitHub Pages](https://cli.vuejs.org/guide/deployment.html#github-pages)
-- [Cómo publicar una aplicación Vue en GitHub Pages](https://www.neoguias.com/como-publicar-aplicacion-vue-github-pages/)
-- [How I Use GitHub Actions to Auto-deploy my Vue.js Site to GitHub Pages](https://dev.to/juniordevforlife/how-i-use-github-actions-to-auto-deploy-my-vue-js-site-to-github-pages-49bf)
-- [Deploy to Github Pages like a pro with Github Actions](https://dev.to/rolanddoda/deploy-to-github-pages-like-a-pro-with-github-actions-4hdg#create-a-github-action-to-automate-deployment)
-- [Deploying Vue Apps to Github Pages](https://medium.com/swlh/deploy-vue-app-to-github-pages-2ada48d7397e)
-- [vue-gh-pages by Cristina Fernández Sanz](https://github.com/cristinafsanz/vue-gh-pages)
-
-## 📄 License
-
-This project is licensed under the `MIT` License, which allows free use, modification and distribution. See [LICENSE](LICENSE) for details.
+This project is licensed under the [MIT License](LICENSE). Feel free to use, modify, and distribute it as needed.
