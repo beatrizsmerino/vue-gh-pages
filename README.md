@@ -122,7 +122,7 @@ Lint and fix CSS, SCSS and Vue files with [Stylelint](https://stylelint.io/).
 npm run stylelint:fix
 ```
 
-### Publish the code for production in GitHub Pages
+### Publish in Github Pages
 
 Publish the `dist` folder to GitHub Pages (`gh-pages` branch). Use `deploy:v1` for [v1](./README-v1.md) (shell script) or `deploy:v2` for [v2](./README-v2.md) (Node.js script).
 
