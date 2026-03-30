@@ -44,6 +44,8 @@ This repository was inspired by the [vue-gh-pages](https://github.com/cristinafs
 
 ### Install dependencies
 
+Install all dependencies listed in `package.json`.
+
 ```bash
 npm install
 ```
