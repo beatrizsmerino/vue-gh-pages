@@ -48,6 +48,14 @@ This repository was inspired by the [vue-gh-pages](https://github.com/cristinafs
 npm install
 ```
 
+### Clean install dependencies
+
+Remove `node_modules` and `package-lock.json` to reinstall from scratch.
+
+```bash
+npm run install:clean
+```
+
 ### Compiles and hot-reloads for development
 
 ```bash
