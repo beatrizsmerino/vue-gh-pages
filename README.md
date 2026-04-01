@@ -44,29 +44,87 @@ This repository was inspired by the [vue-gh-pages](https://github.com/cristinafs
 
 ### Install dependencies
 
+Install all dependencies listed in `package.json`.
+
 ```bash
 npm install
 ```
 
+### Clean install dependencies
+
+Remove `node_modules` and `package-lock.json` to reinstall from scratch.
+
+```bash
+npm run install:clean
+```
+
+### Lint after install
+
+Runs automatically after `npm install` to run `npm run lint` on all project files.
+
+```bash
+npm run postinstall
+```
+
+### Set up Husky git hooks
+
+Runs automatically after `postinstall` to enable `pre-commit` and `commit-msg` hooks of [Husky](https://typicode.github.io/husky/).
+
+```bash
+npm run prepare
+```
+
 ### Compiles and hot-reloads for development
+
+Launch the development server on `localhost` with hot reload.
 
 ```bash
 npm run serve
 ```
 
-### Compiles and minifies for production
-
-```bash
-npm run build
-```
-
 ### Lints and fixes files
+
+Run [Prettier](https://prettier.io/) (`prettier:fix`), [ESLint](https://eslint.org/) (`eslint:fix`) and [Stylelint](https://stylelint.io/) (`stylelint:fix`) to format and lint all project files.
 
 ```bash
 npm run lint
 ```
 
-### Publish the code for production in GitHub Pages
+### Format files with Prettier
+
+Format CSS, SCSS, JSON, YAML, JS and Vue files with [Prettier](https://prettier.io/).
+
+```bash
+npm run prettier:fix
+```
+
+### Lint and fix files with ESLint
+
+Lint and fix JSON, JS and Vue files with [ESLint](https://eslint.org/).
+
+```bash
+npm run eslint:fix
+```
+
+### Lint and fix styles with Stylelint
+
+Lint and fix CSS, SCSS and Vue files with [Stylelint](https://stylelint.io/).
+
+```bash
+npm run stylelint:fix
+```
+
+### Compiles and minifies for production
+
+Build and minify the project for production.
+
+```bash
+npm run build
+```
+
+### Publish in Github Pages
+
+Publish the `dist` folder to GitHub Pages (`gh-pages` branch). Use `deploy:v1` for [v1](./README-v1.md) (shell script) or `deploy:v2` for [v2](./README-v2.md) (Node.js script).
 
 ```bash
 npm run deploy:v1
@@ -87,3 +145,7 @@ npm run deploy:v2
 - [Deploy to Github Pages like a pro with Github Actions](https://dev.to/rolanddoda/deploy-to-github-pages-like-a-pro-with-github-actions-4hdg#create-a-github-action-to-automate-deployment)
 - [Deploying Vue Apps to Github Pages](https://medium.com/swlh/deploy-vue-app-to-github-pages-2ada48d7397e)
 - [vue-gh-pages by Cristina Fernández Sanz](https://github.com/cristinafsanz/vue-gh-pages)
+
+## 📄 License
+
+This project is licensed under the `MIT` License, which allows free use, modification and distribution. See [LICENSE](LICENSE) for details.
