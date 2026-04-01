@@ -1,14 +1,10 @@
 {
-	"version": "3.6.0",
+	"version": "3.5.1",
 	"private": true,
 	"name": "vue-gh-pages",
 	"description": "Tutorial to publish a public repository made with Vue in GithubPages.",
-	"author": {
-		"name": "Beatriz Sopeña Merino",
-		"email": "beatrizsmerino@gmail.com",
-		"url": "https://github.com/beatrizsmerino"
-	},
-	"license": "MIT",
+	"author": "beatrizsmerino@gmail.com",
+	"license": "ISC",
 	"repository": {
 		"type": "git",
 		"url": "https://github.com/beatrizsmerino/vue-gh-pages.git"
@@ -30,7 +26,7 @@
 		"prepare": "husky",
 		"serve": "vue-cli-service serve",
 		"build": "vue-cli-service build",
-		"prettier:fix": "prettier --write \"./**/*.{css,scss,sass,json,yml,yaml,js,cjs,mjs,vue}\"",
+		"prettier:fix": "prettier --write \"./**/*.{css,scss,sass,json,js,cjs,mjs,vue}\"",
 		"eslint:fix": "vue-cli-service lint \"**/*.{json,js,cjs,mjs,vue}\" --fix --ignore-path .eslintignore",
 		"stylelint:fix": "stylelint \"**/*.{css,scss,sass,vue}\" --fix --ignore-path .stylelintignore",
 		"lint": "npm run prettier:fix && npm run eslint:fix && npm run stylelint:fix",
@@ -38,7 +34,7 @@
 		"deploy:v2": "node deploy-v2.mjs"
 	},
 	"dependencies": {
-		"chalk": "^5.6.2",
+		"chalk": "^5.6.0",
 		"core-js": "^3.49.0",
 		"execa": "^9.6.1",
 		"node-emoji": "^2.2.0",
@@ -84,16 +80,8 @@
 	},
 	"overrides": {
 		"cross-spawn": "^7.0.6",
-		"stylelint-config-recommended-vue": {
-			"stylelint-config-recommended": "17.0.0"
-		},
-		"@vue/cli-service": {
-			"serialize-javascript": "^7.0.4",
-			"webpack-dev-server": "^5.2.1"
-		},
-		"@vue/cli-plugin-eslint": {
-			"yorkie": "^2.0.0"
-		},
+		"webpack-dev-server": "^5.2.1",
+		"yorkie": "^2.0.0",
 		"@vue/component-compiler-utils": {
 			"postcss": "^8.4.47"
 		},
