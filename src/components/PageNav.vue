@@ -54,7 +54,7 @@
 			justify-content: center;
 
 			&:not(:last-child) {
-				&:after {
+				&::after {
 					content: "|";
 					display: inline-block;
 					padding: 0 1rem;
