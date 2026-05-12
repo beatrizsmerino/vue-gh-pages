@@ -8,7 +8,7 @@
 	padding: 0 0.2rem;
 	font-weight: 400;
 
-	&:before {
+	&::before {
 		content: "";
 		display: inline-block;
 		position: absolute;
@@ -23,7 +23,7 @@
 
 	&.is-selected,
 	&:hover {
-		&:before {
+		&::before {
 			width: 0;
 			background-color: transparent;
 		}

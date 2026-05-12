@@ -6,8 +6,8 @@
 @use "../abstracts/variables/abstracts-variables-fonts" as *;
 
 *,
-*:before,
-*:after {
+*::before,
+*::after {
 	box-sizing: border-box;
 	margin: 0;
 	padding: 0;
